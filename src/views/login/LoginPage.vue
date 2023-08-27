@@ -1,5 +1,4 @@
 <script setup>
-import btnGreen from '@/components/BtnGreen.vue'
 import { ref } from 'vue'
 const loginWay = ref('phone')
 const checked = ref(false)
