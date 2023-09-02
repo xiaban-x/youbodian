@@ -24,6 +24,14 @@ const router = createRouter({
       path: '/bindPhone',
       component: () => import('@/views/login/BindPhone.vue')
     },
+    {
+      path: '/moreCourse',
+      component: () => import('@/views/course/MoreCourse.vue')
+    },
+    {
+      path: '/highCourse',
+      component: () => import('@/views/course/HighCourse.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')
