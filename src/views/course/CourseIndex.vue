@@ -12,81 +12,80 @@ export default {
 <template>
   <div>
     <!-- <div>这是课程</div> -->
-
-  <!-- 头部 -->
-  <div class="head">
-    <div class="head-left">会计</div>
-    <div class="head-right"><img src="src\assets\smallIcon\head-right.png" alt="" /></div>
-  </div>
-  <img class="head-image" src="src\assets\iamges\score-head.jpg" />
-
-  <!-- 推荐课程 -->
-  <div class="recommended-course">
-    <div class="recommended-course-title">推荐课程</div>
-    <div class="recommended-course-more">查看更多></div>
-  </div>
-  <div class="recommended-course-main">
-    <ClassMain></ClassMain>
-    <ClassMain></ClassMain>
-  </div>
-
-  <!-- 我的课程 -->
-  <van-tabs
-    v-model:active="active"
-    class="order-tabs"
-    line-height="2px"
-    line-width="42px"
-    color="#11D075"
-    background="transparent"
-  >
-    <van-tab title="我的课程" >
-      <div class="my-class-all">
-        <MyClass></MyClass>
-        <MyClass></MyClass>
-        <MyClass></MyClass>
-        <div style="height: 15px"></div>
+    <div class="bgcGreen">
+      <div class="top">
+        <div class="left">会计</div>
+        <div class="right">
+          <img src="src/assets/dictionary/SelectProfession.svg" alt="行业" />
+        </div>
       </div>
-    </van-tab>
-    <van-tab title="招生报名" >
-      <div class="my-class-all">
-        <MyClass></MyClass>
-        <div style="height: 15px"></div>
-      </div>
-    </van-tab>
-  </van-tabs>
-  <div style="height: 70px"></div>
+    </div>
+    <!-- 头部 -->
+
+    <img class="head-image" src="src/assets/iamges/score-head.jpg" />
+
+    <!-- 推荐课程 -->
+    <div class="recommended-course">
+      <div class="recommended-course-title">推荐课程</div>
+      <div class="recommended-course-more">查看更多></div>
+    </div>
+    <div class="recommended-course-main">
+      <ClassMain></ClassMain>
+      <ClassMain></ClassMain>
+    </div>
+
+    <!-- 我的课程 -->
+    <van-tabs
+      v-model:active="active"
+      class="order-tabs"
+      line-height="2px"
+      line-width="42px"
+      color="#11D075"
+      background="transparent"
+      shrink
+    >
+      <van-tab title="我的课程" class="myClassTitle">
+        <div class="my-class-all">
+          <MyClass></MyClass>
+          <MyClass></MyClass>
+          <MyClass></MyClass>
+          <MyClass></MyClass>
+          <div style="height: 15px"></div>
+        </div>
+      </van-tab>
+      <van-tab title="招生报名">
+        <div class="my-class-all">
+          <MyClass></MyClass>
+          <div style="height: 15px"></div>
+        </div>
+      </van-tab>
+    </van-tabs>
+    <div style="height: 70px"></div>
   </div>
-
-
-
-
-
-
 </template>
 
-
-
-
 <style scoped>
-.head {
-  margin-left: 14px;
-  overflow: hidden;
-}
-.head-left {
-  color: #151515;
-  font-family: Source Han Sans CN;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  float: left;
-}
+.bgcGreen {
+  background: linear-gradient(to bottom, #c3feda, #ffffff);
+  display: flex;
+  flex-direction: column;
+  padding-left: 14px;
+  padding-right: 16px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+    margin-top: 23px;
+  }
 
-.head-right {
-  width: 16px;
-  height: 12px;
-  margin-right: 15px;
-  float: right;
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    margin-left: 10px; /* 调整右侧图片与文字的间距 */
+  }
 }
 
 .head-image {
@@ -95,7 +94,7 @@ export default {
   height: 150px;
   background: linear-gradient(0deg, white 0%, white 100%);
   border-radius: 10px;
-  margin: 28px 13px 0 15px;
+  margin: 3px 13px 0 15px;
 }
 
 /* 推荐课程 */
@@ -131,7 +130,6 @@ export default {
 }
 
 /* tab */
-
 /* 我的课程 */
 .my-class-all {
   width: 347px;
@@ -140,7 +138,6 @@ export default {
   border-radius: 10px;
   margin-top: 9px;
   margin-left: 14px;
-
 }
 </style>
 
@@ -163,17 +160,8 @@ export default {
   line-height: normal;
   margin: 19px 0 6px 0;
 }
-
 </style>
-
-
 
 <!-- 线上课程页 -->
 
-
-
-
-<style>
-
-</style>
-
+<style></style>

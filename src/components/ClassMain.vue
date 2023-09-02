@@ -1,6 +1,6 @@
 <template>
-  <div class="class-main" >
-    <img class="image" src="src\assets\iamges\recommended-course-image.jpg" />
+  <div class="class-main">
+    <img class="image" src="src/assets/iamges/recommended-course-image.jpg" />
     <div class="title-small">高分一点通</div>
     <div class="main-text">集中突破，冲刺高分</div>
     <div class="buy">
@@ -11,14 +11,12 @@
 </template>
 
 <script>
-export default {
-  
-}
+export default {}
 </script>
 
 <style lang="less" scoped>
 .class-main {
-  margin-right: 13px; 
+  margin-right: 13px;
   width: 167px;
   height: 230px;
   background: white;
