@@ -8,7 +8,7 @@ const icon = {
 }
 </script>
 <template>
-  <div class="container">
+  <div class="SearchContainer">
     <img class="search" :src="icon.search" alt="搜索" />
     <input
       class="inp"
@@ -16,13 +16,13 @@ const icon = {
       placeholder="请输入关键字进行查询"
       type="text"
     />
-    <a><img :src="icon.camera" alt="拍照" /></a>
+    <a class="camera"><img :src="icon.camera" alt="拍照" /></a>
   </div>
 </template>
 
 <style scoped>
-.container {
-  width: 322px;
+.SearchContainer {
+  width: 347px;
   height: 50px;
   background: white;
   border-radius: 7px;
@@ -41,6 +41,7 @@ const icon = {
     word-wrap: break-word;
     margin-left: 16.5px;
     margin-right: 60px;
+    width: 196px;
   }
 }
 </style>

@@ -1,13 +1,18 @@
 <script setup></script>
 <template>
   <div class="container">
-    <img src="src/assets/dictionary/NoteBook.png" />
-    <div class="introduce">笔记本</div>
+    <slot name="image"></slot>
+    <!-- 图片插槽 -->
+    <div class="introduce">
+      <slot name="text"></slot>
+      <!-- 文字插槽 -->
+    </div>
   </div>
 </template>
 
 <style scoped>
 .container {
+  background-color: #fff;
   display: flex;
   flex-direction: column; /* 垂直分布 */
   align-items: center; /* 水平居中 */
@@ -21,6 +26,7 @@
     font-size: 14px;
     font-weight: 400;
     word-wrap: break-word;
+    width: 56px;
   }
 }
 </style>
