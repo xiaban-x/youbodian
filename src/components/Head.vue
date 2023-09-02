@@ -1,6 +1,8 @@
 <template>
   <div class="head">
-    <div class="head-left"><img src="src\assets\iamges\return.jpg" alt="" /></div>
+    <div class="head-left">
+      <img src="src/assets/iamges/return.jpg" alt="" />
+    </div>
     <div class="head-right">
       <slot></slot>
     </div>
