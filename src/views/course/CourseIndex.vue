@@ -32,6 +32,7 @@ export default {
 
   <!-- 我的课程 -->
   <van-tabs
+  shrink
     v-model:active="active"
     class="order-tabs"
     line-height="2px"
