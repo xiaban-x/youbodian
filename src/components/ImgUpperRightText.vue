@@ -1,14 +1,14 @@
 <template>
   <div class="image-container">
-    <img :src="imageUrl" alt="Image" />
-    <div class="text-overlay">
+    <img :src="imageUrl" alt="Image" class="image" />
+ 
       <div :style="rightTopBackgroundStyle" class="right-top-text">
         <slot name="right-top-text"></slot>
       </div>
       <div class="center-text">
         <slot name="center-text"></slot>
       </div>
-    </div>
+   
   </div>
 </template>
 
@@ -44,15 +44,18 @@ export default {
 .image-container {
   position: relative; /* 添加这一行样式 */
   width: 98px;
+  overflow: hidden;
 }
-
+.image{
+  width: 98px
+}
 .right-top-text {
   position: absolute; /* 添加这一行样式 */
   top: 0;
-  right: -7px;
+  right: -4px;
   color: white;
   padding: 0 6px;
-  border-radius: 5px;
+  border-bottom-left-radius: 3px;
   width: 36px;
   height: 16px;
   font-size: 10px;
@@ -70,5 +73,9 @@ export default {
   font-size: 14px;
   font-weight: 400;
   word-wrap: break-word;
+}
+.text-overlay{
+  width: 100%;
+  height: 100%
 }
 </style>

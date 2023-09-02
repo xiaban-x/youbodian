@@ -458,19 +458,14 @@ const isShow = ref(false)
     }
   }
   .newWordContainer {
-    display: flex;
-    flex-wrap: wrap; /* 自动换行 */
-    justify-content: flex-start; /* 从左到右排列 */
-    gap: 20px; /* 间隙 */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-left: 15px;
     margin-top: 17px;
   }
 
   /* 如果需要控制每个组件的宽度，可以添加以下样式 */
-  .newWordContainer > * {
-    flex: 1; /* 平均分配容器宽度 */
-    max-width: calc(33.3% - 19px); /* 每个组件最大宽度，根据需要调整 */
-  }
+ 
   .plus {
     position: relative;
     .plusInner {
