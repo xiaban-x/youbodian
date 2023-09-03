@@ -1,15 +1,15 @@
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-  setup() {
-    const checked = ref(['a', 'b'])
-    return { checked }
-  }
-}
+const checked = ref(['a', 'b'])
+
+import { useRouter } from 'vue-router'
+import BtnGreen from '@/components/BtnGreen.vue'
+
+const router = useRouter()
 </script>
 <template>
-  <van-nav-bar left-arrow @click-left="$router.go(-1)" title="选择行业" />
+  <van-nav-bar left-arrow @click-left="router.go(-1)" title="选择行业" />
   <van-checkbox-group v-model="checked" shape="square" class="container">
     <div class="profession">
       <van-checkbox class="check" name="a">&nbsp; 会计</van-checkbox>
@@ -30,7 +30,7 @@ export default {
       <van-checkbox class="check" name="f">&nbsp; 战略</van-checkbox>
     </div>
   </van-checkbox-group>
-  <btnGreen message="下一步"></btnGreen>
+  <BtnGreen message="下一步" @click="router.push('/')"></BtnGreen>
 </template>
 
 <style scoped>

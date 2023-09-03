@@ -465,7 +465,7 @@ const isShow = ref(false)
   }
 
   /* 如果需要控制每个组件的宽度，可以添加以下样式 */
- 
+
   .plus {
     position: relative;
     .plusInner {
@@ -474,7 +474,7 @@ const isShow = ref(false)
       left: 50%;
       transform: translate(-50%, -50%);
       .plusInnerImg {
-        margin-left: 28px;
+        margin-left: 20px;
       }
       .plusInnerText {
         color: #666666;
@@ -482,7 +482,7 @@ const isShow = ref(false)
         font-weight: 400;
         word-wrap: break-word;
         width: 60px;
-        margin-left: 5px;
+        margin-right: 14px;
       }
     }
   }

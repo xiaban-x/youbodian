@@ -2,10 +2,14 @@
 import { ref } from 'vue'
 const loginWay = ref('phone')
 const checked = ref(false)
+import { useRouter } from 'vue-router'
+import BtnGreen from '@/components/BtnGreen.vue'
 
+const router = useRouter()
 const login = () => {
-  console.log('登录')
+  router.push('selectProfession')
 }
+const showPassword = ref(false)
 </script>
 <template>
   <div v-if="loginWay === 'email'" class="register">
@@ -23,17 +27,22 @@ const login = () => {
           <input
             class="inp"
             maxlength="11"
-            placeholder="请输入手机号码"
+            placeholder="请输入邮箱账号"
             type="text"
           />
         </div>
         <div class="form-item">
-          <input
-            class="inp"
-            maxlength="20"
-            placeholder="请输入密码"
-            type="password"
-          />
+          <div class="password-input">
+            <input
+              class="inp"
+              maxlength="20"
+              placeholder="请输入密码"
+              :type="showPassword ? 'text' : 'password'"
+            />
+          </div>
+        </div>
+        <div class="forgetPassword" @click="router.push('resetPassword')">
+          忘记密码
         </div>
       </div>
 
@@ -70,12 +79,17 @@ const login = () => {
           />
         </div>
         <div class="form-item">
-          <input
-            class="inp"
-            maxlength="20"
-            placeholder="请输入密码"
-            type="password"
-          />
+          <div class="password-input">
+            <input
+              class="inp"
+              maxlength="20"
+              placeholder="请输入密码"
+              :type="showPassword ? 'text' : 'password'"
+            />
+          </div>
+        </div>
+        <div class="forgetPassword" @click="router.push('resetPassword')">
+          忘记密码
         </div>
       </div>
 
@@ -137,7 +151,7 @@ const login = () => {
   <div class="LoginIconA">
     <span
       ><img
-        @click="loginWay = 'wechat'"
+        @click="router.push('bindPhone')"
         class="loginIcon"
         src="../../assets/smallIcon/wechatLogin.png"
         alt="微信登录"
@@ -196,10 +210,11 @@ const login = () => {
         display: block;
         border: none;
         outline: none;
-        height: 32px;
-        font-size: 14px;
+        height: 43px;
+        font-size: 16px;
+        width: 330px;
         flex: 1;
-        color: #999999;
+        color: #000;
         font-weight: 300;
         word-wrap: break-word;
         margin: 3px 3px 3px 10px;
@@ -216,6 +231,13 @@ const login = () => {
         background-color: transparent;
         padding-right: 9px;
       }
+    }
+    .forgetPassword {
+      margin-left: 290px;
+      color: #11d075;
+      font-size: 14px;
+      font-weight: 400;
+      word-wrap: break-word;
     }
   }
 

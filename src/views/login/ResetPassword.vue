@@ -1,24 +1,24 @@
-<script>
+<script setup>
 import { ref } from 'vue'
-
-export default {
-  setup() {
-    const active = ref(0)
-    return { active }
-  }
-}
+import { useRouter } from 'vue-router'
+import BtnGreen from '@/components/BtnGreen.vue'
+const router = useRouter()
+const active = ref(0)
 </script>
 <template>
-  <van-nav-bar left-arrow @click-left="$router.go(-1)" title="重置密码" />
+  <van-nav-bar left-arrow @click-left="router.go(-1)" title="重置密码" />
 
-  <div class="container">
+  <div class="RPContainer">
     <van-tabs
       v-model:active="active"
       title-active-color="#11D075"
       color="#11D075"
-      background="#fff"
+      background="rgb(248,248,248)"
+      shrink
+      class="switchWay"
+      line-width="70px"
     >
-      <van-tab title="手机号码">
+      <van-tab title="手机号码" class="wayChild">
         <div class="form">
           <div class="form-item">
             <input
@@ -29,20 +29,20 @@ export default {
             />
           </div>
           <div class="form-item">
-            <input class="inp" placeholder="请输入短信验证码" type="text" />
-            <button>获取验证码</button>
+            <input class="inp" placeholder="请输入验证码" type="text" />
+            <div class="getCode">获取验证码</div>
           </div>
           <div class="form-item">
             <input
               class="inp"
               maxlength="20"
-              placeholder="请输入密码"
+              placeholder="请输入新的登录密码"
               type="password"
             />
           </div>
         </div>
       </van-tab>
-      <van-tab title="邮箱">
+      <van-tab title=" &nbsp; &nbsp; 邮箱 &nbsp;&nbsp;" class="wayChild">
         <div class="form">
           <div class="form-item">
             <input
@@ -53,14 +53,14 @@ export default {
             />
           </div>
           <div class="form-item">
-            <input class="inp" placeholder="请输入邮箱验证码" type="text" />
-            <button>获取验证码</button>
+            <input class="inp" placeholder="请输入验证码" type="text" />
+            <div class="getCode">获取验证码</div>
           </div>
           <div class="form-item">
             <input
               class="inp"
               maxlength="20"
-              placeholder="请输入密码"
+              placeholder="请输入新的登录密码"
               type="password"
             />
           </div>
@@ -68,14 +68,21 @@ export default {
       </van-tab>
     </van-tabs>
     <!--      <div class="login-btn">登录</div>-->
-    <btnGreen message="确认重置"></btnGreen>
+    <BtnGreen message="确认重置" class="btn"></BtnGreen>
   </div>
 </template>
 
 <style scoped>
-.container {
+.RPContainer {
   background-color: rgb(248, 248, 248);
-  margin-top: 0;
+  margin-top: 24px;
+  .switchWay {
+    margin-left: 116px;
+    .wayChild {
+      margin-left: -102px;
+      width: 347px;
+    }
+  }
   p {
     line-height: 40px;
     font-size: 14px;
@@ -85,15 +92,14 @@ export default {
 
 .form {
   width: 100%;
-  height: 100%;
+  height: 130px;
   border-radius: 5px;
-  padding-top: 33px;
-
+  padding-top: 43px;
+  margin-bottom: 60px;
   .form-item {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
     background-color: #fff;
     margin: 0;
     img {
@@ -102,19 +108,20 @@ export default {
     }
   }
 }
-button {
+.getCode {
   height: 31px;
   border: none;
   font-size: 13px;
   color: #11d075;
   background-color: transparent;
   padding-right: 9px;
+  padding-top: 5px;
 }
 .inp {
   display: block;
   border: none;
   outline: none;
-  height: 32px;
+  height: 43px;
   font-size: 14px;
   flex: 1;
   color: #999999;
@@ -123,7 +130,11 @@ button {
   padding: 3px 3px 3px 10px;
   margin: 0;
 }
-.van-tab__title {
-  background-color: #ffa500; /* Set your desired color here */
+.btn {
+  margin-left: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  word-wrap: break-word;
 }
 </style>

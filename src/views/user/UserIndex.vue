@@ -1,3 +1,8 @@
+<script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+</script>
 <template>
   <!-- <div>这是我的资料</div> -->
   <div>
@@ -5,7 +10,7 @@
       <div class="headPicture">
         <img src="src/assets/iamges/无头像 1.png" alt="" />
       </div>
-      <div class="name">请点击登录</div>
+      <button class="name" @click="router.push('login')">请点击登录</button>
       <div class="lookMore">&gt;</div>
     </div>
     <div class="message">
@@ -54,12 +59,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'index'
-}
-</script>
-
 <style scoped>
 .clickLog {
   background: linear-gradient(to bottom, #c3feda, #ffffff);
@@ -83,12 +82,14 @@ export default {
   display: block;
   color: #292929;
   font-size: 16px;
-  font-family: Source Han Sans CN;
   font-weight: 400;
   word-wrap: break-word;
   float: left;
   line-height: 55px;
   margin-left: 9px;
+  background: none; /* 移除背景色 */
+  border: none; /* 移除边框 */
+  padding: 0; /* 移除内边距 */
 }
 .clickLog .lookMore {
   display: block;

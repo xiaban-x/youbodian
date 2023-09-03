@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+import BtnGreen from '@/components/BtnGreen.vue'
+import router from '@/router'
+</script>
 <template>
   <div class="login">
-    <van-nav-bar left-arrow @click-left="$router.go(-1)" />
-    <div class="container">
+    <van-nav-bar left-arrow @click-left="router.go(-1)" />
+    <div class="BPContainer">
       <div class="title">
         <h3>绑定手机号码</h3>
         <p>未注册的用户通过验证后将自动注册</p>
@@ -19,19 +22,24 @@
         </div>
         <div class="form-item">
           <input class="inp" placeholder="请输入短信验证码" type="text" />
-          <button>获取验证码</button>
+          <div class="getCode">获取验证码</div>
         </div>
       </div>
 
-      <btnGreen message="下一步" @click="login"></btnGreen>
+      <BtnGreen
+        message="下一步"
+        @click="router.push('selectProfession')"
+        class="btn"
+      ></BtnGreen>
     </div>
   </div>
 </template>
 
 <style scoped>
-.container {
+.BPContainer {
+  margin-left: 14px;
   .form {
-    width: 100%;
+    width: 347px;
     height: 100%;
     border-radius: 5px;
     padding-top: 33px;
@@ -42,7 +50,6 @@
       align-items: center;
       margin-bottom: 5px;
       background-color: #fff;
-
       .inp {
         display: block;
         border: none;
@@ -63,13 +70,20 @@
     }
   }
 }
-button {
+.getCode {
   height: 31px;
   border: none;
   font-size: 13px;
   color: #11d075;
   background-color: transparent;
   padding-right: 9px;
+  padding-top: 5px;
+}
+.btn {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  word-wrap: break-word;
 }
 .title {
   margin-top: 30px;
