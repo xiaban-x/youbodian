@@ -13,7 +13,7 @@ const showPassword = ref(false)
 </script>
 <template>
   <div v-if="loginWay === 'email'" class="register">
-    <van-nav-bar left-arrow @click-left="$router.go(-1)" />
+    <van-nav-bar left-arrow @click-left="router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
         <img src="../../assets/smallIcon/youbodian4.png" />
@@ -60,7 +60,7 @@ const showPassword = ref(false)
     </div>
   </div>
   <div v-else-if="loginWay === 'password'" class="register">
-    <van-nav-bar left-arrow @click-left="$router.go(-1)" />
+    <van-nav-bar left-arrow @click-left="router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
         <img src="../../assets/smallIcon/youbodian4.png" />
@@ -106,7 +106,7 @@ const showPassword = ref(false)
     </div>
   </div>
   <div v-else-if="loginWay === 'phone'" class="login">
-    <van-nav-bar left-arrow @click-left="$router.go(-1)" />
+    <van-nav-bar left-arrow @click-left="router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
         <img src="../../assets/smallIcon/youbodian4.png" />

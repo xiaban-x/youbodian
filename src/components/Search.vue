@@ -1,14 +1,15 @@
 <script setup>
 import search from '@/assets/dictionary/search.svg'
 import camera from '@/assets/dictionary/camera.svg'
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const icon = {
   search,
   camera
 }
 </script>
 <template>
-  <div class="SearchContainer">
+  <div class="SearchContainer" @click="router.push('/search')">
     <img class="search" :src="icon.search" alt="搜索" />
     <input
       class="inp"

@@ -53,6 +53,14 @@ const router = createRouter({
     //   component: () => import('@/views/course/CourseIndex.vue')
     // }
     {
+      path: '/search',
+      component: () => import('@/views/dictionary/SearchPage.vue')
+    },
+    {
+      path: '/searchByTrans',
+      component: () => import('@/views/dictionary/SearchByTrans.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',

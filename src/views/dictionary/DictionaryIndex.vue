@@ -13,6 +13,8 @@ import Search from '@/components/Search.vue'
 // const pay = ref('linear-gradient(to right, #FF7438, #FF9472)')
 // const free = ref('linear-gradient(to left,#11D075, #C0FFE1)')
 // const free = ref('rgb(100,0,0)')
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const buttonTextLearn = ref('学习')
 const imageUrlLearn = ref('src/assets/dictionary/VerticalBarGreen.svg')
 const additionalTextLearn = ref('待学习45')
