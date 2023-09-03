@@ -32,6 +32,14 @@ const router = createRouter({
       path: '/highCourse',
       component: () => import('@/views/course/HighCourse.vue')
     },
+    {
+      path: '/personalInformation',
+      component: () => import('@/views/user/PersonalInformation.vue')
+    },
+    {
+      path: '/changeNickname',
+      component: () => import('@/views/user/ChangeNickname.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')

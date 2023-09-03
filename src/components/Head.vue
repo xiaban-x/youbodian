@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <div class="head-left">
-      <img src="src/assets/iamges/return.jpg" alt="" />
+      <img src="src/assets/iamges/return.jpg" alt="" @click="goBack"/>
     </div>
     <div class="head-right">
       <slot></slot>
@@ -10,15 +10,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    goBack() {
+      this.$router.go(-1); // 返回上一页
+    }
+  }
+};
 </script>
 
 <style lang="less" scoped>
 .head {
-  margin-left: 14px;
-  margin-right: 10px;
+  padding: 21px 10px 10px 14px;
   text-align: center;
   overflow: hidden;
+  background-color: white;
 }
 .head-left {
   width: 14px;

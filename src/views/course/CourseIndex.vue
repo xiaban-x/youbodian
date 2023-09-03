@@ -1,12 +1,9 @@
-<script>
+<script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-export default {
-  setup() {
-    const active = ref(0)
-    return { active }
-  }
-}
+const router = useRouter()
+const active = ref(0)
 </script>
 
 <template>
@@ -27,11 +24,11 @@ export default {
     <!-- 推荐课程 -->
     <div class="recommended-course">
       <div class="recommended-course-title">推荐课程</div>
-      <div class="recommended-course-more">查看更多></div>
+      <bottom class="recommended-course-more" @click="router.push('moreCourse')">查看更多></bottom>
     </div>
     <div class="recommended-course-main">
-      <ClassMain></ClassMain>
-      <ClassMain></ClassMain>
+      <ClassMain @click="router.push('highCourse')"></ClassMain>
+      <ClassMain @click="router.push('highCourse')"></ClassMain>
     </div>
 
     <!-- 我的课程 -->
@@ -81,6 +78,10 @@ export default {
 
   .left {
     flex: 1;
+    color: #151515;
+    font-size: 14px;
+    font-weight: 400;
+    word-wrap: break-word;
   }
 
   .right {

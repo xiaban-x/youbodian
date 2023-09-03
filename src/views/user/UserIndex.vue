@@ -13,8 +13,8 @@ const router = useRouter()
       <button class="name" @click="router.push('login')">请点击登录</button>
       <div class="lookMore">&gt;</div>
     </div>
-    <div class="message">
-      <div class="box">
+    <div class="message" @click="router.push('personalInformation')">
+      <div class="box" >
         <img src="src/assets/iamges/会员注册 1.png" alt="" />
         <div class="text">个人信息</div>
       </div>

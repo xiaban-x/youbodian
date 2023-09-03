@@ -1,32 +1,5 @@
 <script>
 export default {
-  // components: { Discussion },
-  // data() {
-  //   return {
-  //     currentIndex: 0,
-  //     images: [
-  //       { src: 'src/assets/iamges/High-score.jpg', alt: 'Image 1' },
-  //       { src: 'src/assets/iamges/High-score.jpg', alt: 'Image 2' },
-  //       { src: 'src/assets/iamges/High-score.jpg', alt: 'Image 3' },
-  //       { src: 'src/assets/iamges/High-score.jpg', alt: 'Image 4' }
-  //     ]
-  //   }
-  // },
-  // methods: {
-  //   nextImage() {
-  //     this.currentIndex = (this.currentIndex + 1) % this.images.length
-  //   },
-  //   prevImage() {
-  //     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length
-  //   }
-  // },
-  // watch: {
-  //   currentIndex() {
-  //     this.$nextTick(() => {
-  //       this.$refs.imageSlider.style.transform = `translateX(-${this.currentIndex * 100}%)`
-  //     })
-  //   }
-  // },
   data() {
     return {
       showbuy: false
@@ -35,18 +8,21 @@ export default {
   methods: {
     buy() {
       this.showbuy = !this.showbuy // 切换按钮的显示状态
+    },
+    goBack() {
+      this.$router.go(-1); // 返回上一页
     }
-  }
+  } 
+  
 }
+
+
 </script>
 <template>
   <div>
     <Head>高分一点通</Head>
     <div id="imageContainer">
-      <div
-        id="imageSlider"
-        :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
-      >
+      <div id="imageSlider" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
         <!-- <img
           v-for="(image, index) in images"
           :key="index"
@@ -109,6 +85,9 @@ export default {
     <!-- 遮罩 -->
     <div id="shade">
       <div v-show="showbuy" class="black"></div>
+      <div v-show="showbuy" class="top">
+        <img src="src/assets/iamges/return.png" alt="" @click="goBack" />
+      </div>
       <div v-show="showbuy" class="bottom">
         <div class="click">
           <div class="link">
@@ -231,6 +210,19 @@ template {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.top {
+  position: fixed;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  padding: 25px 10px 10px 10px;
+  /* background: white; */
+}
+.shade .top{
+  line-height: normal;
+  padding-top: 4px;
+  z-index: 99;
 }
 .bottom {
   position: fixed;
