@@ -40,6 +40,10 @@ const router = createRouter({
       path: '/changeNickname',
       component: () => import('@/views/user/ChangeNickname.vue')
     },
+    {
+      path: '/changeGender',
+      component: () => import('@/views/user/ChangeGender.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')

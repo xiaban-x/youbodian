@@ -18,7 +18,7 @@
       </tr>
       <tr>
         <td class="left-align">性别</td>
-        <td class="right-align">男 ></td>
+        <td class="right-align" @click="router.push('changeGender')">男 ></td>
       </tr>
     </table>
 
