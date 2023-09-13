@@ -24,7 +24,9 @@ const active = ref(0)
     <!-- 推荐课程 -->
     <div class="recommended-course">
       <div class="recommended-course-title">推荐课程</div>
-      <bottom class="recommended-course-more" @click="router.push('moreCourse')">查看更多></bottom>
+      <div class="recommended-course-more" @click="router.push('moreCourse')">
+        查看更多>
+      </div>
     </div>
     <div class="recommended-course-main">
       <ClassMain @click="router.push('highCourse')"></ClassMain>

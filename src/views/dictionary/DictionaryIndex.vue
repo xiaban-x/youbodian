@@ -158,13 +158,18 @@ const isShow = ref(false)
             <span class="wordMemoryContainerOneTwo"
               ><img src="src/assets/dictionary/Arrow.svg" alt="箭头"
             /></span>
-            <span class="wordMemoryContainerOneThree">&nbsp; 更换</span>
+            <span
+              class="wordMemoryContainerOneThree"
+              @click="router.push('exchangeGlossary')"
+              >&nbsp; 更换</span
+            >
           </div>
           <div class="wordMemoryContainerTwo">28/2000</div>
           <div class="wordMemoryContainerThree">
             <!--            <BtnGreen message="学习 | 待学习45"></BtnGreen>-->
             <!--            <BtnGreen message="复习 | 待复习45"></BtnGreen>-->
             <Btn146
+              @click="router.push('learnGlossaryPage')"
               :buttonText="buttonTextLearn"
               :imageUrl="imageUrlLearn"
               :additionalText="additionalTextLearn"
@@ -175,6 +180,7 @@ const isShow = ref(false)
             </Btn146>
             <span class="Btn146Second"
               ><Btn146
+                @click="router.push('learnGlossaryPage')"
                 :buttonText="buttonTextReview"
                 :imageUrl="imageUrlReview"
                 :additionalText="additionalTextReview"
