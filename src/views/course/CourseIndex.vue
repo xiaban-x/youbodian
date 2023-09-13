@@ -13,13 +13,13 @@ const active = ref(0)
       <div class="top">
         <div class="left">会计</div>
         <div class="right">
-          <img src="src/assets/dictionary/SelectProfession.svg" alt="行业" />
+          <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
         </div>
       </div>
     </div>
     <!-- 头部 -->
 
-    <img class="head-image" src="src/assets/iamges/score-head.jpg" />
+    <img class="head-image" src="@/assets/iamges/score-head.jpg" />
 
     <!-- 推荐课程 -->
     <div class="recommended-course">

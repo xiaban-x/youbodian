@@ -4,10 +4,10 @@
   <div>
     <Head>线上课程</Head>
     <select class="time" id="group" value="1">
-      <!-- <div><img src="src/assets/iamges/drop-down-arrow.png" alt=""></div> -->
+      <!-- <div><img src="@/assets/iamges/drop-down-arrow.png" alt=""></div> -->
       <option value="1">
         时间倒序
-        <img src="src/assets/iamges/drop-down-arrow.png" alt="" />
+        <img src="@/assets/iamges/drop-down-arrow.png" alt="" />
       </option>
       <option value="2">时间正序</option>
     </select>
@@ -38,7 +38,7 @@
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: url(src/assets/iamges/drop-down-arrow.png) no-repeat right 8px
+  background: url("./@/assets/iamges/drop-down-arrow.png") no-repeat right 8px
     center;
 }
 

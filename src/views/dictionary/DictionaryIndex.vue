@@ -8,7 +8,8 @@ import GMAT from '@/assets/dictionary/GMAT.png'
 import TOEFL from '@/assets/dictionary/TOEFL.png'
 import { ref } from 'vue'
 import Btn146 from '@/components/Btn146.vue'
-import Search from '@/components/Search.vue'
+import Search from '@/components/Search.vue';
+import ImageUrlLearn from "@/assets/dictionary/VerticalBarGreen.svg"
 // const pay = ref('linear-gradient(to left,#FF7438, #FF9472)')
 // const pay = ref('linear-gradient(to right, #FF7438, #FF9472)')
 // const free = ref('linear-gradient(to left,#11D075, #C0FFE1)')
@@ -16,13 +17,13 @@ import Search from '@/components/Search.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const buttonTextLearn = ref('学习')
-const imageUrlLearn = ref('src/assets/dictionary/VerticalBarGreen.svg')
+// const imageUrlLearn = ref('@/assets/dictionary/VerticalBarGreen.svg')
 const additionalTextLearn = ref('待学习45')
 const backgroundColorLearn = ref('#E9FFF4') // 背景颜色
 const textColorOneLearn = ref('#11D075')
 const textColorTwo = ref('#666666')
 const buttonTextReview = ref('复习')
-const imageUrlReview = ref('src/assets/dictionary/VerticalBarOrange.svg')
+const imageUrlReview = ref('@/assets/dictionary/VerticalBarOrange.svg')
 const additionalTextReview = ref('待复习45')
 const backgroundColorReview = ref('#FFF9F8') // 背景颜色
 const textColorOneReview = ref('#1890FF')
@@ -34,7 +35,7 @@ const isShow = ref(false)
     <div class="top">
       <div class="left">会计</div>
       <div class="right">
-        <img src="src/assets/dictionary/SelectProfession.svg" alt="行业" />
+        <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
       </div>
     </div>
     <Search></Search>
@@ -47,7 +48,7 @@ const isShow = ref(false)
             <!-- 图片插槽 -->
             <template #image>
               <img
-                src="src/assets/dictionary/VocabularyBook.png"
+                src="@/assets/dictionary/VocabularyBook.png"
                 alt="单词本"
               />
             </template>
@@ -57,7 +58,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="src/assets/dictionary/MiswordBook.png" alt="错词本" />
+              <img src="@/assets/dictionary/MiswordBook.png" alt="错词本" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 错词本 </template>
@@ -66,7 +67,7 @@ const isShow = ref(false)
             <!-- 图片插槽 -->
             <template #image>
               <img
-                src="src/assets/dictionary/CollectedEdition.png"
+                src="@/assets/dictionary/CollectedEdition.png"
                 alt="收藏本"
               />
             </template>
@@ -76,7 +77,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="src/assets/dictionary/NoteBook.png" alt="笔记本" />
+              <img src="@/assets/dictionary/NoteBook.png" alt="笔记本" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 笔记本 </template>
@@ -146,7 +147,7 @@ const isShow = ref(false)
           <div class="wordMemoryHeaderSubTitle">
             <span>学习日历</span>
             <span class="arrow"
-              ><img src="src/assets/dictionary/Arrow.svg" alt="箭头"
+              ><img src="@/assets/dictionary/Arrow.svg" alt="箭头"
             /></span>
           </div>
         </div>
@@ -156,7 +157,7 @@ const isShow = ref(false)
           <div class="wordMemoryContainerOne">
             <span class="wordMemoryContainerOneOne">TOEFL必备词汇 &nbsp;</span>
             <span class="wordMemoryContainerOneTwo"
-              ><img src="src/assets/dictionary/Arrow.svg" alt="箭头"
+              ><img src="@/assets/dictionary/Arrow.svg" alt="箭头"
             /></span>
             <span class="wordMemoryContainerOneThree">&nbsp; 更换</span>
           </div>
@@ -166,7 +167,7 @@ const isShow = ref(false)
             <!--            <BtnGreen message="复习 | 待复习45"></BtnGreen>-->
             <Btn146
               :buttonText="buttonTextLearn"
-              :imageUrl="imageUrlLearn"
+              imageUrl="./src/assets/dictionary/VerticalBarGreen.svg"
               :additionalText="additionalTextLearn"
               :backgroundColor="backgroundColorLearn"
               :textColorOne="textColorOneLearn"
@@ -176,7 +177,7 @@ const isShow = ref(false)
             <span class="Btn146Second"
               ><Btn146
                 :buttonText="buttonTextReview"
-                :imageUrl="imageUrlReview"
+                imageUrl="./src/assets/dictionary/VerticalBarOrange.svg"
                 :additionalText="additionalTextReview"
                 :backgroundColor="backgroundColorReview"
                 :textColorOne="textColorOneReview"
@@ -238,10 +239,10 @@ const isShow = ref(false)
             </template>
           </ImgUpperRightText>
           <div class="plus">
-            <img src="src/assets/dictionary/Blank.png" alt="空白" />
+            <img src="@/assets/dictionary/Blank.png" alt="空白" />
             <div class="plusInner">
               <div class="plusInnerImg">
-                <img src="src/assets/dictionary/Plus.png" alt="加号" />
+                <img src="@/assets/dictionary/Plus.png" alt="加号" />
               </div>
               <div class="plusInnerText">添加生词本</div>
             </div>

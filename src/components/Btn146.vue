@@ -15,7 +15,7 @@ import { defineProps, computed } from 'vue'
 
 const props = defineProps({
   buttonText: String, // 第一部分文字
-  imageUrl: String, // 图片 URL
+  imageUrl: Object | String, // 图片 URL
   additionalText: String, // 第三部分文字
   backgroundColor: String, // 背景颜色
   textColorOne: String, // 文字颜色
