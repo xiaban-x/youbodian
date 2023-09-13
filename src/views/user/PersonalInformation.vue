@@ -8,7 +8,7 @@
         <td class="left-align">头像</td>
         <td class="right-align">
           <div class="head-picture">
-            <img src="src/assets/iamges/my-class.jpg" alt="" />
+            <img src="@/assets/iamges/my-class.jpg" alt="" />
           </div>
         </td>
       </tr>

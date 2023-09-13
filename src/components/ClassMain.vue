@@ -1,6 +1,6 @@
 <template>
   <div class="class-main">
-    <img class="image" src="src/assets/iamges/recommended-course-image.jpg" />
+    <img class="image" src="@/assets/iamges/recommended-course-image.jpg" />
     <div class="title-small">高分一点通</div>
     <div class="main-text">集中突破，冲刺高分</div>
     <div class="buy">

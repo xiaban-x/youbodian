@@ -58,7 +58,7 @@ const C2E = () => {
   <!-- 显示 selectLanguage 的条件是 showSelectLanguage 为 true -->
   <div class="selectLanguage" v-if="showSelectLanguage">
     <div @click="E2C">英转中</div>
-    <div><img src="src/assets/dictionary/Line.svg" alt="横线" /></div>
+    <div><img src="@/assets/dictionary/Line.svg" alt="横线" /></div>
     <div @click="C2E">中转英</div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <div class="head-left">
-      <img src="src/assets/iamges/return.jpg" alt="" @click="goBack"/>
+      <img src="@/assets/iamges/return.jpg" alt="" @click="goBack"/>
     </div>
     <div class="head-right">
       <slot></slot>

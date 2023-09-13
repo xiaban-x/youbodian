@@ -30,7 +30,7 @@ export default {
           :alt="image.alt"
           class="sliderImage"
         /> -->
-        <img src="src/assets/iamges/High-score.jpg" alt="" />
+        <img src="@/assets/iamges/High-score.jpg" alt="" />
       </div>
       <div class="title-small">高分一点通</div>
       <div class="buy">
@@ -58,7 +58,7 @@ export default {
               border-radius: 10px;
               margin: 25px 0 0 16px;
             "
-            src="src/assets/iamges/introductory.jpg"
+            src="@/assets/iamges/introductory.jpg"
           />
           <div style="height: 15px"></div>
         </van-tab>
@@ -75,8 +75,8 @@ export default {
 
     <!-- 底部分享和按钮 -->
     <div class="share">
-      <img src="src/assets/iamges/客服耳机 1.png" alt="" class="service" />
-      <img src="src/assets/iamges/分享 1.png" alt="" class="sharelink" />
+      <img src="@/assets/iamges/客服耳机 1.png" alt="" class="service" />
+      <img src="@/assets/iamges/分享 1.png" alt="" class="sharelink" />
       <button @click="buy">
         <div class="buttontext">立即购买</div>
       </button>
@@ -86,18 +86,18 @@ export default {
     <div id="shade">
       <div v-show="showbuy" class="black"></div>
       <div v-show="showbuy" class="top">
-        <img src="src/assets/iamges/return.png" alt="" @click="goBack" />
+        <img src="@/assets/iamges/return.png" alt="" @click="goBack" />
       </div>
       <div v-show="showbuy" class="bottom">
         <div class="click">
           <div class="link">
-            <img src="src/assets/iamges/picture.png" alt="" />
+            <img src="@/assets/iamges/picture.png" alt="" />
           </div>
           <div class="text">保存图片</div>
         </div>
         <div class="click">
           <div class="link">
-            <img src="src/assets/iamges/link.png" alt="" />
+            <img src="@/assets/iamges/link.png" alt="" />
           </div>
           <div class="text">链接</div>
         </div>

@@ -1,17 +1,17 @@
 <template>
   <div class="evaluate">
     <div class="head-picture">
-      <img src="src/assets/iamges/my-class.jpg" alt="" />
+      <img src="@/assets/iamges/my-class.jpg" alt="" />
     </div>
     <div class="content">
       <div class="nickname-and-star">
         <div class="nickname">全球通学员1234</div>
         <div class="star">
-          <img src="src/assets/iamges/good1.png" alt="" />
-          <img src="src/assets/iamges/good1.png" alt="" />
-          <img src="src/assets/iamges/good1.png" alt="" />
-          <img src="src/assets/iamges/good1.png" alt="" />
-          <img src="src/assets/iamges/good1.png" alt="" />
+          <img src="@/assets/iamges/good1.png" alt="" />
+          <img src="@/assets/iamges/good1.png" alt="" />
+          <img src="@/assets/iamges/good1.png" alt="" />
+          <img src="@/assets/iamges/good1.png" alt="" />
+          <img src="@/assets/iamges/good1.png" alt="" />
         </div>
       </div>
       <div class="text">违背了会计政策，违背了会计政策</div>

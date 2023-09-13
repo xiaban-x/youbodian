@@ -24,7 +24,7 @@ const isShow = ref(false)
     <div class="top">
       <div class="left">会计</div>
       <div class="right">
-        <img src="src/assets/dictionary/SelectProfession.svg" alt="行业" />
+        <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
       </div>
     </div>
     <Search></Search>
@@ -36,7 +36,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="src/assets/training/MiswordNotebook.svg" alt="错词本" />
+              <img src="@/assets/training/MiswordNotebook.svg" alt="错词本" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 错词本 </template>
@@ -45,7 +45,7 @@ const isShow = ref(false)
             <!-- 图片插槽 -->
             <template #image>
               <img
-                src="src/assets/training/CollectedEdition.svg"
+                src="@/assets/training/CollectedEdition.svg"
                 alt="收藏本"
               />
             </template>
@@ -55,7 +55,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="src/assets/training/NoteBook.svg" alt="笔记本" />
+              <img src="@/assets/training/NoteBook.svg" alt="笔记本" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 笔记本 </template>
@@ -63,7 +63,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="src/assets/training/ProblemRecord.svg" alt="做题记录" />
+              <img src="@/assets/training/ProblemRecord.svg" alt="做题记录" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 做题记录 </template>
@@ -245,7 +245,7 @@ const isShow = ref(false)
       <template #footer>
         <LeftImgRightTwoDiv :ImgColor="PracticalTest">
           <template #image>
-            <img src="src/assets/training/PracticalTest.svg" alt="Image" />
+            <img src="@/assets/training/PracticalTest.svg" alt="Image" />
           </template>
           <template #title> 真题实战 </template>
           <template #content> 真题模拟，提前磨练，有效实战 </template>
@@ -258,7 +258,7 @@ const isShow = ref(false)
         <LeftImgRightTwoDiv :ImgColor="ReinforcementLearning">
           <template #image>
             <img
-              src="src/assets/training/ReinforcementLearning.svg"
+              src="@/assets/training/ReinforcementLearning.svg"
               alt="Image"
             />
           </template>

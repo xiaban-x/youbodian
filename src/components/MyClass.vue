@@ -1,6 +1,6 @@
 <template>
   <div class="my-class">
-    <img class="my-class-image" src="src/assets/iamges/my-class.jpg" />
+    <img class="my-class-image" src="@/assets/iamges/my-class.jpg" />
     <div class="my-class-container">
       <div class="my-class-title">会计基础班</div>
       <div class="my-class-text">0基础门槛，帮助小白快速上手</div>
