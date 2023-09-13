@@ -19,7 +19,7 @@ const active = ref(0)
     </div>
     <!-- 头部 -->
 
-    <img class="head-image" src="@/assets/iamges/score-head.jpg" />
+    <img class="head-image" src="@/assets/images/score-head.jpg" />
 
     <!-- 推荐课程 -->
     <div class="recommended-course">

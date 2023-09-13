@@ -61,6 +61,30 @@ const router = createRouter({
       component: () => import('@/views/dictionary/SearchByTrans.vue')
     },
     {
+      path: '/searchByTransDetail',
+      component: () => import('@/views/dictionary/SearchByTransDetail.vue')
+    },
+    {
+      path: '/bilingualExamplePage',
+      component: () => import('@/views/dictionary/BilingualExamplePage.vue')
+    },
+    {
+      path: '/realTestPage',
+      component: () => import('@/views/dictionary/RealTestPage.vue')
+    },
+    {
+      path: '/errorCorrPage',
+      component: () => import('@/views/dictionary/ErrorCorrPage.vue')
+    },
+    {
+      path: '/exchangeGlossary',
+      component: () => import('@/views/dictionary/ExchangeGlossary.vue')
+    },
+    {
+      path: '/learnGlossaryPage',
+      component: () => import('@/views/dictionary/LearnGlossaryPage.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',

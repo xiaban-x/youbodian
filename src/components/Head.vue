@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <div class="head-left">
-      <img src="@/assets/iamges/return.jpg" alt="" @click="goBack"/>
+      <img src="@/assets/images/return.jpg" alt="" @click="goBack" />
     </div>
     <div class="head-right">
       <slot></slot>
@@ -13,10 +13,10 @@
 export default {
   methods: {
     goBack() {
-      this.$router.go(-1); // 返回上一页
+      this.$router.go(-1) // 返回上一页
     }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>

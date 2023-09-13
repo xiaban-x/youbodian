@@ -1,17 +1,14 @@
 <template>
   <div class="my-class">
-    <img class="my-class-image" src="@/assets/images/my-class.jpg" />
+    <img class="my-class-image" src="src/assets/dictionary/GlossaryImg.png" />
     <div class="my-class-container">
-      <div class="my-class-title">会计基础班</div>
-      <div class="my-class-text">0基础门槛，帮助小白快速上手</div>
-      <div class="my-class-price">￥400</div>
+      <div class="my-class-title">TOEFL必备词汇</div>
+      <div class="my-class-text">4264词</div>
     </div>
   </div>
 </template>
 
-<script>
-export default {}
-</script>
+<script setup></script>
 
 <style lang="less" scoped>
 .my-class {
@@ -22,11 +19,9 @@ export default {}
   }
 }
 .my-class .my-class-image {
-  width: 79px;
-  height: 91px;
   background: linear-gradient(0deg, #e0f8ec 0%, #e0f8ec 100%);
   border-radius: 5px;
-  margin: 12px 11px 0 12px;
+  margin: 12px 15px 12px 0;
 }
 
 .my-class .my-class-title {

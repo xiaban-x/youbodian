@@ -23,8 +23,7 @@
     </table>
   </div>
 </template>
-  
-  <style scoped>
+<style scoped>
 table {
   width: 100%;
   border-collapse: collapse;
@@ -76,4 +75,3 @@ input[type='radio']:checked + .dot-label::before {
   border-radius: 9999px;
 }
 </style>
-  

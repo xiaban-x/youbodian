@@ -8,8 +8,8 @@ import GMAT from '@/assets/dictionary/GMAT.png'
 import TOEFL from '@/assets/dictionary/TOEFL.png'
 import { ref } from 'vue'
 import Btn146 from '@/components/Btn146.vue'
-import Search from '@/components/Search.vue';
-import ImageUrlLearn from "@/assets/dictionary/VerticalBarGreen.svg"
+import Search from '@/components/Search.vue'
+// import ImageUrlLearn from "@/assets/dictionary/VerticalBarGreen.svg"
 // const pay = ref('linear-gradient(to left,#FF7438, #FF9472)')
 // const pay = ref('linear-gradient(to right, #FF7438, #FF9472)')
 // const free = ref('linear-gradient(to left,#11D075, #C0FFE1)')
@@ -23,7 +23,7 @@ const backgroundColorLearn = ref('#E9FFF4') // 背景颜色
 const textColorOneLearn = ref('#11D075')
 const textColorTwo = ref('#666666')
 const buttonTextReview = ref('复习')
-const imageUrlReview = ref('@/assets/dictionary/VerticalBarOrange.svg')
+// const imageUrlReview = ref('@/assets/dictionary/VerticalBarOrange.svg')
 const additionalTextReview = ref('待复习45')
 const backgroundColorReview = ref('#FFF9F8') // 背景颜色
 const textColorOneReview = ref('#1890FF')
@@ -47,10 +47,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img
-                src="@/assets/dictionary/VocabularyBook.png"
-                alt="单词本"
-              />
+              <img src="@/assets/dictionary/VocabularyBook.png" alt="单词本" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 单词本 </template>

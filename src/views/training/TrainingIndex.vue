@@ -44,10 +44,7 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img
-                src="@/assets/training/CollectedEdition.svg"
-                alt="收藏本"
-              />
+              <img src="@/assets/training/CollectedEdition.svg" alt="收藏本" />
             </template>
             <!-- 文字插槽 -->
             <template #text> 收藏本 </template>
@@ -69,8 +66,8 @@ const isShow = ref(false)
             <template #text> 做题记录 </template>
           </ImgSpanOne>
         </div>
-      </template></SpanDivOne
-    >
+      </template>
+    </SpanDivOne>
     <SpanDivOne>
       <template #header> 每日学习打卡 </template>
       <template #footer>
@@ -239,34 +236,34 @@ const isShow = ref(false)
           </div>
         </template>
       </SpanDivOne>
+      <SpanDivOne>
+        <template #header> 历年真题 </template>
+        <template #footer>
+          <LeftImgRightTwoDiv :ImgColor="PracticalTest">
+            <template #image>
+              <img src="@/assets/training/PracticalTest.svg" alt="Image" />
+            </template>
+            <template #title> 真题实战 </template>
+            <template #content> 真题模拟，提前磨练，有效实战 </template>
+          </LeftImgRightTwoDiv>
+        </template>
+      </SpanDivOne>
+      <SpanDivOne>
+        <template #header> 强化练习 </template>
+        <template #footer>
+          <LeftImgRightTwoDiv :ImgColor="ReinforcementLearning">
+            <template #image>
+              <img
+                src="@/assets/training/ReinforcementLearning.svg"
+                alt="Image"
+              />
+            </template>
+            <template #title> 自由联系 </template>
+            <template #content> 考前检测，加强提升 </template>
+          </LeftImgRightTwoDiv>
+        </template>
+      </SpanDivOne>
     </div>
-    <SpanDivOne>
-      <template #header> 历年真题 </template>
-      <template #footer>
-        <LeftImgRightTwoDiv :ImgColor="PracticalTest">
-          <template #image>
-            <img src="@/assets/training/PracticalTest.svg" alt="Image" />
-          </template>
-          <template #title> 真题实战 </template>
-          <template #content> 真题模拟，提前磨练，有效实战 </template>
-        </LeftImgRightTwoDiv>
-      </template>
-    </SpanDivOne>
-    <SpanDivOne>
-      <template #header> 强化练习 </template>
-      <template #footer>
-        <LeftImgRightTwoDiv :ImgColor="ReinforcementLearning">
-          <template #image>
-            <img
-              src="@/assets/training/ReinforcementLearning.svg"
-              alt="Image"
-            />
-          </template>
-          <template #title> 自由联系 </template>
-          <template #content> 考前检测，加强提升 </template>
-        </LeftImgRightTwoDiv>
-      </template>
-    </SpanDivOne>
   </div>
 </template>
 
@@ -396,7 +393,6 @@ const isShow = ref(false)
   }
   .max375 {
     width: 375px;
-
     .basicProblemHeaderTitle {
       /* 样式可以按需调整 */
       width: 366px;
@@ -520,8 +516,8 @@ const isShow = ref(false)
       }
     }
   }
-}
-p {
-  width: 56px;
+  p {
+    width: 56px;
+  }
 }
 </style>
