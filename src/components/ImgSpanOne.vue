@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="container">
+  <div class="ISOContainer">
     <slot name="image"></slot>
     <!-- 图片插槽 -->
     <div class="introduce">
@@ -11,7 +11,7 @@
 </template>
 
 <style scoped>
-.container {
+.ISOContainer {
   background-color: #fff;
   display: flex;
   flex-direction: column; /* 垂直分布 */

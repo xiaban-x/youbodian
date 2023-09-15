@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import ClassMain from '@/components/ClassMain.vue'
 
 const router = useRouter()
 const active = ref(0)
@@ -19,7 +20,7 @@ const active = ref(0)
     </div>
     <!-- 头部 -->
 
-    <img class="head-image" src="@/assets/images/score-head.jpg" />
+    <img class="head-image" src="@/assets/images/score-head.png" />
 
     <!-- 推荐课程 -->
     <div class="recommended-course">

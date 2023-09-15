@@ -5,7 +5,7 @@ const router = useRouter()
 </script>
 <template>
   <!-- <div>这是我的资料</div> -->
-  <div>
+  <div class="container">
     <div class="clickLog">
       <div class="headPicture">
         <img src="@/assets/images/NotAvatar.png" alt="" />
@@ -15,19 +15,35 @@ const router = useRouter()
     </div>
     <div class="message" @click="router.push('personalInformation')">
       <div class="box">
-        <img src="@/assets/images/MemberRegister.png" alt="" />
+        <img
+          src="@/assets/images/MemberRegister.png"
+          style="height: 41px; width: 41px"
+          alt=""
+        />
         <div class="text">个人信息</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/logging.png" alt="" />
+        <img
+          src="@/assets/images/logging.png"
+          style="height: 41px; width: 41px"
+          alt=""
+        />
         <div class="text">意见反馈</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/behaviorAnalysis.png" alt="" />
+        <img
+          src="@/assets/images/behaviorAnalysis.png"
+          style="height: 41px; width: 41px"
+          alt=""
+        />
         <div class="text">系统设置</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/memberEntry.png" alt="" />
+        <img
+          src="@/assets/images/memberEntry.png"
+          style="height: 41px; width: 41px"
+          alt=""
+        />
         <div class="text">邀请注册</div>
       </div>
     </div>
@@ -36,23 +52,43 @@ const router = useRouter()
     <div class="title">商城</div>
     <div class="market">
       <div class="box">
-        <img src="@/assets/images/BriefCase.png" alt="" />
+        <img
+          src="@/assets/images/BriefCase.png"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <div class="text">我的钱包</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/finance.png" alt="" />
+        <img
+          src="@/assets/images/finance.png"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <div class="text">购买套餐</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/publish.png" alt="" />
+        <img
+          src="@/assets/images/publish.png"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <div class="text">我的订单</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/exam.png" alt="" />
+        <img
+          src="@/assets/images/exam.png"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <div class="text">我的分销</div>
       </div>
       <div class="box">
-        <img src="@/assets/images/Certification.png" alt="" />
+        <img
+          src="@/assets/images/Certification.png"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <div class="text">我的报名</div>
       </div>
     </div>
@@ -60,6 +96,9 @@ const router = useRouter()
 </template>
 
 <style scoped>
+.container {
+  height: 100vh;
+}
 .clickLog {
   background: linear-gradient(to bottom, #c3feda, #ffffff);
   width: 100%;

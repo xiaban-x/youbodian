@@ -75,7 +75,7 @@ const inputRef = ref(null)
   .inp {
     border: none; /* Remove border */
     outline: none; /* Remove outline */
-    color: #bebebe;
+    color: #000;
     font-size: 14px;
     font-weight: 400;
     word-wrap: break-word;

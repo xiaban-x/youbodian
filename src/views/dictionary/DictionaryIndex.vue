@@ -45,7 +45,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/dictionary/VocabularyBook.png" alt="单词本" />
+              <img
+                src="@/assets/dictionary/VocabularyBook.png"
+                style="width: 38px; height: 38px"
+                alt="单词本"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 单词本 </template>
@@ -53,7 +57,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/dictionary/MiswordBook.png" alt="错词本" />
+              <img
+                src="@/assets/dictionary/MiswordBook.png"
+                style="width: 38px; height: 38px"
+                alt="错词本"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 错词本 </template>
@@ -63,6 +71,7 @@ const isShow = ref(false)
             <template #image>
               <img
                 src="@/assets/dictionary/CollectedEdition.png"
+                style="width: 38px; height: 38px"
                 alt="收藏本"
               />
             </template>
@@ -72,7 +81,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/dictionary/NoteBook.png" alt="笔记本" />
+              <img
+                src="@/assets/dictionary/NoteBook.png"
+                style="width: 38px; height: 38px"
+                alt="笔记本"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 笔记本 </template>
@@ -240,13 +253,10 @@ const isShow = ref(false)
             </template>
           </ImgUpperRightText>
           <div class="plus">
-            <img src="@/assets/dictionary/Blank.png" alt="空白" />
-            <div class="plusInner">
-              <div class="plusInnerImg">
-                <img src="@/assets/dictionary/Plus.png" alt="加号" />
-              </div>
-              <div class="plusInnerText">添加生词本</div>
+            <div class="plusInnerImg">
+              <img src="@/assets/dictionary/Plus.png" alt="加号" />
             </div>
+            <div class="plusInnerText">添加生词本</div>
           </div>
         </div>
       </template>
@@ -280,7 +290,7 @@ const isShow = ref(false)
 .container {
   width: 347px;
   margin-left: 14px;
-
+  height: 115vh;
   /*.book {*/
   /*  display: flex;*/
   /*  flex-direction: row; !* 水平分布 *!*/
@@ -354,20 +364,19 @@ const isShow = ref(false)
           display: flex;
           flex-direction: row;
           margin-bottom: 4px;
+          justify-content: space-between;
           width: 200px;
           .progressName {
             color: #292929;
             font-size: 12px;
             font-weight: 400;
             word-wrap: break-word;
-            width: 60px;
           }
           .progressNum {
             color: #666666;
             font-size: 12px;
             font-weight: 400;
             word-wrap: break-word;
-            margin-left: 104px;
           }
         }
         .progress {
@@ -471,23 +480,20 @@ const isShow = ref(false)
   /* 如果需要控制每个组件的宽度，可以添加以下样式 */
 
   .plus {
-    position: relative;
-    .plusInner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      .plusInnerImg {
-        margin-left: 20px;
-      }
-      .plusInnerText {
-        color: #666666;
-        font-size: 10px;
-        font-weight: 400;
-        word-wrap: break-word;
-        width: 60px;
-        margin-right: 14px;
-      }
+    width: 98px;
+    height: 126px;
+    background-color: #fafafa;
+    border: 0.5px #e7e7e7 solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .plusInnerText {
+      color: #666666;
+      font-size: 10px;
+      font-weight: 400;
+      word-wrap: break-word;
     }
   }
 }

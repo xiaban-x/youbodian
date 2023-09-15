@@ -24,7 +24,11 @@ const isShow = ref(false)
     <div class="top">
       <div class="left">会计</div>
       <div class="right">
-        <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
+        <img
+          src="@/assets/dictionary/SelectProfession.svg"
+          style="width: 38px; height: 38px"
+          alt="行业"
+        />
       </div>
     </div>
     <Search></Search>
@@ -36,7 +40,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/training/MiswordNotebook.svg" alt="错词本" />
+              <img
+                src="@/assets/training/MiswordNotebook.png"
+                style="width: 38px; height: 38px"
+                alt="错词本"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 错词本 </template>
@@ -44,7 +52,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/training/CollectedEdition.svg" alt="收藏本" />
+              <img
+                src="@/assets/training/CollectedEdition.png"
+                style="width: 38px; height: 38px"
+                alt="收藏本"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 收藏本 </template>
@@ -52,7 +64,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/training/NoteBook.svg" alt="笔记本" />
+              <img
+                src="@/assets/training/NoteBook.png"
+                style="width: 38px; height: 38px"
+                alt="笔记本"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 笔记本 </template>
@@ -60,7 +76,11 @@ const isShow = ref(false)
           <ImgSpanOne>
             <!-- 图片插槽 -->
             <template #image>
-              <img src="@/assets/training/ProblemRecord.svg" alt="做题记录" />
+              <img
+                src="@/assets/training/ProblemRecord.png"
+                style="width: 38px; height: 38px"
+                alt="做题记录"
+              />
             </template>
             <!-- 文字插槽 -->
             <template #text> 做题记录 </template>
@@ -293,6 +313,7 @@ const isShow = ref(false)
 .container {
   width: 347px;
   padding-left: 14px;
+  padding-bottom: 100px;
   /*.book {*/
   /*  display: flex;*/
   /*  flex-direction: row; !* 水平分布 *!*/
@@ -366,20 +387,19 @@ const isShow = ref(false)
           display: flex;
           flex-direction: row;
           margin-bottom: 4px;
+          justify-content: space-between;
           width: 200px;
           .progressName {
             color: #292929;
             font-size: 12px;
             font-weight: 400;
             word-wrap: break-word;
-            width: 60px;
           }
           .progressNum {
             color: #666666;
             font-size: 12px;
             font-weight: 400;
             word-wrap: break-word;
-            margin-left: 104px;
           }
         }
         .progress {

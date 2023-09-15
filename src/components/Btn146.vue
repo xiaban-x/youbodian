@@ -37,6 +37,7 @@ const buttonStyle = computed(() => {
   height: 34px;
   border-radius: 30px;
   color: white;
+  font-size: 14px;
   cursor: pointer;
   user-select: none;
 }
@@ -47,7 +48,6 @@ const buttonStyle = computed(() => {
   font-weight: 400;
   word-wrap: break-word;
   white-space: nowrap; /* 防止文字换行 */
-  overflow: hidden; /* 防止文字溢出 */
   text-overflow: ellipsis; /* 超出部分显示省略号 */
 }
 
