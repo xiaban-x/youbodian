@@ -292,8 +292,7 @@ const isShow = ref(false)
 }
 .container {
   width: 347px;
-  margin-left: 14px;
-  overflow: visible; /* 允许内容超出容器 */
+  padding-left: 14px;
   /*.book {*/
   /*  display: flex;*/
   /*  flex-direction: row; !* 水平分布 *!*/
@@ -392,10 +391,9 @@ const isShow = ref(false)
     }
   }
   .max375 {
-    width: 375px;
     .basicProblemHeaderTitle {
       /* 样式可以按需调整 */
-      width: 366px;
+      width: 347px;
       color: #292929;
       font-size: 16px;
       font-weight: 500;
@@ -404,22 +402,19 @@ const isShow = ref(false)
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
       border: 1px solid #fff;
-      margin-left: -10px;
-      padding-left: 11px;
       padding-top: 9px;
       padding-bottom: 8px;
     }
     .basicProblemContainer {
-      width: 366px;
+      width: 347px;
       display: flex;
       background-color: #fff;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       border: 1px solid #fff;
-      margin-left: -10px;
       .basicProblem {
         margin-left: 11px;
-        width: 168px;
+        width: 157px;
         height: 165px;
         margin-bottom: 20px;
 

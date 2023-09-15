@@ -2,7 +2,12 @@
   <div>
     <Head>修改昵称</Head>
     <div class="changing-nickname">
-      <input class="new-nickname" maxlength="11" placeholder="我的城市没有海" type="text" />
+      <input
+        class="new-nickname"
+        maxlength="11"
+        placeholder="我的城市没有海"
+        type="text"
+      />
     </div>
     <div class="change-buttom">
       <BtnGreen message="确认修改"></BtnGreen>
@@ -11,7 +16,11 @@
 </template>
 
 <script>
-export default {}
+import BtnGreen from '@/components/BtnGreen.vue'
+
+export default {
+  components: { BtnGreen }
+}
 </script>
 
 <style scoped>

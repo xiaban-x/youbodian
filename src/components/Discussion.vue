@@ -53,7 +53,7 @@ export default {}
 .evaluate .content .nickname-and-star .nickname {
   color: #666666;
   font-size: 15px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-top: 5px;
@@ -62,7 +62,7 @@ export default {}
 .evaluate .content .nickname-and-star .star {
   color: #666666;
   font-size: 14px;
-  font-family: Roboto;
+
   font-weight: 400;
   word-wrap: break-word;
   float: right;
@@ -71,7 +71,7 @@ export default {}
 .evaluate .content .text {
   color: #020202;
   font-size: 14px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-top: 3px;
@@ -79,7 +79,7 @@ export default {}
 .evaluate .content .time {
   color: #666666;
   font-size: 14px;
-  font-family: Roboto;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-top: 3px;

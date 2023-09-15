@@ -7,7 +7,7 @@
     <Main class="main">
       <slot name="main"></slot>
     </Main>
-    <img class="WPTru" src="src/assets/dictionary/Trumpet.svg" alt="喇叭" />
+    <img class="WPTru" src="@/assets/dictionary/Trumpet.svg" alt="喇叭" />
   </div>
 </template>
 

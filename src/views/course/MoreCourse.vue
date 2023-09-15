@@ -1,3 +1,6 @@
+<script setup>
+import ClassMain from '@/components/ClassMain.vue'
+</script>
 <template>
   <!-- <div>这是备考训练</div> -->
 
@@ -38,7 +41,7 @@
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: url('./@/assets/images/drop-down-arrow.png') no-repeat right 8px
+  background: url('@/assets/images/drop-down-arrow.png') no-repeat right 8px
     center;
 }
 

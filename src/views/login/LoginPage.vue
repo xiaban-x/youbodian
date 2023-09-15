@@ -16,7 +16,7 @@ const showPassword = ref(false)
     <van-nav-bar left-arrow @click-left="router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
-        <img src="../../assets/smallIcon/youbodian4.png" />
+        <img src="@/assets/smallIcon/youbodian4.png" />
       </div>
       <div class="title">
         <h3>邮箱密码登录</h3>
@@ -63,7 +63,7 @@ const showPassword = ref(false)
     <van-nav-bar left-arrow @click-left="router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
-        <img src="../../assets/smallIcon/youbodian4.png" />
+        <img src="@/assets/smallIcon/youbodian4.png" />
       </div>
       <div class="title">
         <h3>帐号密码登录</h3>
@@ -109,7 +109,7 @@ const showPassword = ref(false)
     <van-nav-bar left-arrow @click-left="router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
-        <img src="../../assets/smallIcon/youbodian4.png" />
+        <img src="@/assets/smallIcon/youbodian4.png" />
       </div>
       <div class="title">
         <h3>手机验证码登录</h3>
@@ -153,21 +153,21 @@ const showPassword = ref(false)
       ><img
         @click="router.push('bindPhone')"
         class="loginIcon"
-        src="../../assets/smallIcon/wechatLogin.png"
+        src="@/assets/smallIcon/wechatLogin.png"
         alt="微信登录"
     /></span>
     <span
       ><img
         @click="loginWay = 'password'"
         class="loginIcon"
-        src="../../assets/smallIcon/passwordLogin.png"
+        src="@/assets/smallIcon/passwordLogin.png"
         alt="密码登录"
     /></span>
     <span
       ><img
         @click="loginWay = 'email'"
         class="loginIcon"
-        src="../../assets/smallIcon/emailLogin.png"
+        src="@/assets/smallIcon/emailLogin.png"
         alt="邮箱登录"
     /></span>
   </div>

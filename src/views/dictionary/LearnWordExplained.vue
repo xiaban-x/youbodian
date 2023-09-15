@@ -2,8 +2,8 @@
 import { useRouter } from 'vue-router'
 import WordPronunciation from '@/components/dictionary/WordPronunciation.vue'
 import CorrectNumber from '@/components/dictionary/CorrectNumber.vue'
-import SelectAnswer from '@/components/dictionary/SelectAnswer.vue'
-import Pix40GrayBtn from '@/components/dictionary/Pix40GrayBtn.vue'
+import BilingualExample from '@/components/dictionary/BilingualExample.vue'
+import BtnGreen from '@/components/BtnGreen.vue'
 const router = useRouter()
 </script>
 <template>
@@ -13,7 +13,7 @@ const router = useRouter()
     class="EGNav"
     title="XXX生词本"
   ></van-nav-bar>
-  <div class="container">
+  <div class="LWEContainer">
     <div class="groupLearning">本组学习 &nbsp;0/20</div>
     <div class="word">dictionary</div>
     <div class="line"></div>
@@ -39,27 +39,25 @@ const router = useRouter()
         <span>连续答对1次</span>
       </template>
     </CorrectNumber>
-    <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
-    <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
-    <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
-    <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
-    <Pix40GrayBtn> 不再出现 </Pix40GrayBtn>
-    <Pix40GrayBtn @click="router.push('/learnWordExplained')">
-      查看答案
-    </Pix40GrayBtn>
+
+    <div>中文释义</div>
+    <div class="chineseTrans">n. 字典，词典；专业词典；术语大全...</div>
+    <div class="longDotted"></div>
+    <div class="paragraphTitle">双语例句</div>
+    <BilingualExample class="BEx">
+      <template #header> I looked it up in the dictionary.</template>
+      <template #main> 我在词典里查过这个词。</template>
+      <template #footer> 《牛津词典》</template>
+    </BilingualExample>
+    <BilingualExample class="BEx">
+      <template #header> I looked it up in the dictionary.</template>
+      <template #main> 我在词典里查过这个词。</template>
+      <template #footer> 《牛津词典》</template>
+    </BilingualExample>
+    <div class="longDotted"></div>
+    <div class="moreExplain">查看详细释义 &nbsp; ></div>
+    <BtnGreen message="下个单词" @click="router.push('/nextWord')"></BtnGreen>
   </div>
 </template>
 
-<style scoped>
-.EGNav {
-  background-color: #fff;
-}
-</style>
+<style scoped></style>

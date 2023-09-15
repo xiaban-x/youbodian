@@ -1,6 +1,6 @@
 <template>
   <div class="SAText">
-    <slot name="SAText"></slot>
+    <slot></slot>
   </div>
 </template>
 
@@ -15,5 +15,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-left: 61px;
+  padding-top: 13px;
 }
 </style>

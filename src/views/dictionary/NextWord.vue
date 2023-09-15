@@ -1,11 +1,11 @@
 <script setup>
 import { useRouter } from 'vue-router'
-import WordPronunciation from '@/components/dictionary/WordPronunciation.vue'
 import CorrectNumber from '@/components/dictionary/CorrectNumber.vue'
 import SelectAnswer from '@/components/dictionary/SelectAnswer.vue'
 import Pix40GrayBtn from '@/components/dictionary/Pix40GrayBtn.vue'
 const router = useRouter()
 </script>
+
 <template>
   <van-nav-bar
     left-arrow
@@ -13,18 +13,10 @@ const router = useRouter()
     class="EGNav"
     title="XXX生词本"
   ></van-nav-bar>
-  <div class="container">
+  <div class="LWEContainer">
     <div class="groupLearning">本组学习 &nbsp;0/20</div>
     <div class="word">dictionary</div>
     <div class="line"></div>
-    <WordPronunciation class="SBTDPro">
-      <template #header>英</template>
-      <template #main>/ ˈdɪkʃən(ə)ri /</template>
-    </WordPronunciation>
-    <WordPronunciation class="SBTDPro">
-      <template #header>美</template>
-      <template #main>/ ˈdɪkʃən(ə)ri /</template>
-    </WordPronunciation>
     <CorrectNumber>
       <template v-slot:go1>
         <!-- 放入图片或其他内容 -->
@@ -39,18 +31,19 @@ const router = useRouter()
         <span>连续答对1次</span>
       </template>
     </CorrectNumber>
+
     <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
+      Perpare
+    </SelectAnswer>
     <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
+      Perpare
+    </SelectAnswer>
     <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
+      Perpare
+    </SelectAnswer>
     <SelectAnswer @click="router.push('/learnWordExplained')">
-      adi.突然的，意外的;唐突的，鲁莽的</SelectAnswer
-    >
+      Perpare
+    </SelectAnswer>
     <Pix40GrayBtn> 不再出现 </Pix40GrayBtn>
     <Pix40GrayBtn @click="router.push('/learnWordExplained')">
       查看答案
@@ -58,8 +51,4 @@ const router = useRouter()
   </div>
 </template>
 
-<style scoped>
-.EGNav {
-  background-color: #fff;
-}
-</style>
+<style scoped></style>

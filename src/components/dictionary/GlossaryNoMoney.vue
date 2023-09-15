@@ -1,6 +1,6 @@
 <template>
   <div class="my-class">
-    <img class="my-class-image" src="src/assets/dictionary/GlossaryImg.png" />
+    <img class="my-class-image" src="@/assets/dictionary/GlossaryImg.png" />
     <div class="my-class-container">
       <div class="my-class-title">TOEFL必备词汇</div>
       <div class="my-class-text">4264词</div>

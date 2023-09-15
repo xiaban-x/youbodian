@@ -8,26 +8,26 @@ const router = useRouter()
   <div>
     <div class="clickLog">
       <div class="headPicture">
-        <img src="../../assets/images/NotAvatar.png" alt="" />
+        <img src="@/assets/images/NotAvatar.png" alt="" />
       </div>
       <button class="name" @click="router.push('login')">请点击登录</button>
       <div class="lookMore">&gt;</div>
     </div>
     <div class="message" @click="router.push('personalInformation')">
       <div class="box">
-        <img src="../../assets/images/MemberRegister.png" alt="" />
+        <img src="@/assets/images/MemberRegister.png" alt="" />
         <div class="text">个人信息</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/logging.png" alt="" />
+        <img src="@/assets/images/logging.png" alt="" />
         <div class="text">意见反馈</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/behaviorAnalysis.png" alt="" />
+        <img src="@/assets/images/behaviorAnalysis.png" alt="" />
         <div class="text">系统设置</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/memberEntry.png" alt="" />
+        <img src="@/assets/images/memberEntry.png" alt="" />
         <div class="text">邀请注册</div>
       </div>
     </div>
@@ -36,23 +36,23 @@ const router = useRouter()
     <div class="title">商城</div>
     <div class="market">
       <div class="box">
-        <img src="../../assets/images/BriefCase.png" alt="" />
+        <img src="@/assets/images/BriefCase.png" alt="" />
         <div class="text">我的钱包</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/finance.png" alt="" />
+        <img src="@/assets/images/finance.png" alt="" />
         <div class="text">购买套餐</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/publish.png" alt="" />
+        <img src="@/assets/images/publish.png" alt="" />
         <div class="text">我的订单</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/exam.png" alt="" />
+        <img src="@/assets/images/exam.png" alt="" />
         <div class="text">我的分销</div>
       </div>
       <div class="box">
-        <img src="../../assets/images/Certification.png" alt="" />
+        <img src="@/assets/images/Certification.png" alt="" />
         <div class="text">我的报名</div>
       </div>
     </div>
@@ -95,7 +95,7 @@ const router = useRouter()
   display: block;
   color: #292929;
   font-size: 16px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   float: right;
@@ -126,7 +126,7 @@ const router = useRouter()
 .message .box .text {
   color: #292929;
   font-size: 14px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-top: 14px;
@@ -134,7 +134,7 @@ const router = useRouter()
 .title {
   color: #292929;
   font-size: 16px;
-  font-family: Source Han Sans CN;
+
   font-weight: 500;
   word-wrap: break-word;
   margin: 17px 0 0 14px;
@@ -165,7 +165,7 @@ const router = useRouter()
 }
 .market .box .text {
   color: #292929;
-  font-family: Source Han Sans CN;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

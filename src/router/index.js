@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 // createRouter 创建路由实例，===> new VueRouter()
 // 1. history模式: createWebHistory()   http://xxx/user
 // 2. hash模式: createWebHashHistory()  http://xxx/#/user
@@ -9,7 +9,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 // 如果将来你部署的域名路径是：http://xxx/my-path/user
 // vite.config.ts  添加配置  base: my-path，路由这就会加上 my-path 前缀了
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/login', component: () => import('@/views/login/LoginPage.vue') }, // 登录页
     {
@@ -83,6 +83,14 @@ const router = createRouter({
     {
       path: '/learnGlossaryPage',
       component: () => import('@/views/dictionary/LearnGlossaryPage.vue')
+    },
+    {
+      path: '/learnWordExplained',
+      component: () => import('@/views/dictionary/LearnWordExplained.vue')
+    },
+    {
+      path: '/nextWord',
+      component: () => import('@/views/dictionary/NextWord.vue')
     },
     {
       path: '/',

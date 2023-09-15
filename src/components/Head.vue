@@ -40,7 +40,7 @@ export default {
   display: inline-block;
   text-align: center;
   color: #292929;
-  font-family: Source Han Sans CN;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

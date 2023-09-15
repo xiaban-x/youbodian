@@ -9,21 +9,19 @@ import TOEFL from '@/assets/dictionary/TOEFL.png'
 import { ref } from 'vue'
 import Btn146 from '@/components/Btn146.vue'
 import Search from '@/components/Search.vue'
-// import ImageUrlLearn from "@/assets/dictionary/VerticalBarGreen.svg"
-// const pay = ref('linear-gradient(to left,#FF7438, #FF9472)')
-// const pay = ref('linear-gradient(to right, #FF7438, #FF9472)')
-// const free = ref('linear-gradient(to left,#11D075, #C0FFE1)')
-// const free = ref('rgb(100,0,0)')
+import vBG from '@/assets/dictionary/VerticalBarGreen.svg'
+import vBO from '@/assets/dictionary/VerticalBarOrange.svg'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const buttonTextLearn = ref('学习')
-// const imageUrlLearn = ref('@/assets/dictionary/VerticalBarGreen.svg')
+
+const verticalBarGreen = ref(vBG)
 const additionalTextLearn = ref('待学习45')
 const backgroundColorLearn = ref('#E9FFF4') // 背景颜色
 const textColorOneLearn = ref('#11D075')
 const textColorTwo = ref('#666666')
 const buttonTextReview = ref('复习')
-// const imageUrlReview = ref('@/assets/dictionary/VerticalBarOrange.svg')
+const verticalBarOrange = ref(vBO)
 const additionalTextReview = ref('待复习45')
 const backgroundColorReview = ref('#FFF9F8') // 背景颜色
 const textColorOneReview = ref('#1890FF')
@@ -169,7 +167,7 @@ const isShow = ref(false)
             <Btn146
               @click="router.push('learnGlossaryPage')"
               :buttonText="buttonTextLearn"
-              imageUrl="./src/assets/dictionary/VerticalBarGreen.svg"
+              :imageUrl="verticalBarGreen"
               :additionalText="additionalTextLearn"
               :backgroundColor="backgroundColorLearn"
               :textColorOne="textColorOneLearn"
@@ -180,7 +178,7 @@ const isShow = ref(false)
               ><Btn146
                 @click="router.push('learnGlossaryPage')"
                 :buttonText="buttonTextReview"
-                imageUrl="./src/assets/dictionary/VerticalBarOrange.svg"
+                :imageUrl="verticalBarOrange"
                 :additionalText="additionalTextReview"
                 :backgroundColor="backgroundColorReview"
                 :textColorOne="textColorOneReview"

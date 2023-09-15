@@ -110,7 +110,7 @@ const active = ref(0)
 .recommended-course .recommended-course-title {
   color: #292929;
   font-size: 16px;
-  font-family: Source Han Sans CN;
+
   font-weight: 500;
   word-wrap: break-word;
   float: left;
@@ -119,7 +119,7 @@ const active = ref(0)
 .recommended-course .recommended-course-more {
   color: #666666;
   font-size: 14px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-right: 15px;
@@ -147,7 +147,7 @@ const active = ref(0)
 <style lang="less">
 .order-tabs .van-tab {
   color: #666;
-  font-family: Source Han Sans CN;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -156,7 +156,7 @@ const active = ref(0)
 }
 .order-tabs .van-tab--active {
   color: #292929;
-  font-family: Source Han Sans CN;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

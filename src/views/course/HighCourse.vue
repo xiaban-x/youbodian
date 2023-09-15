@@ -1,5 +1,12 @@
 <script>
+import Discussion from '@/components/Discussion.vue'
+import { ref } from 'vue'
 export default {
+  components: { Discussion },
+  setup() {
+    const active = ref(0)
+    return { active }
+  },
   data() {
     return {
       showbuy: false
@@ -76,11 +83,11 @@ export default {
     <!-- 底部分享和按钮 -->
     <div class="share">
       <img
-        src="../../assets/images/CustomerServiceHeadset.png"
+        src="@/assets/images/CustomerServiceHeadset.png"
         alt=""
         class="service"
       />
-      <img src="../../assets/images/share.png" alt="" class="sharelink" />
+      <img src="@/assets/images/share.png" alt="" class="sharelink" />
       <button @click="buy">
         <div class="buttontext">立即购买</div>
       </button>
@@ -136,7 +143,7 @@ export default {
 .title-small {
   color: #292929;
   font-size: 14px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin: 11px 0 0 14px;
@@ -144,7 +151,7 @@ export default {
 .buy .main-text {
   color: #666666;
   font-size: 12px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin: 5px 0 0 14px;
@@ -153,7 +160,7 @@ export default {
 .buy .price {
   color: #ff5c5c;
   font-size: 14px;
-  font-family: Roboto;
+
   font-weight: 400;
   word-wrap: break-word;
   float: right;
@@ -196,7 +203,7 @@ export default {
 }
 .share button .buttontext {
   color: #fff;
-  font-family: Source Han Sans CN;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -252,7 +259,7 @@ template {
 .bottom .click .text {
   color: #292929;
   font-size: 14px;
-  font-family: Source Han Sans CN;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-top: 15px;

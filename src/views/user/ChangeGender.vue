@@ -61,7 +61,6 @@ input[type='radio'] {
   height: 14px; /* 控制小圆点的高度 */
   background-color: white; /* 空心圆的背景颜色 */
   text-align: center;
-  line-height: px; /* 垂直居中文字 */
 }
 
 /* 自定义选中状态下的打勾样式 */

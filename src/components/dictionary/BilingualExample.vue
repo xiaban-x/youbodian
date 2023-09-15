@@ -2,7 +2,7 @@
 
 <template>
   <div class="BEContainer">
-    <img src="src/assets/dictionary/Trumpet.svg" alt="喇叭" />
+    <img src="@/assets/dictionary/Trumpet.svg" alt="喇叭" />
     <div class="BEText">
       <Header class="header">
         <slot name="header"></slot>

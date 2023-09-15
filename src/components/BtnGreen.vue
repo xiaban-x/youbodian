@@ -34,6 +34,7 @@ defineProps({
   border: 1px solid #0a904b; /* 添加边框并调整颜色 */
   backdrop-filter: blur(4px);
   color: #fff;
+  font-weight: bold;
   margin-top: 28px;
 }
 </style>

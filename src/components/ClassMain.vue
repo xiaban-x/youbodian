@@ -36,7 +36,7 @@ export default {}
 
 .class-main .title-small {
   color: #292929;
-  font-family: Source Han Sans CN;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +46,7 @@ export default {}
 
 .class-main .main-text {
   color: #666;
-  font-family: Source Han Sans CN;
+
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -61,7 +61,7 @@ export default {}
 .class-main .price {
   color: #ff5c5c;
   font-size: 14px;
-  font-family: Roboto;
+
   font-weight: 400;
   word-wrap: break-word;
   margin-left: 14px;
@@ -69,7 +69,7 @@ export default {}
 }
 .class-main .buyers {
   color: #999;
-  font-family: Source Han Sans CN;
+
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

@@ -18,7 +18,7 @@ const border = ref('1px solid #fff')
     ></van-nav-bar>
     <img
       class="SBTDHImg"
-      src="src/assets/dictionary/ErrorCorrection.svg"
+      src="@/assets/dictionary/ErrorCorrection.svg"
       alt="纠错"
       @click="router.push('ErrorCorrPage')"
     />
@@ -130,19 +130,19 @@ const border = ref('1px solid #fff')
                 <div class="noteAndCol">
                   <div class="noteAndColCon">
                     <div class="img">
-                      <img src="src/assets/dictionary/Notes.svg" alt="笔记" />
+                      <img src="@/assets/dictionary/Notes.svg" alt="笔记" />
                     </div>
                     <div class="text1">笔记3.9万</div>
                   </div>
                   <div>
                     <img
-                      src="src/assets/dictionary/VerticalPole.svg"
+                      src="@/assets/dictionary/VerticalPole.svg"
                       alt="竖杆"
                     />
                   </div>
                   <div class="noteAndColCon">
                     <div class="img">
-                      <img src="src/assets/dictionary/Collect.svg" alt="收藏" />
+                      <img src="@/assets/dictionary/Collect.svg" alt="收藏" />
                     </div>
                     <div class="text2">收藏4.5万</div>
                   </div>
@@ -172,21 +172,21 @@ const border = ref('1px solid #fff')
                 <div class="noteAndCol">
                   <div class="noteAndColCon">
                     <div class="img">
-                      <img src="src/assets/dictionary/Notes.svg" alt="笔记" />
+                      <img src="@/assets/dictionary/Notes.svg" alt="笔记" />
                     </div>
                     <div class="text1">笔记3.9万</div>
                   </div>
                   <div>
                     <div>
                       <img
-                        src="src/assets/dictionary/VerticalPole.svg"
+                        src="@/assets/dictionary/VerticalPole.svg"
                         alt="竖杆"
                       />
                     </div>
                   </div>
                   <div class="noteAndColCon">
                     <div class="img">
-                      <img src="src/assets/dictionary/Collect.svg" alt="收藏" />
+                      <img src="@/assets/dictionary/Collect.svg" alt="收藏" />
                     </div>
                     <div class="text2">收藏4.5万</div>
                   </div>

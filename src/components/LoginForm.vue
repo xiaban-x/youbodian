@@ -8,7 +8,7 @@ export default {
     <van-nav-bar left-arrow @click-left="$router.go(-1)" />
     <div class="container">
       <div class="youbodianLogin">
-        <img src="../../assets/smallIcon/youbodian4.png" />
+        <img src="@/assets/smallIcon/youbodian4.png" />
       </div>
       <div class="title">
         <h3>邮箱密码登录</h3>
