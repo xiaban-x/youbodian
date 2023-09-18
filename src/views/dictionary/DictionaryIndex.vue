@@ -153,7 +153,7 @@ const isShow = ref(false)
         <div class="wordMemoryHeader">
           <div class="wordMemoryHeaderTitle">单词速记</div>
           <div class="wordMemoryHeaderSubTitle">
-            <span>学习日历</span>
+            <span @click="router.push('/learnDate')">学习日历</span>
             <span class="arrow"
               ><img src="@/assets/dictionary/Arrow.svg" alt="箭头"
             /></span>
@@ -256,7 +256,9 @@ const isShow = ref(false)
             <div class="plusInnerImg">
               <img src="@/assets/dictionary/Plus.png" alt="加号" />
             </div>
-            <div class="plusInnerText">添加生词本</div>
+            <div class="plusInnerText" @click="router.push('/addNewWordBook')">
+              添加生词本
+            </div>
           </div>
         </div>
       </template>

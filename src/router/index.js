@@ -93,6 +93,18 @@ const router = createRouter({
       component: () => import('@/views/dictionary/NextWord.vue')
     },
     {
+      path: '/learnDate',
+      component: () => import('@/views/dictionary/LearnDate.vue')
+    },
+    {
+      path: '/addNewWordBook',
+      component: () => import('@/views/dictionary/AddNewWordBook.vue')
+    },
+    {
+      path: '/glossaryDetail',
+      component: () => import('@/views/dictionary/GlossaryDetail.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',
@@ -116,6 +128,18 @@ const router = createRouter({
       ]
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  setTimeout(() => {
+    window.scrollTo(0, 0)
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  }, 100)
+  next()
 })
 
 export default router

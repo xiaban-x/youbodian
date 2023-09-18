@@ -24,11 +24,7 @@ const isShow = ref(false)
     <div class="top">
       <div class="left">会计</div>
       <div class="right">
-        <img
-          src="@/assets/dictionary/SelectProfession.svg"
-          style="width: 38px; height: 38px"
-          alt="行业"
-        />
+        <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
       </div>
     </div>
     <Search></Search>
