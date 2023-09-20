@@ -44,6 +44,26 @@ const router = createRouter({
       path: '/changeGender',
       component: () => import('@/views/user/ChangeGender.vue')
     },
+    {
+      path: '/changeProfession',
+      component: () => import('@/views/user/ChangeProfession.vue')
+    },
+    {
+      path: '/changeTel',
+      component: () => import('@/views/user/ChangeTel.vue')
+    },
+    {
+      path: '/changeCode',
+      component: () => import('@/views/user/ChangeCode.vue')
+    },
+    {
+      path: '/changeEmail',
+      component: () => import('@/views/user/ChangeEmail.vue')
+    },
+    {
+      path: '/bindEmail',
+      component: () => import('@/views/user/BindEmail.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')
