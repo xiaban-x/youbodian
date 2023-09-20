@@ -20,17 +20,17 @@ const router = useRouter()
       </tr>
       <tr>
         <td class="left-align">用户协议</td>
-        <td class="right-align"> ></td>
+        <td class="right-align" @click="router.push('serviceAgreement')"> ></td>
       </tr>
       <tr>
         <td class="left-align">隐私政策</td>
-        <td class="right-align" @click="navigateToBindingPage"> ></td>
+        <td class="right-align" @click="router.push('privacyPolicy')"> ></td>
       </tr>
     </table>
     <table>
       <tr>
         <td class="left-align">全局设置</td>
-        <td class="right-align" @click="router.push('changeTel')"> ></td>
+        <td class="right-align" @click="router.push('globalSetting')"> ></td>
       </tr>
     </table>
     <table>

@@ -51,7 +51,6 @@ Head{
   font-size: 16px;
   font-weight: 400;
   word-wrap: break-word;
-  margin: 18px auto;
 }
 
 .introduce {
@@ -68,5 +67,6 @@ p {
   font-weight: 400;
   line-height: normal;
   word-wrap: break-word;
+  text-align: justify;
 }
 </style>

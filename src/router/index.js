@@ -80,6 +80,19 @@ const router = createRouter({
       path: '/aboutUs',
       component: () => import('@/views/user/AboutUs.vue')
     },
+    ,
+    {
+      path: '/serviceAgreement',
+      component: () => import('@/views/user/ServiceAgreement.vue')
+    },
+    {
+      path: '/privacyPolicy',
+      component: () => import('@/views/user/PrivacyPolicy.vue')
+    },
+    {
+      path: '/globalSetting',
+      component: () => import('@/views/user/GlobalSetting.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')
