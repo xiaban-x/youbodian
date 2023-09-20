@@ -5,20 +5,19 @@
       <slot name="avatar"></slot>
     </div>
     <div class="content">
-      <div class="header">
-        <span class="name">
-          <!-- 名称插槽 -->
-          <slot name="name"></slot>
-        </span>
-        <span class="time">
-          <!-- 时间插槽 -->
-          <slot name="time"></slot>
-        </span>
-      </div>
-      <div class="text">
+      <span class="name">
+        <!-- 名称插槽 -->
+        <slot name="name"></slot>
+      </span>
+
+      <span class="text">
         <!-- 评论插槽 -->
         <slot name="comment"></slot>
-      </div>
+      </span>
+      <span class="time">
+        <!-- 时间插槽 -->
+        <slot name="time"></slot>
+      </span>
     </div>
     <div class="likes">
       <span class="likes-icon">
@@ -34,30 +33,48 @@
 
 <style scoped>
 .comment {
+  width: 347px;
   display: flex;
-  border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
-}
+  align-items: flex-start;
+  .avatar {
+    width: 36px;
+    margin-right: 10px;
+  }
 
-.avatar {
-  flex: 1;
-  margin-right: 10px;
-}
+  .content {
+    width: 265px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .name {
+      color: #666;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .comment {
+      color: #020202;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .time {
+      color: #666;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
 
-.content {
-  flex: 3;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.likes {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .likes {
+    display: flex;
+    flex-direction: row;
+  }
 }
 </style>
+<script setup></script>

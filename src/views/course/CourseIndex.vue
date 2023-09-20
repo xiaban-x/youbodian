@@ -61,7 +61,6 @@ const active = ref(0)
         </div>
       </van-tab>
     </van-tabs>
-    <div style="height: 70px"></div>
   </div>
 </template>
 

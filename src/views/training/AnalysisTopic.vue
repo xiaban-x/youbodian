@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import BtnGreen from '@/components/BtnGreen.vue'
 import router from '@/router'
+import Comment from '@/components/training/Comment.vue'
 
 const topicTitle = ref('下列关于会计基础的表述，不正确的是（）。')
 const topicOptions = ref([
@@ -73,17 +74,19 @@ const topicOptions = ref([
         {{ item }}
       </div>
       <div class="longLine"></div>
-      <div class="answer">
-        <div class="text">你的答案</div>
-        <div class="data">A</div>
-      </div>
-      <div class="avgTrueRate">
-        <div class="text">平均正确率</div>
-        <div class="data">50%</div>
-      </div>
-      <div class="trueAnswer">
-        <div class="text">正确答案</div>
-        <div class="data">D</div>
+      <div class="answerCon">
+        <div class="answer">
+          <div class="text">你的答案</div>
+          <div class="data">A</div>
+        </div>
+        <div class="avgTrueRate">
+          <div class="text">平均正确率</div>
+          <div class="data">50%</div>
+        </div>
+        <div class="trueAnswer">
+          <div class="text">正确答案</div>
+          <div class="data">D</div>
+        </div>
       </div>
     </div>
     <div class="answerAnalysis">
@@ -132,7 +135,83 @@ const topicOptions = ref([
         <div>题目评论</div>
         <div class="add">添加</div>
       </div>
-      <div class="disCon"></div>
+      <div class="disCon">
+        <Comment>
+          <!-- 头像插槽 -->
+          <template v-slot:avatar>
+            <img
+              src="@/assets/training/Avatar.png"
+              style="width: 36px; height: 36px"
+              alt="用户头像"
+            />
+          </template>
+          <!-- 名称插槽 -->
+          <template v-slot:name> John Doe </template>
+          <!-- 评论插槽 -->
+          <template v-slot:comment> 违背了会计政策，违背了会计政策 </template>
+          <!-- 时间插槽 -->
+          <template v-slot:time> 2 hours ago </template>
+          <!-- 点赞数量插槽 -->
+          <template v-slot:likes-icon
+            ><img
+              src="@/assets/training/NotLike.png"
+              style="width: 23px; height: 23px"
+              alt="点赞"
+            /> </template
+          ><!-- 点赞数量插槽 -->
+          <template v-slot:likes-count> 42 </template>
+        </Comment>
+        <Comment>
+          <!-- 头像插槽 -->
+          <template v-slot:avatar>
+            <img
+              src="@/assets/training/Avatar.png"
+              style="width: 36px; height: 36px"
+              alt="用户头像"
+            />
+          </template>
+          <!-- 名称插槽 -->
+          <template v-slot:name> John Doe </template>
+          <!-- 评论插槽 -->
+          <template v-slot:comment> 违背了会计政策，违背了会计政策 </template>
+          <!-- 时间插槽 -->
+          <template v-slot:time> 2 hours ago </template>
+          <!-- 点赞数量插槽 -->
+          <template v-slot:likes-icon
+            ><img
+              src="@/assets/training/NotLike.png"
+              style="width: 23px; height: 23px"
+              alt="点赞"
+            /> </template
+          ><!-- 点赞数量插槽 -->
+          <template v-slot:likes-count> 42 </template>
+        </Comment>
+        <Comment>
+          <!-- 头像插槽 -->
+          <template v-slot:avatar>
+            <img
+              src="@/assets/training/Avatar.png"
+              style="width: 36px; height: 36px"
+              alt="用户头像"
+            />
+          </template>
+          <!-- 名称插槽 -->
+          <template v-slot:name> John Doe </template>
+          <!-- 评论插槽 -->
+          <template v-slot:comment> 违背了会计政策，违背了会计政策 </template>
+          <!-- 时间插槽 -->
+          <template v-slot:time> 2 hours ago </template>
+          <!-- 点赞数量插槽 -->
+          <template v-slot:likes-icon
+            ><img
+              src="@/assets/training/NotLike.png"
+              style="width: 23px; height: 23px"
+              alt="点赞"
+            /> </template
+          ><!-- 点赞数量插槽 -->
+          <template v-slot:likes-count> 42 </template>
+        </Comment>
+      </div>
       <div class="bottom">查看更多 &gt;</div>
     </div>
     <div class="longLine"></div>
@@ -169,10 +248,8 @@ const topicOptions = ref([
   }
 }
 .ATContainer {
-  padding-left: 14px;
-  padding-right: 14px;
   width: 375px;
-  padding-top: 13px;
+  padding: 13px 14px 200px;
 
   .title {
     display: flex;
@@ -197,8 +274,7 @@ const topicOptions = ref([
     width: 347px;
     border-radius: 10px;
     background: #fff;
-    padding-bottom: 38px;
-    margin-bottom: 126px;
+    padding-bottom: 23px;
     .topicTitle {
       padding-top: 20px;
       padding-left: 15px;
@@ -222,6 +298,66 @@ const topicOptions = ref([
       font-weight: 400;
       line-height: normal;
     }
+    .longLine {
+      width: 300px;
+      height: 0;
+      border: 1px #c7c7c7 dashed;
+      margin: 19px 0 12px 24px;
+    }
+    .answerCon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 37px 0 37px;
+      .answer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .data {
+          color: red;
+        }
+      }
+      .avgTrueRate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .data {
+          color: red;
+        }
+      }
+      .trueAnswer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .data {
+          color: #11d075;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .answerAnalysis {
+    background-color: #fff;
+    margin-top: 12px;
+    padding: 11px 16px 24px 16px;
+    border-radius: 10px;
+    .content {
+      color: #676767;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 169.231% */
+    }
+  }
+  .examAndSource {
+    border-radius: 10px;
+    background: #fff;
   }
 }
 </style>

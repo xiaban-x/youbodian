@@ -310,7 +310,6 @@ const isShow = ref(false)
 .container {
   width: 347px;
   padding-left: 14px;
-  padding-bottom: 100px;
   /*.book {*/
   /*  display: flex;*/
   /*  flex-direction: row; !* 水平分布 *!*/

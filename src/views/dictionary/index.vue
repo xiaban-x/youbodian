@@ -23,32 +23,44 @@ const icon = {
 </script>
 <template>
   <router-view></router-view>
-  <van-tabbar v-model="active" route>
-    <van-tabbar-item to="/dictionary">
-      <span>字典</span>
-      <template #icon="props">
-        <img
-          :src="props.active ? icon.dictionaryActive : icon.dictionaryInactive"
-        />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item to="/training">
-      <span>题库</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.questionSelect : icon.questionDefault" />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item to="/course">
-      <span>课程</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.courseSelect : icon.courseDefault" />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item to="/user">
-      <span>我的</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.userSelect : icon.userDefault" />
-      </template>
-    </van-tabbar-item>
-  </van-tabbar>
+  <div class="tabBarContainer">
+    <van-tabbar v-model="active" route>
+      <van-tabbar-item to="/dictionary">
+        <span>字典</span>
+        <template #icon="props">
+          <img
+            :src="
+              props.active ? icon.dictionaryActive : icon.dictionaryInactive
+            "
+          />
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item to="/training">
+        <span>题库</span>
+        <template #icon="props">
+          <img
+            :src="props.active ? icon.questionSelect : icon.questionDefault"
+          />
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item to="/course">
+        <span>课程</span>
+        <template #icon="props">
+          <img :src="props.active ? icon.courseSelect : icon.courseDefault" />
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item to="/user">
+        <span>我的</span>
+        <template #icon="props">
+          <img :src="props.active ? icon.userSelect : icon.userDefault" />
+        </template>
+      </van-tabbar-item>
+    </van-tabbar>
+  </div>
 </template>
+
+<style scoped>
+.tabBarContainer {
+  padding-bottom: 110px;
+}
+</style>
