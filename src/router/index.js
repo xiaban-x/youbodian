@@ -105,6 +105,50 @@ const router = createRouter({
       component: () => import('@/views/dictionary/GlossaryDetail.vue')
     },
     {
+      path: '/listenWord',
+      component: () => import('@/views/dictionary/ListenWord.vue')
+    },
+    {
+      path: '/notebook',
+      component: () => import('@/views/dictionary/Notebook.vue')
+    },
+    {
+      path: '/editNotebook',
+      component: () => import('@/views/dictionary/EditNotebook.vue')
+    },
+    {
+      path: '/errorEdition',
+      component: () => import('@/views/dictionary/ErrorEdition.vue')
+    },
+    {
+      path: '/collectedEdition',
+      component: () => import('@/views/dictionary/CollectedEdition.vue')
+    },
+    {
+      path: '/searchTopic',
+      component: () => import('@/views/training/SearchTopic.vue')
+    },
+    {
+      path: '/topicPage',
+      component: () => import('@/views/training/TopicPage.vue')
+    },
+    {
+      path: '/topicShare',
+      component: () => import('@/views/training/TopicShare.vue')
+    },
+    {
+      path: '/answerSheet',
+      component: () => import('@/views/training/AnswerSheet.vue')
+    },
+    {
+      path: '/answerResult',
+      component: () => import('@/views/training/AnswerResult.vue')
+    },
+    {
+      path: '/analysisTopic',
+      component: () => import('@/views/training/AnalysisTopic.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',

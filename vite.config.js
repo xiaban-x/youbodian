@@ -41,4 +41,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
+  // resolve: {
+  //   // Vite路径别名配置
+  //   alias: {
+  //     '@': path.resolve('./src')
+  //   }
+  // }
 })

@@ -5,6 +5,7 @@ import { ref } from 'vue'
 import Search from '@/components/Search.vue'
 import BasicProblem from '@/components/BasicProblem.vue'
 import LeftImgRightTwoDiv from '@/components/LeftImgRightTwoDiv.vue'
+import router from '@/router'
 // const pay = ref('linear-gradient(to left,#FF7438, #FF9472)')
 // const pay = ref('linear-gradient(to right, #FF7438, #FF9472)')
 // const free = ref('linear-gradient(to left,#11D075, #C0FFE1)')
@@ -27,7 +28,7 @@ const isShow = ref(false)
         <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
       </div>
     </div>
-    <Search></Search>
+    <Search @click="router.push('/searchTopic')"></Search>
   </div>
   <div class="container">
     <SpanDivOne>

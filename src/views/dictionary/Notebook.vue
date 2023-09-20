@@ -2,24 +2,34 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 import { ref } from 'vue'
+import BilingualExample from '@/components/dictionary/BilingualExample.vue'
 const value1 = ref(0)
+const value2 = ref('a')
 const option1 = [
-  { text: '默认排序', value: 0 },
-  { text: '难度排序', value: 1 },
-  { text: '常用排序', value: 2 }
+  { text: '四级单词', value: 0 },
+  { text: '六级单词', value: 1 },
+  { text: '专业六级', value: 2 }
+]
+const option2 = [
+  { text: '默认排序', value: 'a' },
+  { text: '难度排序', value: 'b' },
+  { text: '常用排序', value: 'c' }
 ]
 </script>
 <template>
   <van-nav-bar
     left-arrow
     @click-left="router.go(-1)"
-    class="GDNav"
-    title="四级词汇"
+    class="NBNav"
+    title="笔记本"
   ></van-nav-bar>
-  <div class="GDContainer">
+  <div class="NBContainer">
     <van-dropdown-menu class="dropdown">
       <van-dropdown-item v-model="value1" :options="option1" />
+      <van-dropdown-item v-model="value2" :options="option2" />
     </van-dropdown-menu>
+    <span class="add" @click="router.push('/editNotebook')">新增</span>
+    <span class="del">删除</span>
     <div class="longLine"></div>
     <BilingualExample class="BEx" @click="router.push('/searchByTransDetail')">
       <template #header> misdeed</template>
@@ -71,98 +81,46 @@ const option1 = [
       <template #main> 我在词典里查过这个词。</template>
     </BilingualExample>
     <div class="longLine"></div>
-    <div class="noteAndCol">
-      <div class="noteAndColCon1" @click="router.push('/listenWord')">
-        <div class="img">
-          <img
-            src="@/assets/dictionary/listenWord.png"
-            style="width: 17px; height: 17px; margin-right: 10px"
-            alt="听单词"
-          />
-        </div>
-        <div class="text1">听单词</div>
-      </div>
-      <div class="centered-element">
-        <img src="@/assets/dictionary/VerticalPole.svg" alt="竖杆" />
-      </div>
-      <div class="noteAndColCon2">
-        <div class="img">
-          <img
-            src="@/assets/dictionary/hiddenMeaning.png"
-            style="width: 15.86px; height: 14px"
-            alt="隐藏释义"
-          />
-        </div>
-        <div class="text2">隐藏释义</div>
-      </div>
-    </div>
   </div>
 </template>
 
 <style scoped>
-.GDContainer {
+.NBContainer {
   background-color: #fff;
   padding-top: 7px;
   padding-left: 14px;
   .dropdown {
-    width: 94px;
+    width: 219px;
     height: 30px;
     background-color: #f6f6f6;
     border-radius: 30px;
-    margin-bottom: 30px;
   }
-
+  .del {
+    position: relative;
+    top: -10px;
+    left: 290px;
+    color: #11d075;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .add {
+    position: relative;
+    top: -10px;
+    left: 280px;
+    color: #11d075;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .longLine {
     width: 375px;
     margin-left: -14px;
-    border: 0.25px #c3c3c3 solid;
+    border: 0.25px #dadada solid;
     margin-top: 13px;
     margin-bottom: 12px;
-  }
-  .noteAndCol {
-    background-color: #677e6a;
-    display: flex;
-    justify-content: space-between; /* 两边距离相等 */
-    align-items: center;
-    border-radius: 30px;
-    width: 150px;
-    height: 47px;
-    position: fixed;
-    bottom: 120px; /* 距离底部的距离 */
-    right: 20px; /* 距离右侧的距离 */
-    word-wrap: break-word;
-    .centered-element {
-      display: flex;
-      justify-content: center;
-    }
-    .noteAndColCon1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* 两边距离相等 */
-      align-items: center;
-      flex-grow: 1;
-      margin-left: 15px;
-      .text1 {
-        color: white;
-        font-size: 10px;
-        font-weight: 500;
-        margin-right: 8px;
-      }
-    }
-    .noteAndColCon2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* 两边距离相等 */
-      align-items: center;
-      flex-grow: 1;
-      margin-right: 15px;
-      .text2 {
-        color: white;
-        font-size: 10px;
-        font-weight: 500;
-        margin-left: 8px;
-      }
-    }
   }
 }
 </style>

@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import ClassMain from '@/components/ClassMain.vue'
+import MyClass from '@/components/MyClass.vue'
 
 const router = useRouter()
 const active = ref(0)

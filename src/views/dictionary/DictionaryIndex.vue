@@ -36,7 +36,7 @@ const isShow = ref(false)
         <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
       </div>
     </div>
-    <Search></Search>
+    <Search @click="router.push('/search')"></Search>
   </div>
   <div class="container">
     <SpanDivOne>
@@ -58,9 +58,10 @@ const isShow = ref(false)
             <!-- 图片插槽 -->
             <template #image>
               <img
-                src="@/assets/dictionary/MiswordBook.png"
+                src="@/assets/dictionary/ErrorEdition.png"
                 style="width: 38px; height: 38px"
                 alt="错词本"
+                @click="router.push('/errorEdition')"
               />
             </template>
             <!-- 文字插槽 -->
@@ -73,10 +74,11 @@ const isShow = ref(false)
                 src="@/assets/dictionary/CollectedEdition.png"
                 style="width: 38px; height: 38px"
                 alt="收藏本"
+                @click="router.push('/collectedEdition')"
               />
             </template>
             <!-- 文字插槽 -->
-            <template #text> 笔记本 </template>
+            <template #text> 收藏本 </template>
           </ImgSpanOne>
           <ImgSpanOne>
             <!-- 图片插槽 -->
@@ -85,6 +87,7 @@ const isShow = ref(false)
                 src="@/assets/dictionary/NoteBook.png"
                 style="width: 38px; height: 38px"
                 alt="笔记本"
+                @click="router.push('/notebook')"
               />
             </template>
             <!-- 文字插槽 -->

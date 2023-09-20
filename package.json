@@ -13,10 +13,13 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@types/node": "^20.6.2",
     "@vitejs/plugin-legacy": "^4.1.1",
     "axios": "^1.4.0",
     "date-fns": "2.23.0",
     "element-plus": "^2.3.9",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
     "pinia": "^2.1.4",
     "vant": "^4.6.4",
     "vue": "^3.3.4",
