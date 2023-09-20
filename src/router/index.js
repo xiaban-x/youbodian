@@ -64,6 +64,22 @@ const router = createRouter({
       path: '/bindEmail',
       component: () => import('@/views/user/BindEmail.vue')
     },
+    {
+      path: '/invitationRegister',
+      component: () => import('@/views/user/InvitationRegister.vue')
+    },
+    {
+      path: '/systemSetting',
+      component: () => import('@/views/user/SystemSetting.vue')
+    },
+    {
+      path: '/versionInformation',
+      component: () => import('@/views/user/VersionInformation.vue')
+    },
+    {
+      path: '/aboutUs',
+      component: () => import('@/views/user/AboutUs.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')

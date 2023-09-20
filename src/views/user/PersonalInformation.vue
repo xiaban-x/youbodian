@@ -123,8 +123,8 @@ td {
 }
 /* 设置表格横边框，去掉竖边框 */
 td {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top:  0.50px #E8E8E8 solid;
+  border-bottom:  0.50px #E8E8E8 solid;
   height: 44px;
 }
 
