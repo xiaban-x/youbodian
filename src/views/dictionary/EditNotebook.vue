@@ -2,7 +2,10 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 import { ref } from 'vue'
-const checked = ref(true)
+const active = ref(0)
+import BtnGreen from '@/components/BtnGreen.vue'
+import GoodNotebook from '@/components/dictionary/GoodNotebook.vue'
+import NoteEditForm from '@/components/NoteEditForm.vue'
 </script>
 <template>
   <van-nav-bar
@@ -14,37 +17,19 @@ const checked = ref(true)
   <div class="ENContainer">
     <div class="word">dictionary</div>
     <div class="longLine"></div>
-    <form>
-      <textarea
-        class="errorInfo"
-        id="longText"
-        name="longText"
-        rows="7"
-        cols="44"
-        placeholder="在这里写下你的笔记"
-      ></textarea>
-    </form>
-    <div class="selectCon">
-      <span>公开</span>
-      <van-switch
-        v-model="checked"
-        active-color="#11D075"
-        inactive-color="#dcdee0"
-        class="selectPublic"
-      />
-    </div>
+    <NoteEditForm rows="7"></NoteEditForm>
     <BtnGreen message="发布"></BtnGreen>
     <van-tabs
       v-model:active="active"
       class="order-tabs"
-      line-height="2px"
+      line-height="4px"
       line-width="42px"
       color="#11D075"
-      background="transparent"
+      background="rgb(248,248,248)"
       shrink
     >
       <van-tab title="优质笔记" class="">
-        <div class="Recommended">为你精心挑选了部分优秀笔记</div>
+        <div class="recommended">为你精心挑选了部分优秀笔记</div>
         <GoodNotebook class="goodNotebook">
           <template #header
             >Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Aenean
@@ -92,7 +77,30 @@ const checked = ref(true)
 
 <style scoped>
 .ENContainer {
+  padding-left: 14px;
+  .word {
+    color: #292929;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 16px;
+  }
+  .longLine {
+    border: 1px #c3c3c3 dashed;
+    width: 347px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+  .recommended {
+    color: #999;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .goodNotebook {
+    margin-top: 10px;
     .MyNoteCon {
       display: flex;
       .green1 {

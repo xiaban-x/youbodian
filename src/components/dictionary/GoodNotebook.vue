@@ -18,7 +18,6 @@
   .header {
     width: 317px;
     color: #292929;
-    font-family: Source Han Sans CN;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -28,7 +27,6 @@
   }
   .main {
     color: #11d075;
-    font-family: Source Han Sans CN;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

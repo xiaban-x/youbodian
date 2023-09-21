@@ -32,7 +32,7 @@ const topicOptions = ref([
         src="@/assets/training/Share.png"
         style="width: 23px; height: 23px"
         alt="分享"
-        @click="router.push('/topicShare')"
+        @click="router.push('/analysisShare')"
       />
       <img
         src="@/assets/training/ErrorFixed.png"
@@ -168,14 +168,14 @@ const topicOptions = ref([
     <div class="myNote">
       <div class="top">
         <div>我的笔记</div>
-        <div class="edit">编辑</div>
+        <div class="edit" @click="router.push('/editNotebook')">编辑</div>
       </div>
       <div class="text">这道题的考点是权责发生制，很容易犯错，需要注意。</div>
     </div>
     <div class="topicDiscussion">
       <div class="top">
         <div>题目评论</div>
-        <div class="add">添加</div>
+        <div class="add" @click="router.push('/addComment')">添加</div>
       </div>
       <div class="disCon">
         <Comment>
@@ -254,13 +254,13 @@ const topicOptions = ref([
           <template v-slot:likes-count> 42 </template>
         </Comment>
       </div>
-      <div class="bottom">查看更多 &gt;</div>
+      <div class="bottom" @click="router.push('/lookMore')">查看更多 &gt;</div>
     </div>
     <div class="longLine"></div>
     <div class="topicAnswer">
       <div class="top">
         <div>题目答疑</div>
-        <div class="add">添加</div>
+        <div class="add" @click="router.push('/addAsk')">添加</div>
       </div>
       <div class="disCon">
         <Comment>
@@ -339,15 +339,19 @@ const topicOptions = ref([
           <template v-slot:likes-count> 42 </template>
         </Comment>
       </div>
-      <div class="bottom">全部答疑 &gt;</div>
+      <div class="bottom" @click="router.push('/allAnswer')">全部答疑 &gt;</div>
     </div>
   </div>
   <div class="noteAndCol">
-    <div class="noteAndColCon">
+    <div class="noteAndColCon" @click="router.push('/editTopicNote')">
       <div class="img">
-        <img src="@/assets/dictionary/Notes.svg" alt="笔记" />
+        <img
+          src="@/assets/dictionary/Notes.svg"
+          style="margin-right: 14px"
+          alt="笔记"
+        />
       </div>
-      <div class="text1">笔记3.9万</div>
+      <div class="text1">笔记</div>
     </div>
     <div>
       <div>
@@ -356,9 +360,13 @@ const topicOptions = ref([
     </div>
     <div class="noteAndColCon">
       <div class="img">
-        <img src="@/assets/dictionary/Collect.svg" alt="收藏" />
+        <img
+          src="@/assets/dictionary/Collect.svg"
+          style="margin-left: 14px"
+          alt="收藏"
+        />
       </div>
-      <div class="text2">收藏4.5万</div>
+      <div class="text2">收藏</div>
     </div>
   </div>
 </template>
@@ -572,7 +580,6 @@ const topicOptions = ref([
       justify-content: space-between;
       .edit {
         color: #11d075;
-        margin-right: 14px;
         font-size: 14px;
         font-weight: 500;
         word-wrap: break-word;
@@ -619,6 +626,12 @@ const topicOptions = ref([
       display: flex;
       justify-content: space-between;
       margin-top: -20px;
+      .add {
+        color: #11d075;
+        font-size: 13px;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
     }
     .bottom {
       color: #999999;
@@ -635,7 +648,7 @@ const topicOptions = ref([
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  width: 150px;
+  width: 130px;
   height: 47px;
   position: fixed;
   bottom: 100px;
@@ -651,14 +664,14 @@ const topicOptions = ref([
       color: white;
       font-size: 10px;
       font-weight: 500;
-      margin-right: 8px;
+      margin-right: 18px;
     }
 
     .text2 {
       color: white;
       font-size: 10px;
       font-weight: 500;
-      margin-left: 8px;
+      margin-left: 18px;
     }
   }
 }

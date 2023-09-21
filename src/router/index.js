@@ -203,6 +203,30 @@ const router = createRouter({
       component: () => import('@/views/training/AnswerSheetOnlyResult.vue')
     },
     {
+      path: '/editTopicNote',
+      component: () => import('@/views/training/EditTopicNote.vue')
+    },
+    {
+      path: '/addComment',
+      component: () => import('@/views/training/AddComment.vue')
+    },
+    {
+      path: '/lookMore',
+      component: () => import('@/views/training/LookMore.vue')
+    },
+    {
+      path: '/addAsk',
+      component: () => import('@/views/training/AddAsk.vue')
+    },
+    {
+      path: '/allAnswer',
+      component: () => import('@/views/training/AllAnswer.vue')
+    },
+    {
+      path: '/analysisShare',
+      component: () => import('@/views/training/AnalysisShare.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',
