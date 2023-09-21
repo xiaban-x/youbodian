@@ -35,8 +35,7 @@
 .comment {
   width: 347px;
   display: flex;
-  padding: 10px;
-  margin: 10px;
+  padding: 0 10px 20px 10px;
   align-items: flex-start;
   .avatar {
     width: 36px;

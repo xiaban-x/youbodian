@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import BtnGreen from '@/components/BtnGreen.vue'
 import router from '@/router'
 import Comment from '@/components/training/Comment.vue'
 
@@ -27,7 +26,7 @@ const topicOptions = ref([
       <img
         src="@/assets/training/Translation.png"
         style="width: 22px; height: 22px"
-        alt="分享"
+        alt="翻译"
       />
       <img
         src="@/assets/training/Share.png"
@@ -38,13 +37,13 @@ const topicOptions = ref([
       <img
         src="@/assets/training/ErrorFixed.png"
         style="width: 18px; height: 18px"
-        alt="分享"
+        alt="纠错"
         @click="router.push('/errorFixed')"
       />
       <img
         src="@/assets/training/Delete.png"
         style="width: 23px; height: 23px"
-        alt="分享"
+        alt="删除"
       />
       <img
         src="@/assets/training/Collected.png"
@@ -55,7 +54,7 @@ const topicOptions = ref([
         src="@/assets/training/Date.png"
         style="width: 27px; height: 27px"
         alt="答题卡"
-        @click="router.push('/answerSheet')"
+        @click="router.push('/answerSheetOnlyResult')"
       />
     </div>
   </div>
@@ -107,14 +106,57 @@ const topicOptions = ref([
       <div class="exam">
         <div>考点</div>
         <div class="con">
-          <img src="" alt="" />
-          <span class="text">权责发生制</span>
+          <div class="exam1">
+            <img
+              src="@/assets/training/GreenMontant.png"
+              style="width: 5px; height: 20px"
+              alt="绿色竖杆"
+            />
+            <span class="text">权责发生制</span>
+          </div>
+          <div class="exam2">
+            <img
+              src="@/assets/training/GreenMontant.png"
+              style="width: 5px; height: 20px"
+              alt="绿色竖杆"
+            />
+            <span class="text">考核</span>
+            <img
+              src="@/assets/training/Star.png"
+              style="width: 13px; height: 13px"
+              alt="星星"
+            />
+            <img
+              src="@/assets/training/Star.png"
+              style="width: 13px; height: 13px"
+              alt="星星"
+            />
+            <img
+              src="@/assets/training/Star.png"
+              style="width: 13px; height: 13px"
+              alt="星星"
+            />
+            <img
+              src="@/assets/training/Star.png"
+              style="width: 13px; height: 13px"
+              alt="星星"
+            />
+            <img
+              src="@/assets/training/Star.png"
+              style="width: 13px; height: 13px"
+              alt="星星"
+            />
+          </div>
         </div>
       </div>
       <div class="source">
         <div>来源</div>
         <div class="con">
-          <img src="" alt="" />
+          <img
+            src="@/assets/training/GreenMontant.png"
+            style="width: 5px; height: 20px"
+            alt="绿色竖杆"
+          />
           <span class="text">2022年真题</span>
         </div>
       </div>
@@ -215,15 +257,109 @@ const topicOptions = ref([
       <div class="bottom">查看更多 &gt;</div>
     </div>
     <div class="longLine"></div>
-    <div class="topicDiscussion">
+    <div class="topicAnswer">
       <div class="top">
-        <div>题目评论</div>
+        <div>题目答疑</div>
         <div class="add">添加</div>
       </div>
-      <div class="disCon"></div>
+      <div class="disCon">
+        <Comment>
+          <!-- 头像插槽 -->
+          <template v-slot:avatar>
+            <img
+              src="@/assets/training/Avatar.png"
+              style="width: 36px; height: 36px"
+              alt="用户头像"
+            />
+          </template>
+          <!-- 名称插槽 -->
+          <template v-slot:name> John Doe </template>
+          <!-- 评论插槽 -->
+          <template v-slot:comment> 违背了会计政策，违背了会计政策 </template>
+          <!-- 时间插槽 -->
+          <template v-slot:time> 2 hours ago </template>
+          <!-- 点赞数量插槽 -->
+          <template v-slot:likes-icon
+            ><img
+              src="@/assets/training/NotLike.png"
+              style="width: 23px; height: 23px"
+              alt="点赞"
+            /> </template
+          ><!-- 点赞数量插槽 -->
+          <template v-slot:likes-count> 42 </template>
+        </Comment>
+        <Comment>
+          <!-- 头像插槽 -->
+          <template v-slot:avatar>
+            <img
+              src="@/assets/training/Avatar.png"
+              style="width: 36px; height: 36px"
+              alt="用户头像"
+            />
+          </template>
+          <!-- 名称插槽 -->
+          <template v-slot:name> John Doe </template>
+          <!-- 评论插槽 -->
+          <template v-slot:comment> 违背了会计政策，违背了会计政策 </template>
+          <!-- 时间插槽 -->
+          <template v-slot:time> 2 hours ago </template>
+          <!-- 点赞数量插槽 -->
+          <template v-slot:likes-icon
+            ><img
+              src="@/assets/training/NotLike.png"
+              style="width: 23px; height: 23px"
+              alt="点赞"
+            /> </template
+          ><!-- 点赞数量插槽 -->
+          <template v-slot:likes-count> 42 </template>
+        </Comment>
+        <Comment>
+          <!-- 头像插槽 -->
+          <template v-slot:avatar>
+            <img
+              src="@/assets/training/Avatar.png"
+              style="width: 36px; height: 36px"
+              alt="用户头像"
+            />
+          </template>
+          <!-- 名称插槽 -->
+          <template v-slot:name> John Doe </template>
+          <!-- 评论插槽 -->
+          <template v-slot:comment> 违背了会计政策，违背了会计政策 </template>
+          <!-- 时间插槽 -->
+          <template v-slot:time> 2 hours ago </template>
+          <!-- 点赞数量插槽 -->
+          <template v-slot:likes-icon
+            ><img
+              src="@/assets/training/NotLike.png"
+              style="width: 23px; height: 23px"
+              alt="点赞"
+            /> </template
+          ><!-- 点赞数量插槽 -->
+          <template v-slot:likes-count> 42 </template>
+        </Comment>
+      </div>
       <div class="bottom">全部答疑 &gt;</div>
     </div>
-    <BtnGreen message="下一题" @click="router.push('/topicPage')"></BtnGreen>
+  </div>
+  <div class="noteAndCol">
+    <div class="noteAndColCon">
+      <div class="img">
+        <img src="@/assets/dictionary/Notes.svg" alt="笔记" />
+      </div>
+      <div class="text1">笔记3.9万</div>
+    </div>
+    <div>
+      <div>
+        <img src="@/assets/dictionary/VerticalPole.svg" alt="竖杆" />
+      </div>
+    </div>
+    <div class="noteAndColCon">
+      <div class="img">
+        <img src="@/assets/dictionary/Collect.svg" alt="收藏" />
+      </div>
+      <div class="text2">收藏4.5万</div>
+    </div>
   </div>
 </template>
 
@@ -358,6 +494,172 @@ const topicOptions = ref([
   .examAndSource {
     border-radius: 10px;
     background: #fff;
+    height: 151px;
+    width: 347px;
+    margin-top: 12px;
+    padding: 13px 37px 20px 15px;
+    .exam {
+      .con {
+        display: flex;
+        justify-content: space-between;
+        .exam1 {
+          margin-top: 4px;
+          align-items: center;
+          display: flex;
+          .text {
+            margin-left: 8px;
+            color: #666666;
+            font-size: 13px;
+            font-weight: 400;
+            word-wrap: break-word;
+          }
+        }
+        .exam2 {
+          align-items: center;
+          display: flex;
+          .text {
+            margin-left: 8px;
+            margin-right: 4px;
+            color: #666666;
+            font-size: 13px;
+            font-weight: 400;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+    .source {
+      margin-top: 25px;
+      .con {
+        display: flex;
+        margin-top: 4px;
+
+        .text {
+          margin-left: 8px;
+          margin-right: 4px;
+          color: #666666;
+          font-size: 13px;
+          font-weight: 400;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+  .statute {
+    width: 347px;
+    height: 76px;
+    border-radius: 10px;
+    padding: 13px 0 16px 15px;
+    background-color: #fff;
+    margin-top: 12px;
+    .text {
+      margin-top: 8px;
+      color: #666666;
+      font-size: 13px;
+      font-weight: 400;
+      word-wrap: break-word;
+    }
+  }
+  .myNote {
+    background-color: #fff;
+    margin-top: 8px;
+    padding-bottom: 16px;
+    .top {
+      height: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      .edit {
+        color: #11d075;
+        margin-right: 14px;
+        font-size: 14px;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+    }
+    .text {
+      color: #666666;
+      font-size: 13px;
+      font-weight: 400;
+      padding-left: 15px;
+      word-wrap: break-word;
+    }
+  }
+  .topicDiscussion {
+    .top {
+      background-color: rgb(248, 248, 248);
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      .add {
+        color: #11d075;
+        font-size: 13px;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+    }
+    .bottom {
+      color: #999999;
+      font-size: 14px;
+      font-weight: 400;
+      word-wrap: break-word;
+      margin-top: -10px;
+    }
+  }
+  .longLine {
+    width: 347px;
+    height: 0;
+    border: 1px #c7c7c7 dashed;
+    margin: 15px 0 20px 0;
+  }
+  .topicAnswer {
+    .top {
+      background-color: rgb(248, 248, 248);
+      display: flex;
+      justify-content: space-between;
+      margin-top: -20px;
+    }
+    .bottom {
+      color: #999999;
+      font-size: 14px;
+      font-weight: 400;
+      word-wrap: break-word;
+      margin-top: -10px;
+    }
+  }
+}
+.noteAndCol {
+  background-color: #677e6a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 150px;
+  height: 47px;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  word-wrap: break-word;
+  .noteAndColCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text1 {
+      color: white;
+      font-size: 10px;
+      font-weight: 500;
+      margin-right: 8px;
+    }
+
+    .text2 {
+      color: white;
+      font-size: 10px;
+      font-weight: 500;
+      margin-left: 8px;
+    }
   }
 }
 </style>

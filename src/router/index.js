@@ -10,6 +10,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // vite.config.ts  添加配置  base: my-path，路由这就会加上 my-path 前缀了
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
+  // eslint-disable-next-line no-sparse-arrays
   routes: [
     { path: '/login', component: () => import('@/views/login/LoginPage.vue') }, // 登录页
     {
@@ -196,6 +197,10 @@ const router = createRouter({
     {
       path: '/analysisTopic',
       component: () => import('@/views/training/AnalysisTopic.vue')
+    },
+    {
+      path: '/answerSheetOnlyResult',
+      component: () => import('@/views/training/AnswerSheetOnlyResult.vue')
     },
     {
       path: '/',
