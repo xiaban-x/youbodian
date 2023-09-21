@@ -43,7 +43,7 @@
               <td class="right-align">隐藏</td>
             </tr>
           </table>
-          <div class="change-buttom">
+          <div class="change-button">
             <BtnGreen message="确认重置"></BtnGreen>
           </div>
         </van-tab>
@@ -79,7 +79,7 @@
               <td class="right-align">获取验证码</td>
             </tr>
           </table>
-          <div class="change-buttom">
+          <div class="change-button">
             <BtnGreen message="确认重置"></BtnGreen>
           </div>
         </van-tab>
@@ -150,7 +150,7 @@ td:first-child {
 td:last-child {
   border-right: none;
 }
-.change-buttom {
+.change-button {
   display: flex;
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */

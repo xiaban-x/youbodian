@@ -16,30 +16,30 @@ const router = useRouter()
       </tr>
       <tr>
         <td class="left-align">关于我们</td>
-        <td class="right-align" @click="router.push('aboutUs')"> ></td>
+        <td class="right-align" @click="router.push('aboutUs')">></td>
       </tr>
       <tr>
         <td class="left-align">用户协议</td>
-        <td class="right-align" @click="router.push('serviceAgreement')"> ></td>
+        <td class="right-align" @click="router.push('serviceAgreement')">></td>
       </tr>
       <tr>
         <td class="left-align">隐私政策</td>
-        <td class="right-align" @click="router.push('privacyPolicy')"> ></td>
+        <td class="right-align" @click="router.push('privacyPolicy')">></td>
       </tr>
     </table>
     <table>
       <tr>
         <td class="left-align">全局设置</td>
-        <td class="right-align" @click="router.push('globalSetting')"> ></td>
+        <td class="right-align" @click="router.push('globalSetting')">></td>
       </tr>
     </table>
     <table>
       <tr>
         <td class="left-align">注销账号</td>
-        <td class="right-align" @click="router.push('changeTel')"> ></td>
+        <td class="right-align" @click="router.push('changeTel')">></td>
       </tr>
     </table>
-    <div class="change-buttom">
+    <div class="change-button">
       <BtnGreen message="退出登录"></BtnGreen>
     </div>
   </div>
@@ -75,8 +75,8 @@ td {
 
 /* 设置表格横边框，去掉竖边框 */
 td {
-  border-top: 0.50px #E8E8E8 solid;
-  border-bottom: 0.50px #E8E8E8 solid;
+  border-top: 0.5px #e8e8e8 solid;
+  border-bottom: 0.5px #e8e8e8 solid;
   height: 55px;
 }
 
@@ -90,12 +90,12 @@ td:last-child {
   border-right: none;
 }
 /*按钮*/
-.main{
+.main {
   position: relative;
 }
-.change-buttom {
+.change-button {
   position: fixed;
-  bottom: 108px ;
+  bottom: 108px;
   width: 100%;
   display: flex;
   justify-content: center; /* 水平居中 */

@@ -1,10 +1,13 @@
 <template>
-  <div class="button-group">
+  <div :style="groupStyle" class="button-group">
     <button
-        v-for="(button, index) in buttons"
-        :key="index"
-        :class="{ active: activeButton === index, default: activeButton !== index }"
-        @click="setActiveButton(index)"
+      v-for="(button, index) in buttons"
+      :key="index"
+      :class="{
+        active: activeButton === index,
+        default: activeButton !== index
+      }"
+      @click="setActiveButton(index)"
     >
       <slot name="button-text" :button="button"></slot>
     </button>
@@ -12,51 +15,58 @@
 </template>
 
 <script>
-import { ref, watch, computed } from 'vue';
+import { ref, watch, computed } from 'vue'
 
 export default {
   props: {
     buttonsData: Array, // 按钮数据，每个按钮包含 text 字段
     maxButtonsPerRow: {
       type: Number,
-      default: 6, // 每行最多按钮数，默认为6
+      default: 6 // 每行最多按钮数，默认为6
     },
+    width: String
   },
   setup(props) {
-    const buttons = ref(props.buttonsData);
-    const activeButton = ref(0);
+    const buttons = ref(props.buttonsData)
+    const activeButton = ref(0)
 
     const setActiveButton = (index) => {
-      activeButton.value = index;
-    };
-
+      activeButton.value = index
+    }
+    const groupStyle = computed(() => ({
+      display: 'flex',
+      width: props.width || 'auto',
+      flexWrap: 'wrap',
+      margin: '6px 9px 16px 9px'
+    }))
     // 监听按钮数据变化，当按钮数量超过一行时自动换行
     watch(
-        () => props.buttonsData,
-        () => {
-          buttons.value = props.buttonsData;
-        }
-    );
+      () => props.buttonsData,
+      () => {
+        buttons.value = props.buttonsData
+      }
+    )
 
     // 计算样式类，控制每行按钮数量
     const buttonClasses = computed(() => {
-      const classes = {};
-      const maxButtonsPerRow = props.maxButtonsPerRow;
+      const classes = {}
+      const maxButtonsPerRow = props.maxButtonsPerRow
       buttons.value.forEach((button, index) => {
-        const row = Math.floor(index / maxButtonsPerRow);
-        classes[`row-${row}`] = true;
-      });
-      return classes;
-    });
+        const row = Math.floor(index / maxButtonsPerRow)
+        classes[`row-${row}`] = true
+      })
+      return classes
+    })
 
     return {
       buttons,
       activeButton,
       setActiveButton,
       buttonClasses,
-    };
-  },
-};
+      groupStyle
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -66,7 +76,7 @@ button.default {
   margin: 5px;
   height: 22px;
   border-radius: 30px;
-  border: 0.50px #EDEDED solid;
+  border: 0.5px #ededed solid;
   background-color: white;
 }
 
@@ -75,18 +85,13 @@ button.active {
   width: calc(100% / var(--max-buttons-per-row, 6) - 10px);
   margin: 5px;
   height: 22px;
-  background: #11D075;
+  background: #11d075;
   border-radius: 30px;
   border: none;
   color: white;
 }
 
 /* 按钮分行样式 */
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 6px 9px 16px 9px;
-}
 
 .button-group > .button.default {
   margin-right: 5px;

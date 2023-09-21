@@ -9,7 +9,7 @@
         type="text"
       />
     </div>
-    <div class="change-buttom">
+    <div class="change-button">
       <BtnGreen message="确认修改"></BtnGreen>
     </div>
   </div>
@@ -38,7 +38,7 @@ export default {
 .changing-nickname input::placeholder {
   color: #292929;
 }
-.change-buttom {
+.change-button {
   display: flex;
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */

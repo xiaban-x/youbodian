@@ -27,7 +27,7 @@
         <td class="right-align">获取验证码</td>
       </tr>
     </table>
-    <div class="change-buttom">
+    <div class="change-button">
       <BtnGreen message="确认修改"></BtnGreen>
     </div>
   </div>
@@ -75,7 +75,7 @@ td {
 
 /* 设置表格横边框，去掉竖边框 */
 td {
-  border-bottom:  0.50px #E8E8E8 solid;
+  border-bottom: 0.5px #e8e8e8 solid;
   height: 44px;
 }
 
@@ -88,7 +88,7 @@ td:first-child {
 td:last-child {
   border-right: none;
 }
-.change-buttom {
+.change-button {
   display: flex;
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
