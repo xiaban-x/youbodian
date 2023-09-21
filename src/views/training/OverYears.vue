@@ -1,7 +1,7 @@
 <script setup>
 import router from '@/router'
-import FastMemorySection from '@/components/training/FastMemorySection.vue'
 import { ref } from 'vue'
+import OverYearsChapter from '@/components/training/OverYearsChapter.vue'
 const activeNames = ref(['0'])
 </script>
 <template>
@@ -9,68 +9,58 @@ const activeNames = ref(['0'])
   </van-nav-bar>
   <van-collapse v-model="activeNames">
     <van-collapse-item title="初级会计实务" name="1">
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
+      <OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter
+      ><OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter
+      ><OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter>
       <div class="longLine"></div>
     </van-collapse-item>
     <van-collapse-item title="经济基础法" name="2">
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
-      <FastMemorySection
-        chapter-number="第一章"
-        title="总论"
-        finished="6"
-        sum="17"
-        level="5"
-      ></FastMemorySection>
+      <OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter>
+      <OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter>
+      <OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter>
+      <OverYearsChapter
+        title="2022年真题卷"
+        score="总分：100分"
+        count="总题数：29题"
+        text="开始考试"
+      ></OverYearsChapter>
       <div class="longLine"></div>
     </van-collapse-item>
   </van-collapse>
 </template>
 
-<style scoped></style>
+<style scoped>
+.longLine {
+  border: 1px #999 solid;
+}
+</style>
