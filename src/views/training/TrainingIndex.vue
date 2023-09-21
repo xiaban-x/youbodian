@@ -146,7 +146,7 @@ const isShow = ref(false)
         <template #footer>
           <div class="basicProblemHeaderTitle">基础题库</div>
           <div class="basicProblemContainer">
-            <div class="basicProblem">
+            <div class="basicProblem" @click="router.push('/fastMemory')">
               <BasicProblem
                 gradientColor1="#F2FFF9"
                 gradientColor2="white"
@@ -198,7 +198,7 @@ const isShow = ref(false)
                 </div>
               </BasicProblem>
             </div>
-            <div class="basicProblem">
+            <div class="basicProblem" @click="router.push('/sectionExercise')">
               <BasicProblem
                 gradientColor1="#F3F9FF"
                 gradientColor2="#FFFFFF"
@@ -256,7 +256,10 @@ const isShow = ref(false)
       <SpanDivOne>
         <template #header> 历年真题 </template>
         <template #footer>
-          <LeftImgRightTwoDiv :ImgColor="PracticalTest">
+          <LeftImgRightTwoDiv
+            :ImgColor="PracticalTest"
+            @click="router.push('/overYears')"
+          >
             <template #image>
               <img src="@/assets/training/PracticalTest.svg" alt="Image" />
             </template>

@@ -227,6 +227,18 @@ const router = createRouter({
       component: () => import('@/views/training/AnalysisShare.vue')
     },
     {
+      path: '/sectionExercise',
+      component: () => import('@/views/training/SectionExercise.vue')
+    },
+    {
+      path: '/fastMemory',
+      component: () => import('@/views/training/FastMemory.vue')
+    },
+    {
+      path: '/overYears',
+      component: () => import('@/views/training/OverYears.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',
