@@ -5,7 +5,7 @@ const router = useRouter()
 </script>
 
 <template>
-  <div>
+  <div class="main">
     <Head>系统设置</Head>
     <table>
       <tr>
@@ -39,6 +39,9 @@ const router = useRouter()
         <td class="right-align" @click="router.push('changeTel')"> ></td>
       </tr>
     </table>
+    <div class="change-buttom">
+      <BtnGreen message="退出登录"></BtnGreen>
+    </div>
   </div>
 </template>
 
@@ -85,5 +88,17 @@ td:first-child {
 /* 去掉最后一列的右边框 */
 td:last-child {
   border-right: none;
+}
+/*按钮*/
+.main{
+  position: relative;
+}
+.change-buttom {
+  position: fixed;
+  bottom: 108px ;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
 }
 </style>
