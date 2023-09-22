@@ -13,7 +13,7 @@ const router = useRouter()
       <button class="name" @click="router.push('login')">请点击登录</button>
       <div class="lookMore">&gt;</div>
     </div>
-    <div class="message" >
+    <div class="message">
       <div class="box" @click="router.push('personalInformation')">
         <img
           src="@/assets/images/MemberRegister.png"
@@ -44,7 +44,7 @@ const router = useRouter()
           style="height: 41px; width: 41px"
           alt=""
         />
-        <div class="text" >邀请注册</div>
+        <div class="text">邀请注册</div>
       </div>
     </div>
 
@@ -57,7 +57,7 @@ const router = useRouter()
           style="width: 30px; height: 30px"
           alt=""
         />
-        <div class="text">我的钱包</div>
+        <div class="text" @click="router.push('/myWallet')">我的钱包</div>
       </div>
       <div class="box">
         <img

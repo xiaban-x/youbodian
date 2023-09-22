@@ -102,6 +102,10 @@ const router = createRouter({
       path: '/addFeedback',
       component: () => import('@/views/user/AddFeedback.vue')
     },
+    {
+      path: '/myWallet',
+      component: () => import('@/views/user/MyWallet.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')
