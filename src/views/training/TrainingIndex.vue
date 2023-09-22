@@ -6,10 +6,6 @@ import Search from '@/components/Search.vue'
 import BasicProblem from '@/components/BasicProblem.vue'
 import LeftImgRightTwoDiv from '@/components/LeftImgRightTwoDiv.vue'
 import router from '@/router'
-// const pay = ref('linear-gradient(to left,#FF7438, #FF9472)')
-// const pay = ref('linear-gradient(to right, #FF7438, #FF9472)')
-// const free = ref('linear-gradient(to left,#11D075, #C0FFE1)')
-// const free = ref('rgb(100,0,0)')
 const titleColorOne = ref('#11D075')
 const subTitleColorOne = ref('#65E2A6')
 const titleColorTwo = ref('#1890FF')
@@ -34,19 +30,19 @@ const isShow = ref(false)
     <SpanDivOne>
       <template #footer>
         <div class="book">
-          <ImgSpanOne>
+          <ImgSpanOne @click="router.push('/correctionNotebook')">
             <!-- 图片插槽 -->
             <template #image>
               <img
                 src="@/assets/training/MiswordNotebook.png"
                 style="width: 38px; height: 38px"
-                alt="错词本"
+                alt="错题本"
               />
             </template>
             <!-- 文字插槽 -->
-            <template #text> 错词本 </template>
+            <template #text> 错题本 </template>
           </ImgSpanOne>
-          <ImgSpanOne>
+          <ImgSpanOne @click="router.push('/trainingCollectedEdition')">
             <!-- 图片插槽 -->
             <template #image>
               <img
@@ -58,7 +54,7 @@ const isShow = ref(false)
             <!-- 文字插槽 -->
             <template #text> 收藏本 </template>
           </ImgSpanOne>
-          <ImgSpanOne>
+          <ImgSpanOne @click="router.push('/trainingNotebook')">
             <!-- 图片插槽 -->
             <template #image>
               <img
@@ -70,7 +66,7 @@ const isShow = ref(false)
             <!-- 文字插槽 -->
             <template #text> 笔记本 </template>
           </ImgSpanOne>
-          <ImgSpanOne>
+          <ImgSpanOne @click="router.push('/problemRecord')">
             <!-- 图片插槽 -->
             <template #image>
               <img
@@ -325,19 +321,20 @@ const isShow = ref(false)
     display: flex;
     flex-wrap: wrap; /* 自动换行 */
     justify-content: flex-start; /* 从左到右排列 */
-    gap: 10px; /* 间隙 */
+    gap: 6px; /* 间隙 */
     color: #292929;
     font-size: 14px;
     font-weight: 400;
     word-wrap: break-word;
     background-color: #fff;
-    margin: 19px 25px 22px 1px;
+    margin: 19px 10px 22px 1px;
+    /*padding-left: 20px;*/
   }
 
   /* 如果需要控制每个组件的宽度，可以添加以下样式 */
   .book > * {
     flex: 1; /* 平均分配容器宽度 */
-    max-width: calc(33%); /* 每个组件最大宽度，根据需要调整 */
+    max-width: calc(25%); /* 每个组件最大宽度，根据需要调整 */
   }
   .learnCon {
     padding-top: 19px;

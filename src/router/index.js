@@ -239,6 +239,26 @@ const router = createRouter({
       component: () => import('@/views/training/OverYears.vue')
     },
     {
+      path: '/preTestNotice',
+      component: () => import('@/views/training/PreTestNotice.vue')
+    },
+    {
+      path: '/correctionNotebook',
+      component: () => import('@/views/training/CorrectionNotebook.vue')
+    },
+    {
+      path: '/trainingCollectedEdition',
+      component: () => import('@/views/training/TrainingCollectedEdition.vue')
+    },
+    {
+      path: '/trainingNoteBook',
+      component: () => import('@/views/training/TrainingNoteBook.vue')
+    },
+    {
+      path: '/problemRecord',
+      component: () => import('@/views/training/ProblemRecord.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',
