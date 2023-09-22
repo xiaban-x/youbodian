@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import BtnGreen from '@/components/BtnGreen.vue'
 
 const router = useRouter()
 </script>
@@ -36,7 +37,7 @@ const router = useRouter()
     <table>
       <tr>
         <td class="left-align">注销账号</td>
-        <td class="right-align" @click="router.push('changeTel')">></td>
+        <td class="right-align" @click="router.push('/cancelAccount')">></td>
       </tr>
     </table>
     <div class="change-button">
@@ -95,7 +96,8 @@ td:last-child {
 }
 .change-button {
   position: fixed;
-  bottom: 108px;
+  margin-top: 150px;
+  margin-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: center; /* 水平居中 */

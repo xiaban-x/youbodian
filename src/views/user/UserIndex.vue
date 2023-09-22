@@ -59,7 +59,7 @@ const router = useRouter()
         />
         <div class="text" @click="router.push('/myWallet')">我的钱包</div>
       </div>
-      <div class="box">
+      <div class="box" @click="router.push('/buySetMeal')">
         <img
           src="@/assets/images/finance.png"
           style="width: 30px; height: 30px"
@@ -67,7 +67,7 @@ const router = useRouter()
         />
         <div class="text">购买套餐</div>
       </div>
-      <div class="box" @click="router.push('myOrder')">
+      <div class="box" @click="router.push('/myOrder')">
         <img
           src="@/assets/images/publish.png"
           style="width: 30px; height: 30px"
@@ -75,7 +75,7 @@ const router = useRouter()
         />
         <div class="text">我的订单</div>
       </div>
-      <div class="box" @click="router.push('myDistribution')">
+      <div class="box" @click="router.push('/myDistribution')">
         <img
           src="@/assets/images/exam.png"
           style="width: 30px; height: 30px"

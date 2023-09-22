@@ -1,6 +1,7 @@
 <script>
 import Discussion from '@/components/Discussion.vue'
 import { ref } from 'vue'
+import router from '@/router'
 export default {
   components: { Discussion },
   setup() {
@@ -13,6 +14,9 @@ export default {
     }
   },
   methods: {
+    router() {
+      return router
+    },
     buy() {
       this.showbuy = !this.showbuy // 切换按钮的显示状态
     },
@@ -23,7 +27,7 @@ export default {
 }
 </script>
 <template>
-  <div>
+  <div class="HCContainer">
     <Head>高分一点通</Head>
     <div id="imageContainer">
       <div
@@ -87,9 +91,16 @@ export default {
         alt=""
         class="service"
       />
-      <img src="@/assets/images/share.png" alt="" class="sharelink" />
-      <button @click="buy">
-        <div class="buttontext">立即购买</div>
+      <img
+        @click="buy"
+        src="@/assets/images/share.png"
+        alt=""
+        class="sharelink"
+      />
+      <button>
+        <div @click="router().push('/createOrder')" class="buttontext">
+          立即购买
+        </div>
       </button>
     </div>
 
@@ -118,6 +129,9 @@ export default {
 </template>
 
 <style scoped>
+.HCContainer {
+  padding-bottom: 100px;
+}
 #imageContainer {
   width: 347px;
   height: 247px;

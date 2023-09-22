@@ -115,6 +115,18 @@ const router = createRouter({
       component: () => import('@/views/user/FeedbackDetails.vue')
     },
     {
+      path: '/createOrder',
+      component: () => import('@/views/user/CreateOrder.vue')
+    },
+    {
+      path: '/payPage',
+      component: () => import('@/views/user/PayPage.vue')
+    },
+    {
+      path: '/payInfo',
+      component: () => import('@/views/user/PayInfo.vue')
+    },
+    {
       path: '/myOrder',
       component: () => import('@/views/user/MyOrder.vue')
     },
@@ -141,6 +153,14 @@ const router = createRouter({
     {
       path: '/applyDetail',
       component: () => import('@/views/user/ApplyDetail.vue')
+    },
+    {
+      path: '/buySetMeal',
+      component: () => import('@/views/user/BuySetMeal.vue')
+    },
+    {
+      path: '/cancelAccount',
+      component: () => import('@/views/user/CancelAccount.vue')
     },
     // {
     //   path: '/dictionary',
