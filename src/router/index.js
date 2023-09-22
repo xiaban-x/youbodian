@@ -106,6 +106,10 @@ const router = createRouter({
       path: '/myWallet',
       component: () => import('@/views/user/MyWallet.vue')
     },
+    {
+      path: '/embody',
+      component: () => import('@/views/user/EmbodyPage.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')

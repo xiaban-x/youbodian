@@ -14,7 +14,7 @@ import RunningWaterSection from '@/components/user/RunningWaterSection.vue'
       <div class="text">我的余额</div>
       <div class="moneyAndEmbody">
         <div class="money">￥ 408.00</div>
-        <div class="embody">体现</div>
+        <div class="embody" @click="router.push('/embody')">提现</div>
       </div>
     </div>
 
