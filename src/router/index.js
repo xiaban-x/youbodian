@@ -110,6 +110,30 @@ const router = createRouter({
       path: '/embody',
       component: () => import('@/views/user/EmbodyPage.vue')
     },
+    {
+      path: '/feedbackDetails',
+      component: () => import('@/views/user/FeedbackDetails.vue')
+    },
+    {
+      path: '/myOrder',
+      component: () => import('@/views/user/MyOrder.vue')
+    },
+    {
+      path: '/orderDetails',
+      component: () => import('@/views/user/OrderDetails.vue')
+    },
+    {
+      path: '/orderDetailsEvaluation',
+      component: () => import('@/views/user/OrderDetailsEvaluation.vue')
+    },
+    {
+      path: '/orderEvaluation',
+      component: () => import('@/views/user/OrderEvaluation.vue')
+    },
+    {
+      path: '/myDistribution',
+      component: () => import('@/views/user/MyDistribution.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')
