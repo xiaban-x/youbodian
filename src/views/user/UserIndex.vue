@@ -67,7 +67,7 @@ const router = useRouter()
         />
         <div class="text">购买套餐</div>
       </div>
-      <div class="box">
+      <div class="box" @click="router.push('myOrder')">
         <img
           src="@/assets/images/publish.png"
           style="width: 30px; height: 30px"
@@ -75,7 +75,7 @@ const router = useRouter()
         />
         <div class="text">我的订单</div>
       </div>
-      <div class="box">
+      <div class="box" @click="router.push('myDistribution')">
         <img
           src="@/assets/images/exam.png"
           style="width: 30px; height: 30px"

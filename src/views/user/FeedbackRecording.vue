@@ -9,9 +9,9 @@ const router = useRouter()
 <template>
   <div>
     <Head>反馈记录</Head>
-    <Feedback></Feedback>
-    <Feedback></Feedback>
-    <Feedback></Feedback>
+    <div @click="router.push('feedbackDetails')"><Feedback></Feedback></div>
+    <div @click="router.push('feedbackDetails')"><Feedback></Feedback></div>
+    <div @click="router.push('feedbackDetails')"><Feedback></Feedback></div>
     <div class="fixed-button-container">
       <!-- 按钮 -->
       <BtnGreen message="添加" @click="router.push('addFeedback')"></BtnGreen>
