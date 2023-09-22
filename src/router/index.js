@@ -94,6 +94,14 @@ const router = createRouter({
       path: '/globalSetting',
       component: () => import('@/views/user/GlobalSetting.vue')
     },
+    {
+      path: '/feedbackRecording',
+      component: () => import('@/views/user/FeedbackRecording.vue')
+    },
+    {
+      path: '/addFeedback',
+      component: () => import('@/views/user/AddFeedback.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')

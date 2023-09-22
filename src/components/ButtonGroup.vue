@@ -78,6 +78,7 @@ button.default {
   border-radius: 30px;
   border: 0.5px #ededed solid;
   background-color: white;
+  font-size: 14px
 }
 
 /* 激活按钮的样式 */
@@ -89,6 +90,7 @@ button.active {
   border-radius: 30px;
   border: none;
   color: white;
+  font-size: 14px
 }
 
 /* 按钮分行样式 */

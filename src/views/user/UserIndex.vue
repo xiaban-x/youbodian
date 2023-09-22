@@ -22,7 +22,7 @@ const router = useRouter()
         />
         <div class="text">个人信息</div>
       </div>
-      <div class="box">
+      <div class="box" @click="router.push('feedbackRecording')">
         <img
           src="@/assets/images/logging.png"
           style="height: 41px; width: 41px"
