@@ -83,7 +83,7 @@ const router = useRouter()
         />
         <div class="text">我的分销</div>
       </div>
-      <div class="box">
+      <div class="box" @click="router.push('/myApply')">
         <img
           src="@/assets/images/Certification.png"
           style="width: 30px; height: 30px"

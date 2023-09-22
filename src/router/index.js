@@ -134,6 +134,14 @@ const router = createRouter({
       path: '/myDistribution',
       component: () => import('@/views/user/MyDistribution.vue')
     },
+    {
+      path: '/myApply',
+      component: () => import('@/views/user/MyApply.vue')
+    },
+    {
+      path: '/applyDetail',
+      component: () => import('@/views/user/ApplyDetail.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')
