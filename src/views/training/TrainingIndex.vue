@@ -267,14 +267,17 @@ const isShow = ref(false)
       <SpanDivOne>
         <template #header> 强化练习 </template>
         <template #footer>
-          <LeftImgRightTwoDiv :ImgColor="ReinforcementLearning">
+          <LeftImgRightTwoDiv
+            :ImgColor="ReinforcementLearning"
+            @click="router.push('/intensiveExercise')"
+          >
             <template #image>
               <img
                 src="@/assets/training/ReinforcementLearning.svg"
                 alt="Image"
               />
             </template>
-            <template #title> 自由联系 </template>
+            <template #title> 自由练习 </template>
             <template #content> 考前检测，加强提升 </template>
           </LeftImgRightTwoDiv>
         </template>

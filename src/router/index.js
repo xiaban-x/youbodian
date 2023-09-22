@@ -267,6 +267,10 @@ const router = createRouter({
       component: () => import('@/views/training/ProblemRecord.vue')
     },
     {
+      path: '/intensiveExercise',
+      component: () => import('@/views/training/IntensiveExercise.vue')
+    },
+    {
       path: '/',
       component: () => import('@/views/dictionary/index.vue'),
       redirect: '/dictionary',
