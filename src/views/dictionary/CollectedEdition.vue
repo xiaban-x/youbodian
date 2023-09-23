@@ -1,14 +1,8 @@
 <script setup>
 import { useRouter } from 'vue-router'
 const router = useRouter()
-import { ref, reactive } from 'vue'
+import { reactive } from 'vue'
 import BilingualExample from '@/components/dictionary/BilingualExample.vue'
-const value1 = ref(0)
-const option1 = [
-  { text: '时间倒序', value: 0 },
-  { text: '时间顺序', value: 1 },
-  { text: '错题数量顺序', value: 2 }
-]
 
 // themeVars 内的值会被转换成对应 CSS 变量
 // 比如 sliderBarHeight 会转换成 `--van-slider-bar-height`
@@ -29,9 +23,11 @@ const themeVars = reactive({
   ></van-nav-bar>
   <div class="CEContainer">
     <van-config-provider :theme-vars="themeVars" class="dropdownCon">
-      <van-dropdown-menu class="dropdown">
-        <van-dropdown-item v-model="value1" :options="option1" />
-      </van-dropdown-menu>
+      <select class="subSelect" name="subject" id="subject">
+        <option value="时间倒序">时间倒序</option>
+        <option value="时间顺序">时间顺序</option>
+        <option value="错题数量顺序">错题数量顺序</option>
+      </select>
     </van-config-provider>
     <span class="del">取消收藏</span>
     <div class="longLine"></div>
@@ -94,17 +90,27 @@ const themeVars = reactive({
   padding-left: 14px;
   .dropdownCon {
     border-radius: 15px;
-    padding-top: 7px;
-    .dropdown {
-      width: 90px;
+    padding-top: 12px;
+    .subSelect {
+      background-color: #f6f6f6;
+      color: #292929;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 94px;
+      height: 30px;
+      border: 1px #f6f6f6 solid;
+      border-radius: 30px;
+      padding-left: 10px;
     }
   }
   .del {
     position: relative;
-    top: -25px;
+    top: -30px;
     left: 270px;
     color: #11d075;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

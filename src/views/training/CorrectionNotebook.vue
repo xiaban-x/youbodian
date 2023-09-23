@@ -4,116 +4,155 @@
     <van-tabs v-model:active="active" color="#11D075" line-height="5px">
       <van-tab title="速记刷题">
         <div class="con">
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
           <div class="longLine"></div>
         </div>
       </van-tab>
       <van-tab title="章节练习">
         <div class="con">
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
           <div class="longLine"></div>
         </div>
       </van-tab>
       <van-tab title="历年真题">
         <div class="con">
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
-          <ChapterLink>
-            <template #chapterNum>一</template>
-            <template #title>总论</template>
-            <template #count>3</template>
-          </ChapterLink>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
+          <div @click="router.push('/topicPage')">
+            <ChapterLink>
+              <template #chapterNum>一</template>
+              <template #title>总论</template>
+              <template #count>3</template>
+            </ChapterLink>
+          </div>
           <div class="longLine"></div>
         </div>
       </van-tab>
       <van-tab title="强化练习">
         <div class="forth">
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
             <template #exerciseCount>8</template>
             <template #scoreRate>70</template>
           </ReinforceLearningChapter>
-          <ReinforceLearningChapter>
+          <ReinforceLearningChapter @click="router.push('/topicPage')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>

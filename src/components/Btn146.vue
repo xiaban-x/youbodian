@@ -3,7 +3,12 @@
     <span class="text-part-one" :style="{ color: textColorOne }">{{
       buttonText
     }}</span>
-    <img :src="imageUrl" alt="按钮图标" class="image-part" />
+    <img
+      :src="imageUrl"
+      style="height: 20px; width: 4px"
+      alt="按钮图标"
+      class="image-part"
+    />
     <span class="text-part-two" :style="{ color: textColorTwo }">{{
       additionalText
     }}</span>

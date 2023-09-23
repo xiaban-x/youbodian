@@ -1,31 +1,32 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import BtnGreen from '@/components/BtnGreen.vue'
 import Discussion from '@/components/Discussion.vue'
 
 const active = ref(0)
 const showBuy = ref(false)
 const router = useRouter()
 
-const buy = () => {
-  showBuy.value = !showBuy.value // 切换按钮的显示状态
+const goBack = () => {
+  router.go(-1) // 返回上一页
 }
 </script>
 <template>
   <div class="HCContainer">
-    <Head>高分一点通</Head>
+    <Head>会计基础班</Head>
     <div id="imageContainer">
       <div
         id="imageSlider"
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
       >
         <!-- <img
-          v-for="(image, index) in images"
-          :key="index"
-          :src="image.src"
-          :alt="image.alt"
-          class="sliderImage"
-        /> -->
+                  v-for="(image, index) in images"
+                  :key="index"
+                  :src="image.src"
+                  :alt="image.alt"
+                  class="sliderImage"
+                /> -->
         <img src="@/assets/images/High-score.jpg" alt="" />
       </div>
       <div class="title-small">高分一点通</div>
@@ -71,30 +72,18 @@ const buy = () => {
 
     <!-- 底部分享和按钮 -->
     <div class="share">
-      <img
-        @click="router.push('/wechatService')"
-        src="@/assets/images/CustomerServiceHeadset.png"
-        alt=""
-        class="service"
-      />
-      <img
-        @click="buy"
-        src="@/assets/images/share.png"
-        alt=""
-        class="sharelink"
-      />
-      <button>
-        <div @click="router().push('/createOrder')" class="buttontext">
-          立即购买
-        </div>
-      </button>
+      <BtnGreen
+        message="去报名"
+        style="margin-top: 10px"
+        @click="router.push('/goApply')"
+      ></BtnGreen>
     </div>
 
     <!-- 遮罩 -->
     <div id="shade">
       <div v-show="showBuy" class="black"></div>
       <div v-show="showBuy" class="top">
-        <img src="@/assets/images/return.png" alt="" @click="buy" />
+        <img src="@/assets/images/return.png" alt="" @click="goBack" />
       </div>
       <div v-show="showBuy" class="bottom">
         <div class="click">
@@ -174,35 +163,9 @@ const buy = () => {
   position: fixed;
   bottom: 0;
   width: 375px;
-  height: 83px;
   background: white;
-  overflow: hidden;
-}
-
-.share .service {
-  margin-left: 16px;
-}
-.share .sharelink {
-  margin-left: 12px;
-}
-.share button {
-  width: 210px;
-  height: 45px;
-  background: #11d075;
-  border-radius: 30px;
-  backdrop-filter: blur(4px);
-  border: 0;
-  margin: 10px 0 0 51px;
-}
-.share button .buttontext {
-  color: #fff;
-
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 45px;
-  float: left;
-  padding: 0 73px;
+  padding-left: 14px;
+  padding-bottom: 24px;
 }
 /* 遮罩 */
 template {

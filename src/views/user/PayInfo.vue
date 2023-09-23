@@ -83,6 +83,7 @@ const value5 = ref('')
   <BtnGreen
     message="提交"
     style="margin-left: 14px; margin-top: 170px; margin-bottom: 30px"
+    @click="router.push('/buySetMeal')"
   ></BtnGreen>
 </template>
 

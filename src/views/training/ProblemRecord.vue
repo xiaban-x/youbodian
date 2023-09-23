@@ -11,7 +11,7 @@ const currentRate = ref(0)
   <div class="TNBContainer">
     <van-tabs v-model:active="active" color="#11D075" line-height="5px">
       <van-tab title="速记刷题">
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -30,7 +30,7 @@ const currentRate = ref(0)
           <template #rate>%</template>
           <template #text>得分率</template>
         </ChapterScore>
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -49,7 +49,7 @@ const currentRate = ref(0)
           <template #rate>%</template>
           <template #text>得分率</template>
         </ChapterScore>
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -70,7 +70,7 @@ const currentRate = ref(0)
         </ChapterScore>
       </van-tab>
       <van-tab title="章节题库">
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -89,7 +89,7 @@ const currentRate = ref(0)
           <template #rate>%</template>
           <template #text>得分率</template>
         </ChapterScore>
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -110,7 +110,7 @@ const currentRate = ref(0)
         </ChapterScore>
       </van-tab>
       <van-tab title="历年真题">
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -129,7 +129,7 @@ const currentRate = ref(0)
           <template #rate>分</template>
           <template #text>&nbsp;&nbsp;得分</template>
         </ChapterScore>
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -148,7 +148,7 @@ const currentRate = ref(0)
           <template #rate>分</template>
           <template #text>&nbsp;&nbsp;得分</template>
         </ChapterScore>
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -167,7 +167,7 @@ const currentRate = ref(0)
           <template #rate>分</template>
           <template #text>&nbsp;&nbsp;得分</template>
         </ChapterScore>
-        <ChapterScore>
+        <ChapterScore @click="router.push('/answerResult')">
           <template #chapterNum>一</template>
           <template #title>总论</template>
           <template #time>2022.07.10 14:23</template>
@@ -189,7 +189,7 @@ const currentRate = ref(0)
       </van-tab>
       <van-tab title="强化练习">
         <div class="forth">
-          <ChapterScore>
+          <ChapterScore @click="router.push('/answerResult')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
@@ -208,7 +208,7 @@ const currentRate = ref(0)
             <template #rate>%</template>
             <template #text>得分率</template>
           </ChapterScore>
-          <ChapterScore>
+          <ChapterScore @click="router.push('/answerResult')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>
@@ -227,7 +227,7 @@ const currentRate = ref(0)
             <template #rate>%</template>
             <template #text>得分率</template>
           </ChapterScore>
-          <ChapterScore>
+          <ChapterScore @click="router.push('/answerResult')">
             <template #chapterNum>一</template>
             <template #title>总论</template>
             <template #time>2022.07.10 14:23</template>

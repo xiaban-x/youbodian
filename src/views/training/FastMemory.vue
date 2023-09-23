@@ -15,7 +15,8 @@ const activeNames = ref(['0'])
       <img
         src="@/assets/training/Setting.png"
         style="height: 20px; width: 20px"
-        alt="选择科目"
+        alt="全局设置"
+        @click="router.push('/globalSetting')"
       />
     </template>
   </van-nav-bar>
@@ -27,19 +28,19 @@ const activeNames = ref(['0'])
       </div>
       <div class="count">
         <div class="num">0</div>
-        <div class="text"></div>
+        <div class="text">今日做题量</div>
       </div>
     </div>
     <div class="fastLearn">
       <div class="top">
         <div>快速学习</div>
         <div>
-          <select>
+          <select class="FMSel">
             <option value="所有题目">所有题目</option>
             <option value="部分题目">部分题目</option>
             <option value="重点题目">重点题目</option>
           </select>
-          <select>
+          <select class="FMSel">
             <option value="全部提醒">全部提醒</option>
             <option value="部分提醒">部分提醒</option>
             <option value="重点提醒">重点提醒</option>
@@ -54,6 +55,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <FastMemorySection
             chapter-number="第一章"
@@ -61,6 +63,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <FastMemorySection
             chapter-number="第一章"
@@ -68,6 +71,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <FastMemorySection
             chapter-number="第一章"
@@ -75,6 +79,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <div class="longLine"></div>
         </van-collapse-item>
@@ -85,6 +90,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <FastMemorySection
             chapter-number="第一章"
@@ -92,6 +98,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <FastMemorySection
             chapter-number="第一章"
@@ -99,6 +106,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <FastMemorySection
             chapter-number="第一章"
@@ -106,6 +114,7 @@ const activeNames = ref(['0'])
             finished="6"
             sum="17"
             level="5"
+            @click="router.push('/topicPage')"
           ></FastMemorySection>
           <div class="longLine"></div>
         </van-collapse-item>
@@ -164,6 +173,13 @@ const activeNames = ref(['0'])
     .top {
       display: flex;
       justify-content: space-between;
+    }
+    .FMSel {
+      border-radius: 5px;
+      border: 1px solid #b9b9b9;
+      background: #f4f4f6;
+      padding: 3px 0 4px 7px;
+      margin-left: 5px;
     }
   }
   .longLine {

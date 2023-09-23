@@ -9,8 +9,8 @@ import TOEFL from '@/assets/dictionary/TOEFL.png'
 import { ref } from 'vue'
 import Btn146 from '@/components/Btn146.vue'
 import Search from '@/components/Search.vue'
-import vBG from '@/assets/dictionary/VerticalBarGreen.svg'
-import vBO from '@/assets/dictionary/VerticalBarOrange.svg'
+import vBG from '@/assets/dictionary/VerticalBarGreen.png'
+import vBO from '@/assets/dictionary/VerticalBarOrange.png'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const buttonTextLearn = ref('学习')
@@ -33,7 +33,11 @@ const isShow = ref(false)
     <div class="top">
       <div class="left">会计</div>
       <div class="right">
-        <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
+        <img
+          src="@/assets/dictionary/SelectProfession.svg"
+          alt="行业"
+          @click="router.push('/selectProfession')"
+        />
       </div>
     </div>
     <Search @click="router.push('/search')"></Search>
@@ -42,7 +46,7 @@ const isShow = ref(false)
     <SpanDivOne>
       <template #footer>
         <div class="book">
-          <ImgSpanOne>
+          <ImgSpanOne @click="router.push('/glossaryDetail')">
             <!-- 图片插槽 -->
             <template #image>
               <img
@@ -54,14 +58,13 @@ const isShow = ref(false)
             <!-- 文字插槽 -->
             <template #text> 单词本 </template>
           </ImgSpanOne>
-          <ImgSpanOne>
+          <ImgSpanOne @click="router.push('/errorEdition')">
             <!-- 图片插槽 -->
             <template #image>
               <img
                 src="@/assets/dictionary/ErrorEdition.png"
                 style="width: 38px; height: 38px"
                 alt="错词本"
-                @click="router.push('/errorEdition')"
               />
             </template>
             <!-- 文字插槽 -->
@@ -97,7 +100,17 @@ const isShow = ref(false)
       </template></SpanDivOne
     >
     <SpanDivOne>
-      <template #header> 每日学习打卡 </template>
+      <template #header>
+        <div class="wordMemoryHeader">
+          <div class="wordMemoryHeaderTitle">每日学习打卡</div>
+          <div class="wordMemoryHeaderSubTitle">
+            <span @click="router.push('/learnDate')">学习日历</span>
+            <span class="arrow"
+              ><img src="@/assets/dictionary/Arrow.svg" alt="箭头"
+            /></span>
+          </div>
+        </div>
+      </template>
       <template #footer>
         <div class="learnCon">
           <div class="date">
@@ -152,17 +165,7 @@ const isShow = ref(false)
       </template>
     </SpanDivOne>
     <SpanDivOne>
-      <template #header>
-        <div class="wordMemoryHeader">
-          <div class="wordMemoryHeaderTitle">单词速记</div>
-          <div class="wordMemoryHeaderSubTitle">
-            <span @click="router.push('/learnDate')">学习日历</span>
-            <span class="arrow"
-              ><img src="@/assets/dictionary/Arrow.svg" alt="箭头"
-            /></span>
-          </div>
-        </div>
-      </template>
+      <template #header>单词速记 </template>
       <template #footer>
         <div class="wordMemoryContainer">
           <div class="wordMemoryContainerOne">
@@ -215,7 +218,11 @@ const isShow = ref(false)
       </template>
       <template #footer>
         <div class="newWordContainer">
-          <ImgUpperRightText :imageUrl="SixLevel" :text-content="'付费'">
+          <ImgUpperRightText
+            :imageUrl="SixLevel"
+            :text-content="'付费'"
+            @click="router.push('/glossaryDetail')"
+          >
             <!-- 右上角的插槽 -->
             <template v-slot:right-top-text>
               <p>付费</p>
@@ -225,7 +232,11 @@ const isShow = ref(false)
               <p>六级词汇 &nbsp;</p>
             </template>
           </ImgUpperRightText>
-          <ImgUpperRightText :imageUrl="GMAT" :text-content="'免费'">
+          <ImgUpperRightText
+            :imageUrl="GMAT"
+            :text-content="'免费'"
+            @click="router.push('/glossaryDetail')"
+          >
             <!-- 右上角的插槽 -->
             <template v-slot:right-top-text>
               <p>免费</p>
@@ -235,7 +246,11 @@ const isShow = ref(false)
               <p>GMAT &nbsp; 必备词汇</p>
             </template>
           </ImgUpperRightText>
-          <ImgUpperRightText :imageUrl="TOEFL" :text-content="'付费'">
+          <ImgUpperRightText
+            :imageUrl="TOEFL"
+            :text-content="'付费'"
+            @click="router.push('/glossaryDetail')"
+          >
             <!-- 右上角的插槽 -->
             <template v-slot:right-top-text>
               <p>付费</p>
@@ -245,7 +260,11 @@ const isShow = ref(false)
               <p>TOEFL必备词汇</p>
             </template>
           </ImgUpperRightText>
-          <ImgUpperRightText :imageUrl="SixLevel2" :text-content="'付费'">
+          <ImgUpperRightText
+            :imageUrl="SixLevel2"
+            :text-content="'付费'"
+            @click="router.push('/glossaryDetail')"
+          >
             <!-- 右上角的插槽 -->
             <template v-slot:right-top-text>
               <p>付费</p>
@@ -255,13 +274,11 @@ const isShow = ref(false)
               <p>六级词汇 &nbsp;</p>
             </template>
           </ImgUpperRightText>
-          <div class="plus">
+          <div class="plus" @click="router.push('/addNewWordBook')">
             <div class="plusInnerImg">
               <img src="@/assets/dictionary/Plus.png" alt="加号" />
             </div>
-            <div class="plusInnerText" @click="router.push('/addNewWordBook')">
-              添加生词本
-            </div>
+            <div class="plusInnerText">添加生词本</div>
           </div>
         </div>
       </template>
@@ -488,7 +505,7 @@ const isShow = ref(false)
     width: 98px;
     height: 126px;
     background-color: #fafafa;
-    border: 0.5px #e7e7e7 solid;
+    border: 1px #e7e7e7 solid;
     border-radius: 5px;
     display: flex;
     align-items: center;

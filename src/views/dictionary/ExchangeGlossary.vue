@@ -12,7 +12,9 @@ import router from '@/router'
   <div class="EGContainer">
     <div class="EGTitle">
       <div>已有生词本</div>
-      <div class="moreGlossary">更多生词本 ></div>
+      <div class="moreGlossary" @click="router.push('/addNewWordBook')">
+        更多生词本 >
+      </div>
     </div>
     <div class="EGMain" v-for="index in 6" :key="index">
       <div class="EGMain1">
@@ -70,7 +72,7 @@ import router from '@/router'
     .longLine {
       width: 375px;
       margin-left: -14px;
-      border: 0.25px #c3c3c3 solid;
+      border: 1px #c3c3c3 solid;
     }
   }
 }

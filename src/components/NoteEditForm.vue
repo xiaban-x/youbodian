@@ -19,7 +19,7 @@ const props = defineProps({
         ></textarea>
         <div class="selectCon">
           <span v-if="checked">公开 &nbsp;</span>
-          <span v-else>隐私&nbsp;</span>
+          <span v-else>私密&nbsp;</span>
           <van-switch
             v-model="checked"
             active-color="#11D075"

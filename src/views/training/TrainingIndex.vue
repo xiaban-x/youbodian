@@ -21,7 +21,11 @@ const isShow = ref(false)
     <div class="top">
       <div class="left">会计</div>
       <div class="right">
-        <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
+        <img
+          src="@/assets/dictionary/SelectProfession.svg"
+          alt="行业"
+          @click="router.push('/selectProfession')"
+        />
       </div>
     </div>
     <Search @click="router.push('/searchTopic')"></Search>
@@ -82,7 +86,16 @@ const isShow = ref(false)
       </template>
     </SpanDivOne>
     <SpanDivOne>
-      <template #header> 每日学习打卡 </template>
+      <template #header
+        ><div class="wordMemoryHeader">
+          <div class="wordMemoryHeaderTitle">每日学习打卡</div>
+          <div class="wordMemoryHeaderSubTitle">
+            <span @click="router.push('/learnDate')">学习日历</span>
+            <span class="arrow"
+              ><img src="@/assets/dictionary/Arrow.svg" alt="箭头"
+            /></span>
+          </div></div
+      ></template>
       <template #footer>
         <div class="learnCon">
           <div class="date">
@@ -339,6 +352,34 @@ const isShow = ref(false)
     flex: 1; /* 平均分配容器宽度 */
     max-width: calc(25%); /* 每个组件最大宽度，根据需要调整 */
   }
+  .wordMemoryHeader {
+    display: flex;
+    justify-content: space-between; /* 将子元素分散对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    .wordMemoryHeaderTitle {
+      /* 样式可以按需调整 */
+      color: #292929;
+      font-size: 16px;
+      font-weight: 500;
+      word-wrap: break-word;
+    }
+
+    .wordMemoryHeaderSubTitle {
+      /* 样式可以按需调整 */
+      display: flex;
+      align-items: center;
+      color: #666666;
+      font-size: 14px;
+      font-weight: 400;
+      word-wrap: break-word;
+    }
+
+    .arrow {
+      /* 样式可以按需调整 */
+      margin-left: 4px; /* 调整箭头和文字之间的间距 */
+      margin-top: 4px;
+    }
+  }
   .learnCon {
     padding-top: 19px;
     display: flex;
@@ -473,62 +514,9 @@ const isShow = ref(false)
       }
     }
   }
-
-  .newWordHeader {
-    display: flex;
-    justify-content: space-between; /* 将子元素分散对齐 */
-    align-items: center; /* 垂直居中对齐 */
-    .newWordHeaderTitle {
-      /* 样式可以按需调整 */
-      color: #292929;
-      font-size: 16px;
-      font-weight: 500;
-      word-wrap: break-word;
-    }
-
-    .newWordHeaderSubTitle {
-      /* 样式可以按需调整 */
-      display: flex;
-      align-items: center;
-      color: #11d075;
-      font-size: 14px;
-      font-weight: 400;
-      word-wrap: break-word;
-    }
-  }
-  .newWordContainer {
-    display: flex;
-    flex-wrap: wrap; /* 自动换行 */
-    justify-content: flex-start; /* 从左到右排列 */
-    gap: 20px; /* 间隙 */
-    margin-left: 15px;
-    margin-top: 17px;
-  }
-
-  /* 如果需要控制每个组件的宽度，可以添加以下样式 */
   .newWordContainer > * {
     flex: 1; /* 平均分配容器宽度 */
     max-width: calc(33.3% - 19px); /* 每个组件最大宽度，根据需要调整 */
-  }
-  .plus {
-    position: relative;
-    .plusInner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      .plusInnerImg {
-        margin-left: 28px;
-      }
-      .plusInnerText {
-        color: #666666;
-        font-size: 10px;
-        font-weight: 400;
-        word-wrap: break-word;
-        width: 60px;
-        margin-left: 5px;
-      }
-    }
   }
   p {
     width: 56px;

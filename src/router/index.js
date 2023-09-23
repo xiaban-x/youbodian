@@ -34,6 +34,18 @@ const router = createRouter({
       component: () => import('@/views/course/HighCourse.vue')
     },
     {
+      path: '/courseDetail',
+      component: () => import('@/views/course/CourseDetail.vue')
+    },
+    {
+      path: '/goApply',
+      component: () => import('@/views/course/GoApply.vue')
+    },
+    {
+      path: '/wechatService',
+      component: () => import('@/views/course/WechatService.vue')
+    },
+    {
       path: '/personalInformation',
       component: () => import('@/views/user/PersonalInformation.vue')
     },
@@ -228,7 +240,7 @@ const router = createRouter({
     },
     {
       path: '/notebook',
-      component: () => import('@/views/dictionary/Notebook.vue')
+      component: () => import('@/views/dictionary/DictionaryNotebook.vue')
     },
     {
       path: '/editNotebook',

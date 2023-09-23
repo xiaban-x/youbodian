@@ -44,7 +44,7 @@ defineProps({
     border: 1px #999 solid;
   }
   .top {
-    margin-top: 5px;
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
     .left {

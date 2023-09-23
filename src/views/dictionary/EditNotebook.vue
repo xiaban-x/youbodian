@@ -18,17 +18,17 @@ import NoteEditForm from '@/components/NoteEditForm.vue'
     <div class="word">dictionary</div>
     <div class="longLine"></div>
     <NoteEditForm rows="7"></NoteEditForm>
-    <BtnGreen message="发布"></BtnGreen>
+    <BtnGreen message="发布" @click="router.go(-1)"></BtnGreen>
     <van-tabs
       v-model:active="active"
       class="order-tabs"
       line-height="4px"
       line-width="42px"
+      background="#F8F8F8"
       color="#11D075"
-      background="rgb(248,248,248)"
       shrink
     >
-      <van-tab title="优质笔记" class="">
+      <van-tab title="优质笔记" style="padding-top: 10px">
         <div class="recommended">为你精心挑选了部分优秀笔记</div>
         <GoodNotebook class="goodNotebook">
           <template #header
@@ -64,7 +64,14 @@ import NoteEditForm from '@/components/NoteEditForm.vue'
           >
           <template #main>
             <div class="MyNoteCon">
-              <div class="green1"><span>公开</span></div>
+              <div class="green1">
+                <span>公开</span>
+                <img
+                  src="@/assets/training/ShowNote.png"
+                  style="width: 24px; height: 24px"
+                  alt="睁开眼睛"
+                />
+              </div>
               <div class="green2">2023-08-17 11:21</div>
               <div class="green3">...</div>
             </div>
@@ -129,6 +136,7 @@ import NoteEditForm from '@/components/NoteEditForm.vue'
         border-radius: 40px;
         width: 49px;
         height: 26px;
+        font-size: 18px;
         background: #edfff6;
         border: 1px #edfff6 solid;
         margin-right: 9px;

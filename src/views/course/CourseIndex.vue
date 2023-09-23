@@ -15,7 +15,11 @@ const active = ref(0)
       <div class="top">
         <div class="left">会计</div>
         <div class="right">
-          <img src="@/assets/dictionary/SelectProfession.svg" alt="行业" />
+          <img
+            src="@/assets/dictionary/SelectProfession.svg"
+            alt="行业"
+            @click="router.push('/selectProfession')"
+          />
         </div>
       </div>
     </div>
@@ -47,16 +51,17 @@ const active = ref(0)
     >
       <van-tab title="我的课程" class="myClassTitle">
         <div class="my-class-all">
-          <MyClass></MyClass>
-          <MyClass></MyClass>
-          <MyClass></MyClass>
-          <MyClass></MyClass>
+          <MyClass @click="router.push('/courseDetail')"></MyClass>
+          <MyClass @click="router.push('/courseDetail')"></MyClass>
+          <MyClass @click="router.push('/courseDetail')"></MyClass>
+          <MyClass @click="router.push('/courseDetail')"></MyClass>
+
           <div style="height: 15px"></div>
         </div>
       </van-tab>
       <van-tab title="招生报名">
         <div class="my-class-all">
-          <MyClass></MyClass>
+          <MyClass @click="router.push('/courseDetail')"></MyClass>
           <div style="height: 15px"></div>
         </div>
       </van-tab>

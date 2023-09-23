@@ -15,7 +15,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 61px;
-  padding-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

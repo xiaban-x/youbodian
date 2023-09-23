@@ -1,13 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 const router = useRouter()
-import { ref } from 'vue'
-const value1 = ref(0)
-const option1 = [
-  { text: '默认排序', value: 0 },
-  { text: '难度排序', value: 1 },
-  { text: '常用排序', value: 2 }
-]
+import BilingualExample from '@/components/dictionary/BilingualExample.vue'
 </script>
 <template>
   <van-nav-bar
@@ -17,9 +11,11 @@ const option1 = [
     title="四级词汇"
   ></van-nav-bar>
   <div class="GDContainer">
-    <van-dropdown-menu class="dropdown">
-      <van-dropdown-item v-model="value1" :options="option1" />
-    </van-dropdown-menu>
+    <select class="subSelect" name="subject" id="subject">
+      <option value="默认排序">默认排序</option>
+      <option value="难度排序">难度排序</option>
+      <option value="常用排序">常用排序</option>
+    </select>
     <div class="longLine"></div>
     <BilingualExample class="BEx" @click="router.push('/searchByTransDetail')">
       <template #header> misdeed</template>
@@ -89,7 +85,7 @@ const option1 = [
         <div class="img">
           <img
             src="@/assets/dictionary/hiddenMeaning.png"
-            style="width: 15.86px; height: 14px"
+            style="width: 16px; height: 14px"
             alt="隐藏释义"
           />
         </div>
@@ -104,18 +100,24 @@ const option1 = [
   background-color: #fff;
   padding-top: 7px;
   padding-left: 14px;
-  .dropdown {
+  .subSelect {
+    background-color: #f6f6f6;
+    color: #292929;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     width: 94px;
     height: 30px;
-    background-color: #f6f6f6;
+    border: 1px #f6f6f6 solid;
     border-radius: 30px;
-    margin-bottom: 30px;
+    padding-left: 10px;
   }
 
   .longLine {
     width: 375px;
     margin-left: -14px;
-    border: 0.25px #c3c3c3 solid;
+    border: 1px #c3c3c3 solid;
     margin-top: 13px;
     margin-bottom: 12px;
   }
@@ -128,7 +130,7 @@ const option1 = [
     width: 150px;
     height: 47px;
     position: fixed;
-    bottom: 120px; /* 距离底部的距离 */
+    bottom: 60px; /* 距离底部的距离 */
     right: 20px; /* 距离右侧的距离 */
     word-wrap: break-word;
     .centered-element {
