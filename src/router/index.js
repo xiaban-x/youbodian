@@ -174,6 +174,10 @@ const router = createRouter({
       path: '/cancelAccount',
       component: () => import('@/views/user/CancelAccount.vue')
     },
+    {
+      path: '/photoSearch',
+      component: () => import('@/views/dictionary/PhotoSearch.vue')
+    },
     // {
     //   path: '/dictionary',
     //   component: () => import('@/views/dictionary/DictionaryIndex.vue')

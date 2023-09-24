@@ -145,7 +145,6 @@ img {
     font-weight: 400;
     word-wrap: break-word;
     margin: 12px 0 0 19px;
-    display: flex;
     justify-content: space-between;
 
     .information {
