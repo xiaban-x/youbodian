@@ -6,7 +6,7 @@ import router from '@/router'
   <div>
     <Head>订单详情</Head>
     <div class="obligation">
-      <img src="@/assets/images/Rectangle 2211.png" />
+      <img src="../../assets/images/Rectangle2211.png" />
       <div class="packageContent">
         <div class="package">套餐一</div>
         <div class="content">集中突破，冲刺高分</div>

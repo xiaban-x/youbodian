@@ -1,8 +1,8 @@
 <script setup>
-import BtnGreen from "@/components/BtnGreen.vue";
+import BtnGreen from '@/components/BtnGreen.vue'
 
-import { ref } from 'vue';
-const value = ref(3);
+import { ref } from 'vue'
+const value = ref(3)
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const value = ref(3);
     <Head>订单详情</Head>
 
     <div class="obligation">
-      <img src="@/assets/images/Rectangle 2211 (1).png"/>
+      <img src="../../assets/images/Rectangle2211(1).png" />
       <div class="package">套餐一</div>
       <div class="content">集中突破，冲刺高分</div>
     </div>
@@ -19,11 +19,11 @@ const value = ref(3);
       <div class="row">请根据课程的感受打个分</div>
       <div class="row">
         <van-rate
-            v-model="value"
-            :size="22"
-            color="#11D075"
-            void-icon="star"
-            void-color="#eee"
+          v-model="value"
+          :size="22"
+          color="#11D075"
+          void-icon="star"
+          void-color="#eee"
         />
       </div>
     </div>
@@ -67,7 +67,7 @@ img {
   margin: 16px auto;
   width: 317px;
   height: 128px;
-  background: linear-gradient(0deg, #962A2A 0%, #962A2A 100%);
+  background: linear-gradient(0deg, #962a2a 0%, #962a2a 100%);
   border-radius: 5px;
 }
 
@@ -100,7 +100,7 @@ textarea {
   padding: 10px 14px;
   background: white;
   border-radius: 10px;
-  border: 0.50px #EBEBEB solid;
+  border: 0.5px #ebebeb solid;
   resize: none;
 }
 

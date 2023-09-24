@@ -40,7 +40,29 @@ const isShow = ref(false)
         />
       </div>
     </div>
-    <Search @click="router.push('/search')"></Search>
+    <Search>
+      <template #search>
+        <img class="search" src="@/assets/dictionary/search.svg" alt="搜索" />
+      </template>
+      <template #inp>
+        <input
+          class="inp"
+          maxlength="11"
+          placeholder="请输入关键字进行查询"
+          type="text"
+          style="
+            border: none; /* Remove border */
+            outline: none; /* Remove outline */
+          "
+          @click="router.push('/search')"
+        />
+      </template>
+      <template #camera>
+        <a class="camera" @click="router.push('/photoSearch')"
+          ><img src="@/assets/dictionary/camera.svg" alt="拍照"
+        /></a>
+      </template>
+    </Search>
   </div>
   <div class="container">
     <SpanDivOne>

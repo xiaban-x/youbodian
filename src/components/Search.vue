@@ -1,21 +1,9 @@
-<script setup>
-import search from '@/assets/dictionary/search.svg'
-import camera from '@/assets/dictionary/camera.svg'
-const icon = {
-  search,
-  camera
-}
-</script>
+<script setup></script>
 <template>
   <div class="SearchContainer">
-    <img class="search" :src="icon.search" alt="搜索" />
-    <input
-      class="inp"
-      maxlength="11"
-      placeholder="请输入关键字进行查询"
-      type="text"
-    />
-    <a class="camera"><img :src="icon.camera" alt="拍照" /></a>
+    <div class="search"><slot name="search"></slot></div>
+    <div class="inp"><slot name="inp"></slot></div>
+    <div class="camera"><slot name="camera"></slot></div>
   </div>
 </template>
 
@@ -25,7 +13,7 @@ const icon = {
   height: 50px;
   background: white;
   border-radius: 7px;
-  border: 0.5px #616161 solid;
+  border: 1px #616161 solid;
   display: flex;
   align-items: center;
   .search {
@@ -38,7 +26,7 @@ const icon = {
     font-size: 14px;
     font-weight: 400;
     word-wrap: break-word;
-    margin-left: 16.5px;
+    margin-left: 17px;
     margin-right: 60px;
     width: 196px;
   }

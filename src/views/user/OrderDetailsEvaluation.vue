@@ -2,14 +2,14 @@
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-import BtnGreen from "@/components/BtnGreen.vue";
+import BtnGreen from '@/components/BtnGreen.vue'
 </script>
 
 <template>
   <div>
     <Head>订单详情</Head>
     <div class="obligation">
-      <img src="@/assets/images/Rectangle 2211.png"/>
+      <img src="../../assets/images/Rectangle2211.png" />
       <div class="packageContent">
         <div class="package">套餐一</div>
         <div class="content">集中突破，冲刺高分</div>
@@ -39,7 +39,10 @@ import BtnGreen from "@/components/BtnGreen.vue";
     </div>
     <!-- 按钮 -->
     <div class="fixed-button-container">
-      <BtnGreen message="去评价" @click="router.push('orderEvaluation')"></BtnGreen>
+      <BtnGreen
+        message="去评价"
+        @click="router.push('orderEvaluation')"
+      ></BtnGreen>
     </div>
   </div>
 </template>
@@ -113,7 +116,7 @@ import BtnGreen from "@/components/BtnGreen.vue";
       }
 
       .cancel {
-        border: 0.50px #DDDDDD solid;
+        border: 0.5px #dddddd solid;
         color: #666666;
       }
 
@@ -123,14 +126,13 @@ import BtnGreen from "@/components/BtnGreen.vue";
       }
     }
   }
-
 }
 
 img {
   display: flex;
   width: 131px;
   height: 171px;
-  background: linear-gradient(0deg, #962A2A 0%, #962A2A 100%);
+  background: linear-gradient(0deg, #962a2a 0%, #962a2a 100%);
   border-radius: 10px;
   margin: 15px 17px 0 15px;
 }
@@ -159,7 +161,7 @@ img {
       font-weight: 400;
       word-wrap: break-word;
     }
-    .detail{
+    .detail {
       margin-right: 19px;
     }
   }

@@ -1,13 +1,12 @@
 <script setup>
-
-import BtnGreen from "@/components/BtnGreen.vue";
+import BtnGreen from '@/components/BtnGreen.vue'
 </script>
 
 <template>
   <div>
     <Head>订单详情</Head>
     <div class="obligation">
-      <img src="@/assets/images/Rectangle 2211.png"/>
+      <img src="@/assets/images/Rectangle2211.png" />
       <div class="packageContent">
         <div class="package">套餐一</div>
         <div class="content">集中突破，冲刺高分</div>
@@ -84,47 +83,14 @@ import BtnGreen from "@/components/BtnGreen.vue";
         color: red;
       }
     }
-
-    .payButton {
-      display: flex;
-      flex-direction: row;
-      margin-right: 19px;
-      margin-bottom: 19px;
-      margin-left: auto;
-
-      .buttonStyle {
-        display: flex;
-        height: 27px;
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: 400;
-        word-wrap: break-word;
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        text-align: center;
-        padding: 0 10px;
-        margin-left: 8px;
-      }
-
-      .cancel {
-        border: 0.50px #DDDDDD solid;
-        color: #666666;
-      }
-
-      .pay {
-        background-color: #11d074;
-        color: white;
-      }
-    }
   }
-
 }
 
 img {
   display: flex;
   width: 131px;
   height: 171px;
-  background: linear-gradient(0deg, #962A2A 0%, #962A2A 100%);
+  background: linear-gradient(0deg, #962a2a 0%, #962a2a 100%);
   border-radius: 10px;
   margin: 15px 17px 0 15px;
 }
@@ -150,11 +116,10 @@ img {
     .information {
       color: #999999;
       font-size: 14px;
-      font-family: Roboto;
       font-weight: 400;
       word-wrap: break-word;
     }
-    .detail{
+    .detail {
       margin-right: 19px;
     }
   }

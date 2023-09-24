@@ -84,7 +84,7 @@ const buy = () => {
         class="sharelink"
       />
       <button>
-        <div @click="router().push('/createOrder')" class="buttontext">
+        <div @click="router.push('/createOrder')" class="buttontext">
           立即购买
         </div>
       </button>
