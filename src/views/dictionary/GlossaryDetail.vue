@@ -2,6 +2,37 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 import BilingualExample from '@/components/dictionary/BilingualExample.vue'
+
+var time = '' // 用来存上一次按键时间；
+setTimeout(() => {
+  // 监听返回按钮
+  document.addEventListener('plusready', function () {
+    plus.key.addEventListener(
+      'backbutton',
+      function (evt) {
+        var webview = plus.webview.currentWebview()
+        var url = location.hash.split('/')[1]
+        if (url === 'index') {
+          // 处于首页时,实现退出app操作
+          // vant.Toast('提示');
+          if (new Date() - time < 2000) {
+            // 小于2s,退出程序
+            webview.close()
+          } else {
+            // 重置时间，
+            time = new Date()
+            vant.Toast('再次点击退出', 2000)
+          }
+          return
+        } else {
+          vant.Toast('不满足条件')
+          history.go(-1) // 不满足退出操作，，返回上一页
+        }
+      },
+      false
+    )
+  })
+}, 10)
 </script>
 <template>
   <van-nav-bar

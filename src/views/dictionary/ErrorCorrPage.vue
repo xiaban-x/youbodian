@@ -20,6 +20,7 @@ const afterRead = (file) => {
     file.message = '上传成功'
   }, 1000)
 }
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

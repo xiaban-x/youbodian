@@ -10,6 +10,7 @@ const router = useRouter()
 const buy = () => {
   showBuy.value = !showBuy.value // 切换按钮的显示状态
 }
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <div class="HCContainer">

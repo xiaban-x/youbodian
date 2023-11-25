@@ -1,46 +1,51 @@
-import { useUserStore } from '@/stores/user'
 import axios from 'axios'
 import router from '@/router'
-import { ElMessage } from 'element-plus'
-
-const baseURL = 'https://ybd.freecourse.vip'
-
-const instance = axios.create({
-  baseURL,
-  timeout: 100000
-})
-
-instance.interceptors.request.use(
-  (config) => {
-    const userStore = useUserStore()
-    if (userStore.token) {
-      config.headers.Authorization = userStore.token
+export function request(config) {
+  // 创建axios的实例
+  const instance = axios.create({
+    baseURL: '/api/',
+    timeout: 10000
+  })
+  // 请求拦截器配置
+  instance.interceptors.request.use(
+    (config) => {
+      // config.headers.Authorization = window.sessionStorage.getItem('token')
+      // 在发送请求之前输出请求的 URL
+      console.log('请求的 URL:', config.url)
+      return config
+    },
+    (error) => {
+      console.log(error)
+      return Promise.error(error)
     }
-    return config
-  },
-  (err) => Promise.reject(err)
-)
-
-instance.interceptors.response.use(
-  (res) => {
-    if (res.data.code === 0) {
-      return res
+  )
+  // 响应拦截器配置
+  instance.interceptors.response.use(
+    (response) => {
+      console.log(response)
+      return response.data
+    },
+    (error) => {
+      switch (error.response.status) {
+        case 401:
+          console.log('无权访问')
+          router.push({ path: '/login' })
+          break
+        case 403:
+          console.log('token过期啦')
+          router.push({ path: '/login' })
+          break
+        case 404:
+          console.log('404啦')
+          router.push({ path: '/404' })
+          break
+        default:
+          return Promise.reject(error)
+      }
+      return Promise.reject(error)
     }
-    ElMessage({ message: res.data.message || '服务异常', type: 'error' })
-    return Promise.reject(res.data)
-  },
-  (err) => {
-    ElMessage({
-      message: err.response.data.message || '服务异常',
-      type: 'error'
-    })
-    console.log(err)
-    if (err.response?.status === 401) {
-      router.push('/login')
-    }
-    return Promise.reject(err)
-  }
-)
-
-export default instance
-export { baseURL }
+  )
+  // 发送真正的网络请求
+  return instance(config)
+}
+export default request

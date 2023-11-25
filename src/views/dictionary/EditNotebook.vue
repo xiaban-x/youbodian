@@ -6,6 +6,7 @@ const active = ref(0)
 import BtnGreen from '@/components/BtnGreen.vue'
 import GoodNotebook from '@/components/dictionary/GoodNotebook.vue'
 import NoteEditForm from '@/components/NoteEditForm.vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

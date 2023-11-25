@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router'
 import WordPronunciation from '@/components/dictionary/WordPronunciation.vue'
 import BilingualExample from '@/components/dictionary/BilingualExample.vue'
 const router = useRouter()
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

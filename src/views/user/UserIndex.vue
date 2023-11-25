@@ -1,7 +1,42 @@
 <script setup>
 import { useRouter } from 'vue-router'
-
+import { getUserInfoService } from '@/api/user'
+import { ref } from 'vue'
+import { useUserStore } from '@/stores/user'
 const router = useRouter()
+const userStore = useUserStore()
+
+const access_token = localStorage.getItem('access_token')
+// const refresh_token = localStorage.getItem('refresh_token')
+const token_type = localStorage.getItem('token_type')
+// 调用getUserInfoService并携带自定义请求头
+const customHeaders = ref({
+  Authorization: `${token_type} ${access_token}` // 替换为你的自定义授权令牌
+})
+console.log(customHeaders.value)
+const getUserInfo = async () => {
+  try {
+    const data = await getUserInfoService(customHeaders.value.Authorization)
+    // // 在这里处理响应数据，可以根据需要进行操作
+    // 这里可以继续执行其他逻辑，使用响应的值
+    userStore.setUserInfo({
+      gender: data.gender,
+      displayName: data.displayName,
+      avatar: data.avatar,
+      location: data.location,
+      email: data.email,
+      phone: data.phone,
+      education: data.education,
+      wechat: data.wechat
+    })
+    console.log(data)
+  } catch (error) {
+    // 处理错误
+    console.error('获取登录失败：', error)
+  }
+}
+
+getUserInfo()
 </script>
 <template>
   <!-- <div>这是我的资料</div> -->
@@ -10,8 +45,18 @@ const router = useRouter()
       <div class="headPicture">
         <img src="@/assets/images/NotAvatar.png" alt="" />
       </div>
-      <button class="name" @click="router.push('login')">请点击登录</button>
-      <div class="lookMore">&gt;</div>
+      <div class="displayNameCon" v-if="userStore.email || userStore.phone">
+        <div class="displayName" v-if="userStore.displayName">
+          {{ userStore.displayName }}
+        </div>
+        <div class="goSetName" v-else @click="router.push('/changeNickname')">
+          您还没有设置名字噢，点击设置名字
+        </div>
+      </div>
+      <div v-else>
+        <button class="name" @click="router.push('login')">请点击登录</button>
+        <div class="lookMore">&gt;</div>
+      </div>
     </div>
     <div class="message">
       <div class="box" @click="router.push('personalInformation')">
@@ -105,6 +150,19 @@ const router = useRouter()
   padding-top: 64px;
   padding-bottom: 10px;
   overflow: hidden;
+  .displayName {
+    color: #292929;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 14px;
+    padding-left: 80px;
+  }
+  .goSetName {
+    margin-top: 14px;
+    padding-left: 80px;
+  }
 }
 .clickLog .headPicture {
   width: 55px;

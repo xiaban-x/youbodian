@@ -22,6 +22,7 @@ const searchResult = ref([
   '不属于国家统一规定了计提基础和计提比例的是（）。',
   '下列资产中，期末账面价值与计税基础可能相等的有（）。'
 ])
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

@@ -24,8 +24,8 @@ const icon = {
 <template>
   <router-view></router-view>
   <div class="tabBarContainer">
-    <van-tabbar v-model="active" route>
-      <van-tabbar-item to="/dictionary">
+    <van-tabbar v-model="active" route class="test">
+      <van-tabbar-item to="/dictionary" class="index1">
         <span>字典</span>
         <template #icon="props">
           <img
@@ -35,7 +35,7 @@ const icon = {
           />
         </template>
       </van-tabbar-item>
-      <van-tabbar-item to="/training">
+      <van-tabbar-item to="/training" class="index2">
         <span>题库</span>
         <template #icon="props">
           <img
@@ -43,13 +43,13 @@ const icon = {
           />
         </template>
       </van-tabbar-item>
-      <van-tabbar-item to="/course">
+      <van-tabbar-item to="/course" class="index3">
         <span>课程</span>
         <template #icon="props">
           <img :src="props.active ? icon.courseSelect : icon.courseDefault" />
         </template>
       </van-tabbar-item>
-      <van-tabbar-item to="/user">
+      <van-tabbar-item to="/user" class="index4">
         <span>我的</span>
         <template #icon="props">
           <img :src="props.active ? icon.userSelect : icon.userDefault" />
@@ -61,6 +61,15 @@ const icon = {
 
 <style scoped>
 .tabBarContainer {
-  padding-bottom: 110px;
+  /*display: block;*/
+  /*position: fixed;*/
+  /*bottom: 0;*/
+
+  padding-bottom: 100px;
 }
+/*.test {*/
+/*  position: fixed;*/
+/*  bottom: 0;*/
+/*  padding-bottom: 10px;*/
+/*}*/
 </style>

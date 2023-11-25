@@ -1,5 +1,6 @@
 <script setup>
 import ClassMain from '@/components/ClassMain.vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <!-- <div>这是备考训练</div> -->

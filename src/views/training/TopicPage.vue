@@ -60,6 +60,7 @@ const nextTopic = () => {
 // 如果还有下一题，可以根据题目类型切换到下一题的数据
 // 如果没有下一题了，可以跳转到答题结果页面或其他页面
 // 这里的逻辑需要根据你的具体需求来实现
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 
 <template>

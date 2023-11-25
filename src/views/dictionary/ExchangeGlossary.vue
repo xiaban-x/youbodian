@@ -1,6 +1,7 @@
 <script setup>
 import GlossaryNoMoney from '@/components/dictionary/GlossaryNoMoney.vue'
 import router from '@/router'
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

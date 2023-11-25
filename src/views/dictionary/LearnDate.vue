@@ -65,6 +65,7 @@ const onChange = (dateString) => {
   }
   year.value = date.getFullYear()
 }
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

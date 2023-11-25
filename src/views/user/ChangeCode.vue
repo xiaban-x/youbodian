@@ -1,158 +1,113 @@
-<script setup></script>
+<script setup>
+import BtnGreen from '@/components/BtnGreen.vue'
+import router from '@/router'
+import { ref } from 'vue'
+import { resetUserPasswordService } from '@/api/user'
+import { showFailToast, showSuccessToast } from 'vant'
+const oldPassword = ref('')
+const newPassword = ref('')
+
+const access_token = localStorage.getItem('access_token')
+// const refresh_token = localStorage.getItem('refresh_token')
+const token_type = localStorage.getItem('token_type')
+// 调用getUserInfoService并携带自定义请求头
+const headers = ref({
+  Authorization: `${token_type} ${access_token}`
+})
+
+const resetPassword = async () => {
+  try {
+    const response = await resetUserPasswordService(
+      oldPassword.value,
+      newPassword.value,
+      headers.value.Authorization
+    )
+    // 在这里处理响应数据，可以根据需要进行操作
+    const data = response.data
+    console.log(data)
+    showSuccessToast('更新密码成功')
+  } catch (error) {
+    // 处理错误
+    console.log(error.response.data.msg)
+    if (
+      error.response.data.msg === 'The password must have at least 8 characters'
+    ) {
+      showFailToast('密码至少要八位数')
+      return
+    }
+    console.error('更改密码失败：', error)
+  }
+  router.go(-1)
+}
+</script>
 
 <template>
-  <div>
-    <Head>重置密码</Head>
-    <div class="change-code">
-      <van-tabs
-        v-model:active="active"
-        class="order-tabs"
-        line-height="2px"
-        line-width="30px"
-        color="#11D075"
-        background="transparent"
-      >
-        <van-tab title="简介">
-          <table>
-            <tr>
-              <td class="left-align">
-                <div class="number">112255648</div>
-              </td>
-              <td class="right-align"></td>
-            </tr>
-            <tr>
-              <td class="left-align">
-                <input
-                  class="new-tel"
-                  maxlength="11"
-                  placeholder="请输入验证码"
-                  type="text"
-                />
-              </td>
-              <td class="right-align">获取验证码</td>
-            </tr>
-            <tr>
-              <td class="left-align">
-                <input
-                  class="new-tel"
-                  maxlength="11"
-                  placeholder="请输入新的登录密码"
-                  type="text"
-                />
-              </td>
-              <td class="right-align">隐藏</td>
-            </tr>
-          </table>
-          <div class="change-button">
-            <BtnGreen message="确认重置"></BtnGreen>
-          </div>
-        </van-tab>
+  <van-nav-bar left-arrow @click-left="router.go(-1)" title="重置密码" />
 
-        <van-tab title="评价">
-          <table>
-            <tr>
-              <td class="left-align">
-                <div class="number">112255648@qq.com</div>
-              </td>
-              <td class="right-align"></td>
-            </tr>
-            <tr>
-              <td class="left-align">
-                <input
-                  class="new-tel"
-                  maxlength="11"
-                  placeholder="请输入验证码"
-                  type="text"
-                />
-              </td>
-              <td class="right-align">获取验证码</td>
-            </tr>
-            <tr>
-              <td class="left-align">
-                <input
-                  class="new-tel"
-                  maxlength="11"
-                  placeholder="请输入新的登录密码"
-                  type="text"
-                />
-              </td>
-              <td class="right-align">获取验证码</td>
-            </tr>
-          </table>
-          <div class="change-button">
-            <BtnGreen message="确认重置"></BtnGreen>
-          </div>
-        </van-tab>
-      </van-tabs>
+  <div class="CCContainer">
+    <div class="form">
+      <div class="form-item">
+        <input
+          class="inp"
+          maxlength="11"
+          placeholder="请输入旧的登录密码"
+          type="password"
+          v-model="oldPassword"
+        />
+      </div>
+      <div class="form-item">
+        <input
+          class="inp"
+          maxlength="20"
+          placeholder="请输入新的登录密码"
+          type="password"
+          v-model="newPassword"
+        />
+      </div>
     </div>
+    <BtnGreen message="确认重置" class="btn" @click="resetPassword"></BtnGreen>
   </div>
 </template>
 
 <style scoped>
-table {
+.CCContainer {
+  background-color: rgb(248, 248, 248);
+  p {
+    line-height: 40px;
+    font-size: 14px;
+    color: #b8b8b8;
+  }
+}
+
+.form {
   width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  margin-top: 20px;
+  border-radius: 5px;
+  .form-item {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 0;
+    padding-left: 10px;
+  }
 }
-
-td {
-  padding: 0 10px;
-}
-td .number {
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-}
-
-.left-align {
-  text-align: left;
-  color: #292929;
-  font-size: 16px;
-  font-weight: 400;
-  word-wrap: break-word;
-}
-.left-align .new-tel {
-  background: white;
-  border: 0;
-  padding-left: 10px;
-  color: #292929;
+.inp {
+  display: block;
+  border: none;
+  outline: none;
+  height: 43px;
   font-size: 14px;
-  font-weight: 400;
+  flex: 1;
+  font-weight: 300;
   word-wrap: break-word;
+  padding: 3px 3px 3px 10px;
+  margin: 0;
 }
-.left-align .new-tel::placeholder {
-  color: #999999;
-}
-
-.right-align {
-  text-align: right;
-  font-size: 14px;
-  font-weight: 400;
-  padding-right: 18px;
+.btn {
+  margin-left: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
   word-wrap: break-word;
-  color: #11d074;
-}
-
-/* 设置表格横边框，去掉竖边框 */
-td {
-  border-bottom: none;
-  height: 44px;
-}
-
-/* 去掉第一列的左边框 */
-td:first-child {
-  border-left: none;
-}
-
-/* 去掉最后一列的右边框 */
-td:last-child {
-  border-right: none;
-}
-.change-button {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
 }
 </style>

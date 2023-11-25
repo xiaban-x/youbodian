@@ -1,12 +1,72 @@
-import request from '@/utils/request'
+import http from '@/utils/http'
 
-// 注册接口
-export const userRegisterService = ({ username, password, repassword }) =>
-  request.post('/api/reg', { username, password, repassword })
+//发送邮箱/手机确认码
+export const userSendVerityCodeService = (
+  captchaType,
+  captchaId,
+  captchaToken,
+  dest,
+  destType
+) =>
+  http.post('https://ybd.freecourse.vip/user/send-verity-code', {
+    captchaType,
+    captchaId,
+    captchaToken,
+    dest,
+    destType
+  })
 
-// 登录接口
-export const userLoginService = ({ username, password }) =>
-  request.post('/api/login', { username, password })
+// 获取图形认证码接口
+export const getCaptchaService = () =>
+  http.get('https://ybd.freecourse.vip/user/get-captcha')
 
-// 获取用户基本信息
-export const userGetInfoService = () => request.get('/my/userinfo')
+// 用户登录接口
+export const userLoginService = (username, code, password) =>
+  http.post('https://ybd.freecourse.vip/user/login', {
+    username: username,
+    code: code,
+    password: password
+  })
+
+export const getUserInfoService = (customHeaders) =>
+  http.get('https://ybd.freecourse.vip/user/get', null, {
+    Authorization: customHeaders
+  })
+export const updateUserInfoService = (
+  gender,
+  displayName,
+  avatar,
+  location,
+  email,
+  phone,
+  education,
+  wechat,
+  headers
+) =>
+  http.post(
+    'https://ybd.freecourse.vip/user/update',
+    {
+      gender,
+      displayName,
+      avatar,
+      location,
+      email,
+      phone,
+      education,
+      wechat
+    },
+    {
+      Authorization: headers
+    }
+  )
+export const resetUserPasswordService = (oldPassword, newPassword, headers) =>
+  http.post(
+    'https://ybd.freecourse.vip/user/reset',
+    {
+      oldPassword,
+      newPassword
+    },
+    {
+      Authorization: headers
+    }
+  )

@@ -2,6 +2,7 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 import BilingualExample from '@/components/dictionary/BilingualExample.vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

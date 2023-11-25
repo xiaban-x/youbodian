@@ -1,7 +1,7 @@
 <script setup>
 import search from '@/assets/dictionary/SearchGreen.svg'
 import { useRouter } from 'vue-router'
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, nextTick } from 'vue'
 
 const router = useRouter()
 const icon = {
@@ -39,6 +39,7 @@ const E2C = () => {
 const C2E = () => {
   router.push('searchByTrans')
 }
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 
 <template>

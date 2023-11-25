@@ -1,4 +1,65 @@
-<script setup></script>
+<script setup>
+import BtnGreen from '@/components/BtnGreen.vue'
+import { ref } from 'vue'
+import { getCaptchaService, userSendVerityCodeService } from '@/api/user'
+
+let captchaValue = ref('')
+let captchaId = ref('')
+let captchaImage = ref('')
+
+const getCaptcha = async () => {
+  try {
+    const response = await getCaptchaService()
+    // 在这里处理响应数据，可以根据需要进行操作
+    const data = response.data
+    captchaId.value = data.captchaId
+    captchaImage.value = data.captchaImage
+    // 这里可以继续执行其他逻辑，使用响应的值
+  } catch (error) {
+    // 处理错误
+    console.error('获取验证码失败：', error)
+  }
+}
+
+let codeLoginDest = ref('')
+let codeLoginCaptchaValue = ref('')
+let dest = ref('')
+let destType = ref('')
+const getCode = async () => {
+  try {
+    console.log(codeLoginDest)
+    console.log(codeLoginCaptchaValue)
+    dest.value = codeLoginDest.value
+    captchaValue.value = codeLoginCaptchaValue.value
+    if (dest.value === null) {
+      return '帐号为空'
+    }
+    if (dest.value.includes('@')) {
+      destType.value = 'email'
+    } else {
+      destType.value = 'phone'
+    }
+    console.log(captchaId.value)
+    console.log(captchaValue.value)
+    console.log(dest.value)
+    console.log(destType.value)
+    const response = await userSendVerityCodeService(
+      'Default',
+      captchaId.value,
+      captchaValue.value,
+      dest.value,
+      destType.value
+    )
+    // 在这里处理响应数据，可以根据需要进行操作
+    const data = response.data
+    // 这里可以继续执行其他逻辑，使用响应的值
+    console.log(data)
+  } catch (error) {
+    // 处理错误
+    console.error('获取验证码失败：', error)
+  }
+}
+</script>
 
 <template>
   <div>
@@ -20,11 +81,29 @@
           <input
             class="new-tel"
             maxlength="11"
-            placeholder="请输入验证码"
+            placeholder="请输入图形验证码"
             type="text"
           />
+          <img
+            @click="getCaptcha"
+            :src="'data:image/png;base64,' + captchaImage"
+            style="height: 50px"
+            alt="验证码"
+          />
         </td>
-        <td class="right-align">获取验证码</td>
+        <td class="right-align"></td>
+      </tr>
+      <tr>
+        <td class="left-align">
+          <input
+            class="new-tel"
+            maxlength="11"
+            placeholder="请输入验证码"
+            type="text"
+            @click="getCode"
+          />
+          <span class="right-align">获取验证码</span>
+        </td>
       </tr>
     </table>
     <div class="change-button">
@@ -50,6 +129,9 @@ td {
   font-size: 16px;
   font-weight: 400;
   word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .left-align .new-tel {
   background: white;

@@ -8,6 +8,7 @@ const router = useRouter()
 const active = ref(0)
 const active2 = ref(0)
 const border = ref('1px solid #fff')
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <div class="SBTDHeader">

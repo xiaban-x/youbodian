@@ -3,6 +3,11 @@ import { useRouter } from 'vue-router'
 import BtnGreen from '@/components/BtnGreen.vue'
 
 const router = useRouter()
+
+const logout = () => {
+  localStorage.clear()
+  router.push('/login')
+}
 </script>
 
 <template>
@@ -41,7 +46,7 @@ const router = useRouter()
       </tr>
     </table>
     <div class="change-button">
-      <BtnGreen message="退出登录"></BtnGreen>
+      <BtnGreen message="退出登录" @click="logout"></BtnGreen>
     </div>
   </div>
 </template>

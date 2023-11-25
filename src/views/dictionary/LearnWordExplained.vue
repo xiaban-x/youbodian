@@ -5,6 +5,7 @@ import CorrectNumber from '@/components/dictionary/CorrectNumber.vue'
 import BilingualExample from '@/components/dictionary/BilingualExample.vue'
 import BtnGreen from '@/components/BtnGreen.vue'
 const router = useRouter()
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

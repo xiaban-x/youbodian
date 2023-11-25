@@ -7,6 +7,7 @@ import { useRouter } from 'vue-router'
 import BtnGreen from '@/components/BtnGreen.vue'
 
 const router = useRouter()
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar left-arrow @click-left="router.go(-1)" title="选择行业" />

@@ -1,16 +1,49 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
 
-// 用户模块
-export const useUserStore = defineStore(
-  'big-user',
-  () => {
-    const token = ref('') // 定义 token
-    const setToken = (t) => (token.value = t) // 设置 token
-
-    return { token, setToken }
-  },
-  {
-    persist: true // 持久化
+export const useAuthStore = defineStore('auth', {
+  state: () => ({
+    accessToken: null,
+    refreshToken: null,
+    tokenType: null
+  }),
+  actions: {
+    // 设置令牌
+    setTokens(accessToken, refreshToken, tokenType) {
+      this.accessToken = accessToken
+      this.refreshToken = refreshToken
+      this.tokenType = tokenType
+    },
+    // 清除令牌
+    clearTokens() {
+      this.accessToken = null
+      this.refreshToken = null
+      this.tokenType = null
+    }
   }
-)
+})
+
+//用户模块
+export const useUserStore = defineStore('userInfo', {
+  state: () => ({
+    gender: '',
+    displayName: '',
+    avatar: '',
+    location: '',
+    email: '',
+    phone: '',
+    education: '',
+    wechat: ''
+  }),
+  actions: {
+    // 设置用户信息
+    setUserInfo(userInfo) {
+      Object.assign(this, userInfo)
+    },
+    // 清除用户信息
+    clearUserInfo() {
+      Object.keys(this.$state).forEach((key) => {
+        this[key] = ''
+      })
+    }
+  }
+})

@@ -9,6 +9,7 @@ const icon = {
 const router = useRouter()
 const inputValue = ref('')
 const inputRef = ref(null)
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar left-arrow @click-left="router.go(-1)" title="词典查询翻译" />

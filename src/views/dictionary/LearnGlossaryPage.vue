@@ -5,6 +5,7 @@ import CorrectNumber from '@/components/dictionary/CorrectNumber.vue'
 import SelectAnswer from '@/components/dictionary/SelectAnswer.vue'
 import Pix40GrayBtn from '@/components/dictionary/Pix40GrayBtn.vue'
 const router = useRouter()
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar

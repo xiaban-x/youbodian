@@ -1,6 +1,7 @@
 <script setup>
 import BtnGreen from '@/components/BtnGreen.vue'
 import router from '@/router'
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <div class="login">

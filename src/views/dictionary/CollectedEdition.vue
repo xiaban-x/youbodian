@@ -13,6 +13,7 @@ const themeVars = reactive({
   dropdownMenuTitleFontSize: '14px',
   dropdownMenuShadow: '5 2px 12px fade(var(--van-gray-7), 12)'
 })
+import { onMounted, onBeforeUnmount } from 'vue'
 </script>
 <template>
   <van-nav-bar
